@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurea Odontologia — Sorrisos com calma</title>
+  <meta name="description" content="Clínica odontológica em São Paulo: estética, implantes e ortodontia com atendimento humano e sem pressa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <a href="#" class="logo">Aurea<span>.</span></a>
+    <nav class="nav" id="nav">
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#agendar" class="nav__cta">Agendar consulta</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow reveal">Odontologia estética & preventiva</p>
+        <h1 class="hero__title reveal">Um sorriso novo,<br><em>sem pressa e sem susto.</em></h1>
+        <p class="hero__sub reveal">Na Aurea, cada consulta tem hora para começar e tempo para terminar.
+          Tecnologia de ponta, anestesia digital e um cafezinho antes de tudo.</p>
+        <div class="hero__actions reveal">
+          <a href="#agendar" class="btn btn--solid">Agendar avaliação</a>
+          <a href="#tratamentos" class="btn btn--soft">Conhecer tratamentos</a>
+        </div>
+        <ul class="hero__badges reveal">
+          <li>★ 4,9 no Google (312 avaliações)</li>
+          <li>+3.500 pacientes atendidos</li>
+        </ul>
+      </div>
+      <div class="hero__visual reveal">
+        <div class="hero__img">
+          <img src="https://picsum.photos/seed/aurea-hero/800/1000" alt="Paciente sorrindo em consultório claro">
+        </div>
+        <div class="hero__card hero__card--a">
+          <span>😁</span>
+          <div><b>Clareamento</b><small>a partir de R$ 590</small></div>
+        </div>
+        <div class="hero__card hero__card--b">
+          <span>🦷</span>
+          <div><b>Avaliação digital</b><small>escaneamento 3D gratuito</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRATAMENTOS ==================== -->
+    <section class="treatments" id="tratamentos">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Tratamentos</p>
+        <h2>Cuidado completo, <em>do check-up ao implante</em></h2>
+      </header>
+      <div class="treatments__grid">
+        <article class="treatment reveal">
+          <div class="treatment__icon">✧</div>
+          <h3>Estética do sorriso</h3>
+          <p>Lentes de contato dental, clareamento e restaurações invisíveis, planejadas em simulação 3D antes de qualquer procedimento.</p>
+          <a href="#agendar">Saber mais →</a>
+        </article>
+        <article class="treatment reveal">
+          <div class="treatment__icon">◠</div>
+          <h3>Ortodontia invisível</h3>
+          <p>Alinhadores transparentes com acompanhamento mensal e previsão de resultado — você vê o sorriso final antes de começar.</p>
+          <a href="#agendar">Saber mais →</a>
+        </article>
+        <article class="treatment reveal">
+          <div class="treatment__icon">❋</div>
+          <h3>Implantes guiados</h3>
+          <p>Cirurgia guiada por computador: mais precisão, menos tempo de cadeira e recuperação até 3x mais rápida.</p>
+          <a href="#agendar">Saber mais →</a>
+        </article>
+        <article class="treatment reveal">
+          <div class="treatment__icon">☾</div>
+          <h3>Odontologia do sono</h3>
+          <p>Tratamento de bruxismo e apneia com placas digitais sob medida e acompanhamento multidisciplinar.</p>
+          <a href="#agendar">Saber mais →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== ANTES / DEPOIS ==================== -->
+    <section class="results" id="resultados">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Resultados reais</p>
+        <h2>Arraste e veja <em>a diferença</em></h2>
+      </header>
+      <div class="compare reveal" id="compare" role="slider" aria-label="Comparação antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+        <img class="compare__after" src="https://picsum.photos/seed/aurea-after/1400/800" alt="Sorriso depois do tratamento">
+        <div class="compare__before-wrap" id="beforeWrap">
+          <img class="compare__before" src="https://picsum.photos/seed/aurea-before/1400/800" alt="Sorriso antes do tratamento">
+        </div>
+        <div class="compare__handle" id="handle" aria-hidden="true"><span>◂ ▸</span></div>
+        <span class="compare__tag compare__tag--l" aria-hidden="true">Antes</span>
+        <span class="compare__tag compare__tag--r" aria-hidden="true">Depois</span>
+      </div>
+      <p class="results__note reveal">Caso real de lentes de contato dental — tratamento concluído em 3 sessões. Fotos ilustrativas no template.</p>
+    </section>
+
+    <!-- ==================== EQUIPE ==================== -->
+    <section class="team" id="equipe">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Quem cuida de você</p>
+        <h2>Especialistas que <em>explicam antes de fazer</em></h2>
+      </header>
+      <div class="team__grid">
+        <article class="member reveal">
+          <img src="https://picsum.photos/seed/aurea-dr1/600/700" alt="Dra. Carolina Mattos" loading="lazy">
+          <h3>Dra. Carolina Mattos</h3>
+          <p>Estética & prótese · CRO-SP 00000</p>
+        </article>
+        <article class="member reveal">
+          <img src="https://picsum.photos/seed/aurea-dr2/600/700" alt="Dr. Henrique Sales" loading="lazy">
+          <h3>Dr. Henrique Sales</h3>
+          <p>Implantodontia · CRO-SP 00000</p>
+        </article>
+        <article class="member reveal">
+          <img src="https://picsum.photos/seed/aurea-dr3/600/700" alt="Dra. Beatriz Nunes" loading="lazy">
+          <h3>Dra. Beatriz Nunes</h3>
+          <p>Ortodontia · CRO-SP 00000</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== AGENDAR ==================== -->
+    <section class="booking" id="agendar">
+      <div class="booking__card reveal">
+        <div class="booking__info">
+          <h2>Agende sua avaliação</h2>
+          <p>Respondemos em até 2 horas úteis. Primeira avaliação com escaneamento digital <b>sem custo</b>.</p>
+          <ul>
+            <li>📍 Rua das Acácias, 128 — Moema, São Paulo</li>
+            <li>🕐 Seg a Sex, 8h — 20h · Sáb, 8h — 13h</li>
+            <li>📞 (11) 4000-0000</li>
+          </ul>
+        </div>
+        <form class="booking__form" id="bookingForm">
+          <label>Nome
+            <input type="text" placeholder="Seu nome" required>
+          </label>
+          <label>WhatsApp
+            <input type="tel" placeholder="(11) 90000-0000" required>
+          </label>
+          <label>O que você procura?
+            <select>
+              <option>Avaliação geral</option>
+              <option>Estética / lentes</option>
+              <option>Ortodontia invisível</option>
+              <option>Implantes</option>
+              <option>Urgência</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--solid">Solicitar horário</button>
+          <p class="booking__ok" id="bookingOk" hidden>✓ Recebido! Entraremos em contato em breve.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><b>Aurea Odontologia</b> · Resp. técnica: Dra. Carolina Mattos CRO-SP 00000</p>
+    <p><a href="#">Instagram</a> · <a href="#">Política de privacidade</a></p>
+    <p>© 2026 — Template demonstrativo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

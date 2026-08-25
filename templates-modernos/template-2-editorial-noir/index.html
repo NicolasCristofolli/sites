@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOCTURNE — Revista de Moda & Cultura</title>
+  <meta name="description" content="Uma revista digital sobre moda, fotografia e a estética da noite.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <a href="#" class="logo">NOCTURNE</a>
+    <p class="header__issue">Edição Nº 09 — Inverno 2026</p>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+  </header>
+
+  <nav class="overlay-menu" id="overlayMenu" aria-hidden="true">
+    <a href="#capa" class="overlay-menu__link"><span>01</span>Capa</a>
+    <a href="#editorial" class="overlay-menu__link"><span>02</span>Editorial</a>
+    <a href="#galeria" class="overlay-menu__link"><span>03</span>Galeria</a>
+    <a href="#assine" class="overlay-menu__link"><span>04</span>Assine</a>
+  </nav>
+
+  <main>
+    <!-- ==================== CAPA ==================== -->
+    <section class="cover" id="capa">
+      <h1 class="cover__title">
+        <span class="cover__line" data-kinetic>A&nbsp;ESTÉTICA</span>
+        <span class="cover__line cover__line--italic" data-kinetic>da&nbsp;noite</span>
+      </h1>
+      <figure class="cover__img" data-parallax>
+        <img src="https://picsum.photos/seed/noct-cover/1000/1400" alt="Retrato editorial em preto e branco">
+        <figcaption>Fotografia — Helena Duarte</figcaption>
+      </figure>
+      <p class="cover__deck">Moda, fotografia e cultura depois que as luzes se apagam.
+        Uma edição inteira dedicada ao que só existe entre a meia-noite e o amanhecer.</p>
+      <div class="cover__scroll" aria-hidden="true">Role para ler<span class="cover__scroll-line"></span></div>
+    </section>
+
+    <!-- ==================== EDITORIAL ==================== -->
+    <section class="editorial" id="editorial">
+      <p class="editorial__kicker" data-reveal>Carta da editora</p>
+      <h2 class="editorial__text" data-split>
+        A noite não esconde nada. Ela apenas escolhe, com um rigor que o dia
+        desconhece, aquilo que merece ser visto.
+      </h2>
+      <p class="editorial__sign" data-reveal>— Marina Valente, editora-chefe</p>
+    </section>
+
+    <!-- ==================== GALERIA HORIZONTAL ==================== -->
+    <section class="gallery" id="galeria">
+      <div class="gallery__pin">
+        <div class="gallery__track" id="galleryTrack">
+          <article class="frame">
+            <span class="frame__num">I</span>
+            <img src="https://picsum.photos/seed/noct1/800/1100" alt="Ensaio Vigília" loading="lazy">
+            <h3 class="frame__title">Vigília</h3>
+            <p class="frame__credit">por Tomás Reis</p>
+          </article>
+          <article class="frame frame--offset">
+            <span class="frame__num">II</span>
+            <img src="https://picsum.photos/seed/noct2/800/1100" alt="Ensaio Neblina" loading="lazy">
+            <h3 class="frame__title">Neblina</h3>
+            <p class="frame__credit">por Alice Kwon</p>
+          </article>
+          <article class="frame">
+            <span class="frame__num">III</span>
+            <img src="https://picsum.photos/seed/noct3/800/1100" alt="Ensaio Last Dance" loading="lazy">
+            <h3 class="frame__title">Last Dance</h3>
+            <p class="frame__credit">por Helena Duarte</p>
+          </article>
+          <article class="frame frame--offset">
+            <span class="frame__num">IV</span>
+            <img src="https://picsum.photos/seed/noct4/800/1100" alt="Ensaio Âmbar" loading="lazy">
+            <h3 class="frame__title">Âmbar</h3>
+            <p class="frame__credit">por Rafael Boto</p>
+          </article>
+          <article class="frame frame--cta">
+            <p>+ 42 páginas<br>na edição<br>impressa</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ARTIGOS ==================== -->
+    <section class="articles">
+      <article class="article-row" data-reveal>
+        <span class="article-row__tag">Moda</span>
+        <h3 class="article-row__title">O retorno do alfaiate noturno</h3>
+        <span class="article-row__time">12 min</span>
+      </article>
+      <article class="article-row" data-reveal>
+        <span class="article-row__tag">Fotografia</span>
+        <h3 class="article-row__title">Luz de vapor de sódio: um manifesto</h3>
+        <span class="article-row__time">8 min</span>
+      </article>
+      <article class="article-row" data-reveal>
+        <span class="article-row__tag">Cultura</span>
+        <h3 class="article-row__title">As pistas de dança que criaram o século</h3>
+        <span class="article-row__time">15 min</span>
+      </article>
+      <article class="article-row" data-reveal>
+        <span class="article-row__tag">Perfil</span>
+        <h3 class="article-row__title">Marina Lima e o silêncio das 4h</h3>
+        <span class="article-row__time">10 min</span>
+      </article>
+    </section>
+
+    <!-- ==================== ASSINE ==================== -->
+    <section class="subscribe" id="assine">
+      <h2 class="subscribe__title" data-split>Receba a próxima edição antes de todo mundo.</h2>
+      <form class="subscribe__form" id="subscribeForm">
+        <input type="email" placeholder="seu@email.com" required aria-label="Seu e-mail">
+        <button type="submit">Assinar →</button>
+      </form>
+      <p class="subscribe__note">Sem spam. Uma edição por estação, nada mais.</p>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p class="footer__brand">NOCTURNE</p>
+    <div class="footer__cols">
+      <p>© 2026 Nocturne Media<br>Lisboa · São Paulo</p>
+      <p><a href="#">Instagram</a><br><a href="#">Are.na</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

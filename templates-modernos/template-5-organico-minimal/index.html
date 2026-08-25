@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terrā — Arquitetura & Paisagem</title>
+  <meta name="description" content="Estúdio de arquitetura que projeta com o clima, a luz e o tempo. Casas, pavilhões e paisagens no Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <a href="#" class="logo">Terrā</a>
+    <nav class="nav" id="nav">
+      <a href="#estudio">Estúdio</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <h1 class="hero__title">
+        <span class="hero__row"><em class="mask"><i>Construímos</i></em></span>
+        <span class="hero__row hero__row--indent"><em class="mask"><i>com o</i></em>&nbsp;<em class="mask"><i class="serif">tempo</i></em><em class="mask"><i>,</i></em></span>
+        <span class="hero__row"><em class="mask"><i>não contra</i></em>&nbsp;<em class="mask"><i class="serif">ele</i></em><em class="mask"><i>.</i></em></span>
+      </h1>
+      <figure class="hero__img" data-reveal-img>
+        <img src="https://picsum.photos/seed/terra-hero/1600/1000" alt="Casa entre árvores com luz do fim de tarde">
+      </figure>
+      <p class="hero__caption">Casa Mirante — Serra da Mantiqueira, 2025</p>
+    </section>
+
+    <!-- ==================== ESTÚDIO ==================== -->
+    <section class="studio" id="estudio">
+      <p class="studio__text" data-fade>
+        A Terrā é um estúdio de arquitetura e paisagem fundado em 2016.
+        Projetamos casas, pavilhões e jardins que envelhecem bem —
+        <em>edifícios que pertencem ao lugar antes mesmo de existirem.</em>
+      </p>
+      <div class="studio__meta" data-fade>
+        <p>São Paulo — Brasil</p>
+        <p>23 projetos construídos</p>
+        <p>Prêmio APCA 2024</p>
+      </div>
+    </section>
+
+    <!-- ==================== PROJETOS ==================== -->
+    <section class="projects" id="projetos">
+      <header class="projects__head" data-fade>
+        <h2>Projetos selecionados</h2>
+        <p>2019 — 2026</p>
+      </header>
+
+      <ul class="projects__list" id="projectList">
+        <li class="project" data-img="https://picsum.photos/seed/terra1/900/640">
+          <a href="#">
+            <span class="project__index">01</span>
+            <span class="project__name">Casa Mirante</span>
+            <span class="project__place">Mantiqueira · 2025</span>
+          </a>
+        </li>
+        <li class="project" data-img="https://picsum.photos/seed/terra2/900/640">
+          <a href="#">
+            <span class="project__index">02</span>
+            <span class="project__name">Pavilhão das Águas</span>
+            <span class="project__place">Inhotim · 2024</span>
+          </a>
+        </li>
+        <li class="project" data-img="https://picsum.photos/seed/terra3/900/640">
+          <a href="#">
+            <span class="project__index">03</span>
+            <span class="project__name">Residência Ipê</span>
+            <span class="project__place">São Paulo · 2023</span>
+          </a>
+        </li>
+        <li class="project" data-img="https://picsum.photos/seed/terra4/900/640">
+          <a href="#">
+            <span class="project__index">04</span>
+            <span class="project__name">Refúgio Neblina</span>
+            <span class="project__place">Campos do Jordão · 2022</span>
+          </a>
+        </li>
+        <li class="project" data-img="https://picsum.photos/seed/terra5/900/640">
+          <a href="#">
+            <span class="project__index">05</span>
+            <span class="project__name">Jardim Suspenso Anhangabaú</span>
+            <span class="project__place">São Paulo · 2021</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="projects__preview" id="preview" aria-hidden="true">
+        <img src="" alt="" id="previewImg">
+      </div>
+    </section>
+
+    <!-- ==================== IMAGEM FULL ==================== -->
+    <section class="fullbleed">
+      <figure class="fullbleed__fig" data-reveal-img>
+        <img src="https://picsum.photos/seed/terra-full/2000/1100" alt="Pavilhão aberto com vista para o vale" data-parallax>
+      </figure>
+      <blockquote class="fullbleed__quote" data-fade>
+        “A melhor arquitetura é a que a paisagem aceita de volta.”
+      </blockquote>
+    </section>
+
+    <!-- ==================== PROCESSO ==================== -->
+    <section class="process" id="processo">
+      <h2 class="process__title" data-fade>Processo</h2>
+      <ol class="process__steps">
+        <li class="step" data-fade>
+          <span class="step__num">Ⅰ</span>
+          <h3>Escuta</h3>
+          <p>Antes do primeiro traço, passamos dias no terreno. Observamos o sol, o vento, o barulho, os vizinhos, as árvores que já estavam lá.</p>
+        </li>
+        <li class="step" data-fade>
+          <span class="step__num">Ⅱ</span>
+          <h3>Desenho</h3>
+          <p>Projetamos à mão e em modelo físico antes de qualquer render. O papel aceita dúvidas que a tela esconde.</p>
+        </li>
+        <li class="step" data-fade>
+          <span class="step__num">Ⅲ</span>
+          <h3>Matéria</h3>
+          <p>Terra, madeira, pedra e concreto aparente — materiais que marcam o tempo em vez de disfarçá-lo.</p>
+        </li>
+        <li class="step" data-fade>
+          <span class="step__num">Ⅳ</span>
+          <h3>Cuidado</h3>
+          <p>Acompanhamos a obra semanalmente e voltamos um ano depois. O projeto só termina quando a casa aprende a morar em si mesma.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section class="contact" id="contato">
+      <p class="contact__kicker" data-fade>Novos projetos</p>
+      <a href="mailto:ola@terra.arq.br" class="contact__link" data-fade>ola@terra.arq.br</a>
+      <p class="contact__addr" data-fade>Rua Harmonia 456 · Vila Madalena<br>São Paulo — SP</p>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>Terrā Arquitetura & Paisagem</p>
+    <p><a href="#">Instagram</a> — <a href="#">Pinterest</a></p>
+    <p>© 2026</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

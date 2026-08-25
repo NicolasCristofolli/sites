@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ateliê Oral — Odontologia de Precisão</title>
+  <meta name="description" content="Clínica odontológica de precisão. Um paciente por vez, tecnologia de laboratório, zero pressa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="gridlines" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="nav">
+    <a href="#topo" class="nav__logo">ATELIÊ<b>ORAL</b></a>
+    <nav class="nav__menu">
+      <a href="#precisao" data-hover>Precisão</a>
+      <a href="#parque" data-hover>Parque técnico</a>
+      <a href="#protocolo" data-hover>Protocolo</a>
+      <a href="#clinica" data-hover>A Clínica</a>
+    </nav>
+    <span class="nav__crm">CRO-SP 45.210</span>
+  </header>
+
+  <main id="topo">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__coord" aria-hidden="true">
+        <span>23°33′S</span><span>46°41′W</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="mask"><span>ODONTOLOGIA</span></span>
+        <span class="mask"><span class="hero__title-accent">DE PRECISÃO<i>.</i></span></span>
+      </h1>
+      <div class="hero__base">
+        <p class="hero__desc">
+          Um paciente por horário. Scanner intraoral de 60 micra.
+          Nenhum procedimento sem que você veja, em tela, exatamente o porquê.
+        </p>
+        <div class="hero__specs">
+          <span>±60 µm</span>
+          <span>1 paciente / hora</span>
+          <span>desde 2013</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECISÃO -->
+    <section class="precisao" id="precisao">
+      <div class="precisao__head">
+        <span class="idx">(01)</span>
+        <h2>A boca não aceita<br />aproximação<i>.</i></h2>
+      </div>
+      <div class="precisao__body">
+        <p>
+          Uma coroa com 100 micra de desajuste — a espessura de um fio de cabelo —
+          acumula placa, inflama gengiva e falha em cinco anos. Por isso medimos tudo,
+          o tempo todo, e recusamos qualquer trabalho que não passe no nosso próprio escrutínio.
+        </p>
+        <div class="precisao__medidas">
+          <div class="medida" data-hover>
+            <span class="medida__num"><b data-count="60">0</b><small>µm</small></span>
+            <span class="medida__desc">precisão do scanner intraoral — 3× mais fino que um fio de cabelo</span>
+          </div>
+          <div class="medida" data-hover>
+            <span class="medida__num"><b data-count="12">0</b><small>×</small></span>
+            <span class="medida__desc">ampliação do microscópio operatório usado em todo tratamento de canal</span>
+          </div>
+          <div class="medida" data-hover>
+            <span class="medida__num"><b data-count="0">0</b><small>,4s</small></span>
+            <span class="medida__desc">tempo de exposição da tomografia — dose mínima de radiação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARQUE TÉCNICO -->
+    <section class="parque" id="parque">
+      <div class="parque__head">
+        <span class="idx">(02)</span>
+        <h2>Parque técnico<i>.</i></h2>
+        <p>Passe o cursor sobre cada item.</p>
+      </div>
+
+      <ul class="parque__lista" id="parque-lista">
+        <li class="equip" data-visual="A">
+          <span class="equip__idx">A</span>
+          <span class="equip__nome">Scanner intraoral 3Shape</span>
+          <span class="equip__tag">moldagem sem massa</span>
+        </li>
+        <li class="equip" data-visual="B">
+          <span class="equip__idx">B</span>
+          <span class="equip__nome">Tomógrafo cone-beam</span>
+          <span class="equip__tag">imagem 3D in loco</span>
+        </li>
+        <li class="equip" data-visual="C">
+          <span class="equip__idx">C</span>
+          <span class="equip__nome">Microscópio Zeiss</span>
+          <span class="equip__tag">endodontia ampliada 12×</span>
+        </li>
+        <li class="equip" data-visual="D">
+          <span class="equip__idx">D</span>
+          <span class="equip__nome">Fresadora CAD/CAM</span>
+          <span class="equip__tag">coroa pronta no mesmo dia</span>
+        </li>
+        <li class="equip" data-visual="E">
+          <span class="equip__idx">E</span>
+          <span class="equip__nome">Autoclave classe B</span>
+          <span class="equip__tag">rastreabilidade por ciclo</span>
+        </li>
+      </ul>
+      <div class="parque__preview" id="parque-preview" aria-hidden="true">
+        <span id="preview-letra">A</span>
+      </div>
+    </section>
+
+    <!-- PROTOCOLO -->
+    <section class="protocolo" id="protocolo">
+      <div class="protocolo__head">
+        <span class="idx">(03)</span>
+        <h2>O protocolo de<br />primeira consulta<i>.</i></h2>
+      </div>
+
+      <div class="protocolo__trilha">
+        <div class="protocolo__linha" aria-hidden="true"><span id="linha-fill"></span></div>
+        <ol class="protocolo__passos">
+          <li class="passo">
+            <span class="passo__n">01</span>
+            <h3>90 minutos, só seus</h3>
+            <p>A primeira consulta não divide agenda com ninguém. História clínica completa, sem olhar no relógio.</p>
+          </li>
+          <li class="passo">
+            <span class="passo__n">02</span>
+            <h3>Documentação total</h3>
+            <p>Escaneamento 3D, fotografias e, se necessário, tomografia — tudo dentro da clínica, no mesmo dia.</p>
+          </li>
+          <li class="passo">
+            <span class="passo__n">03</span>
+            <h3>Diagnóstico em tela</h3>
+            <p>Você vê sua própria boca em 3D e entende cada achado antes de qualquer decisão. Sem jargão, sem pressa.</p>
+          </li>
+          <li class="passo">
+            <span class="passo__n">04</span>
+            <h3>Plano por escrito</h3>
+            <p>Prioridades, alternativas e prazos documentados em relatório que é seu — para levar, comparar e decidir.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- A CLÍNICA -->
+    <section class="clinica" id="clinica">
+      <div class="clinica__card">
+        <span class="idx idx--light">(04)</span>
+        <h2>Uma sala, uma cadeira,<br />uma equipe de três<i>.</i></h2>
+        <p>
+          Não somos uma rede. A Dra. Marina Sato atende na mesma sala desde 2013,
+          com a mesma auxiliar e o mesmo protético — que trabalha no laboratório
+          anexo, a sete metros da cadeira.
+        </p>
+        <div class="clinica__grid">
+          <div><h4>Endereço</h4><p>Rua Oscar Freire, 1520 — cj. 74<br />Pinheiros, São Paulo</p></div>
+          <div><h4>Consultas</h4><p>Segunda a sexta, 8h–18h<br />somente horário marcado</p></div>
+          <div><h4>Contato</h4><p>clinica@atelieoral.com.br<br />(11) 3000-7474</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__giant">ATELIÊ ORAL</p>
+    <div class="footer__row">
+      <span>© 2026 Ateliê Oral — Resp. téc. Dra. Marina Sato, CRO-SP 45.210</span>
+      <a href="#topo" data-hover>↑ topo</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

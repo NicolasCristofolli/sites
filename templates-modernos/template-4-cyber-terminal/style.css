@@ -1,0 +1,424 @@
+/* ============================================================
+   NEXO://26 — Cyber Terminal
+   Paleta: void #050807 / fósforo #0aff9d / magenta #ff2ec4 / âmbar #ffb340
+   Tipografia: JetBrains Mono (tudo)
+   ============================================================ */
+
+:root {
+  --void: #050807;
+  --panel: #0a100d;
+  --phos: #0aff9d;
+  --phos-dim: rgba(10, 255, 157, 0.55);
+  --magenta: #ff2ec4;
+  --amber: #ffb340;
+  --line: rgba(10, 255, 157, 0.22);
+  --mono: "JetBrains Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--phos);
+  font-family: var(--mono);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--magenta); color: var(--void); }
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Overlays CRT ---------- */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 998;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 2px,
+    rgba(0, 0, 0, 0.18) 2px 4px
+  );
+}
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 997;
+  background: radial-gradient(ellipse at center, transparent 58%, rgba(0, 0, 0, 0.55));
+}
+
+/* ---------- Boot sequence ---------- */
+.boot {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--void);
+  padding: clamp(1.5rem, 6vw, 4rem);
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.boot.done { opacity: 0; visibility: hidden; }
+.boot__log { font-size: clamp(0.72rem, 1.6vw, 0.95rem); white-space: pre-wrap; color: var(--phos-dim); }
+.boot__log b { color: var(--phos); font-weight: 400; }
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  background: rgba(5, 8, 7, 0.88);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav { display: flex; gap: clamp(0.8rem, 2.5vw, 2rem); align-items: center; }
+.nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--phos-dim);
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.nav a:hover { color: var(--phos); text-shadow: 0 0 10px var(--phos); }
+.nav__cta { color: var(--magenta) !important; }
+.nav__cta:hover { text-shadow: 0 0 10px var(--magenta) !important; }
+
+.burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--phos);
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: calc(100svh - 62px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem, 8vh, 6rem) clamp(1rem, 4vw, 3rem);
+  max-width: 1500px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.hero__pre { color: var(--amber); font-size: clamp(0.8rem, 1.6vw, 1rem); margin-bottom: 1rem; }
+
+.hero__title {
+  font-size: clamp(1.9rem, 7.5vw, 6.2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-shadow: 0 0 24px rgba(10, 255, 157, 0.35);
+  max-width: 14ch;
+}
+
+/* Glitch: pseudo-elementos deslocados em ciano/magenta */
+.glitch { position: relative; }
+.glitch::before, .glitch::after {
+  content: attr(data-glitch);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  opacity: 0;
+}
+.glitch::before { color: var(--magenta); z-index: -1; }
+.glitch::after { color: #40e0ff; z-index: -2; }
+.glitch:hover::before, .glitch.glitching::before { opacity: 0.8; animation: glitch-a 0.32s steps(2) infinite; }
+.glitch:hover::after, .glitch.glitching::after { opacity: 0.8; animation: glitch-b 0.28s steps(2) infinite; }
+
+@keyframes glitch-a {
+  0% { transform: translate(-3px, 2px); clip-path: inset(10% 0 60% 0); }
+  50% { transform: translate(3px, -1px); clip-path: inset(50% 0 10% 0); }
+  100% { transform: translate(-2px, 1px); clip-path: inset(30% 0 40% 0); }
+}
+@keyframes glitch-b {
+  0% { transform: translate(3px, -2px); clip-path: inset(60% 0 5% 0); }
+  50% { transform: translate(-3px, 2px); clip-path: inset(5% 0 70% 0); }
+  100% { transform: translate(2px, -1px); clip-path: inset(40% 0 30% 0); }
+}
+
+.hero__typed {
+  margin-top: 1.4rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: var(--phos-dim);
+  min-height: 1.8em;
+}
+.caret { animation: blink 0.9s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.hero__countdown {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+.count { text-align: center; border: 1px solid var(--line); padding: 0.8rem 1.2rem; background: var(--panel); }
+.count b {
+  display: block;
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--phos);
+  text-shadow: 0 0 14px rgba(10, 255, 157, 0.5);
+  font-variant-numeric: tabular-nums;
+}
+.count span { font-size: 0.72rem; color: var(--phos-dim); text-transform: uppercase; letter-spacing: 0.2em; }
+
+.hero__actions { display: flex; gap: 1.2rem; margin-top: 2.5rem; flex-wrap: wrap; }
+
+.btn-term {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--phos);
+  border: 1px solid var(--phos);
+  padding: 0.8em 1.6em;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-term:hover { background: rgba(10, 255, 157, 0.12); box-shadow: 0 0 18px rgba(10, 255, 157, 0.35); }
+.btn-term--solid { background: var(--phos); color: var(--void); font-weight: 700; }
+.btn-term--solid:hover { background: var(--magenta); border-color: var(--magenta); color: var(--void); box-shadow: 0 0 22px rgba(255, 46, 196, 0.5); }
+
+.hero__ascii {
+  position: absolute;
+  right: clamp(1rem, 4vw, 3rem);
+  bottom: clamp(1.5rem, 5vh, 3.5rem);
+  font-size: clamp(0.62rem, 1vw, 0.8rem);
+  color: var(--phos-dim);
+  line-height: 1.45;
+}
+.hero__ascii i { color: var(--phos); font-style: normal; animation: blink 1.6s steps(1) infinite; }
+
+/* ---------- Seções ---------- */
+.sec-title {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: clamp(2rem, 5vh, 3.5rem);
+  color: var(--phos);
+}
+.sec-title span { color: var(--magenta); margin-right: 0.6em; }
+.sec-title::after { content: "_"; animation: blink 1s steps(1) infinite; }
+
+.about, .speakers, .schedule, .tickets {
+  padding: clamp(3.5rem, 10vh, 7rem) clamp(1rem, 4vw, 3rem);
+  max-width: 1500px;
+  margin-inline: auto;
+  border-top: 1px dashed var(--line);
+}
+
+/* ---------- Sobre ---------- */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+.about__text { font-size: clamp(0.95rem, 1.6vw, 1.15rem); color: var(--phos-dim); }
+.about__text mark { background: rgba(255, 46, 196, 0.18); color: var(--magenta); padding: 0 0.2em; }
+
+.about__facts { list-style: none; display: grid; gap: 1rem; align-content: start; }
+.about__facts li {
+  border-left: 2px solid var(--magenta);
+  padding-left: 1rem;
+  color: var(--phos-dim);
+  font-size: 0.92rem;
+}
+.about__facts b { color: var(--phos); font-size: 1.3em; margin-right: 0.4em; }
+
+/* ---------- Palestrantes ---------- */
+.speakers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: clamp(1.2rem, 3vw, 2.5rem);
+}
+
+.speaker { text-align: left; }
+.speaker__frame {
+  border: 1px solid var(--line);
+  padding: 0.5rem;
+  background: var(--panel);
+  position: relative;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.speaker__frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10, 255, 157, 0.1), transparent 40%);
+  pointer-events: none;
+}
+.speaker__frame img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: grayscale(1) brightness(0.85) contrast(1.15) sepia(1) hue-rotate(100deg) saturate(2.2);
+  transition: filter 0.35s;
+}
+.speaker:hover .speaker__frame { border-color: var(--magenta); box-shadow: 0 0 24px rgba(255, 46, 196, 0.25); }
+.speaker:hover .speaker__frame img { filter: grayscale(0.2) brightness(1) contrast(1.05); }
+
+.speaker h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1rem; }
+.speaker p { font-size: 0.82rem; color: var(--phos-dim); }
+.speaker p span { color: var(--amber); }
+
+/* ---------- Agenda ---------- */
+.schedule__table { border: 1px solid var(--line); background: var(--panel); }
+.srow {
+  display: grid;
+  grid-template-columns: 6rem 1fr 8rem;
+  gap: 1rem;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid rgba(10, 255, 157, 0.1);
+  font-size: 0.92rem;
+  transition: background 0.2s;
+}
+.srow:last-child { border-bottom: none; }
+.srow:not(.srow--head):hover { background: rgba(10, 255, 157, 0.07); }
+.srow--head {
+  color: var(--amber);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid var(--line);
+}
+.srow span:first-child { color: var(--phos-dim); font-variant-numeric: tabular-nums; }
+
+.tr { font-size: 0.75rem; text-align: center; padding: 0.15em 0.6em; align-self: center; border: 1px solid; }
+.tr--c { color: var(--phos); border-color: var(--phos-dim); }
+.tr--a { color: var(--magenta); border-color: rgba(255, 46, 196, 0.5); }
+.tr--r { color: var(--amber); border-color: rgba(255, 179, 64, 0.5); }
+
+.schedule__note { margin-top: 1.2rem; color: var(--phos-dim); font-size: 0.85rem; }
+
+/* ---------- Ingressos ---------- */
+.tickets__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+.ticket {
+  border: 1px dashed var(--line);
+  padding: 2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--phos-dim);
+}
+.ticket h3 { font-size: 1.1rem; font-weight: 700; color: var(--phos); }
+.ticket h3 s { color: var(--phos-dim); font-weight: 300; }
+.ticket__status { font-size: 0.85rem; }
+
+.ticket--active {
+  border: 1px solid var(--phos);
+  background: var(--panel);
+  box-shadow: 0 0 32px rgba(10, 255, 157, 0.15);
+  position: relative;
+}
+.ticket--active::before {
+  content: "● ATIVO";
+  position: absolute;
+  top: -0.7em; right: 1rem;
+  background: var(--void);
+  color: var(--magenta);
+  font-size: 0.7rem;
+  padding: 0 0.6em;
+  letter-spacing: 0.15em;
+}
+.ticket--active p { color: var(--phos-dim); font-size: 0.9rem; }
+.ticket--active .btn-term { text-align: center; margin-top: auto; }
+.ticket__bar { font-size: 0.78rem; color: var(--amber); white-space: nowrap; overflow: hidden; }
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 3rem clamp(1rem, 4vw, 3rem);
+  text-align: center;
+  color: var(--phos-dim);
+  font-size: 0.82rem;
+}
+.footer__ascii {
+  font-size: clamp(2rem, 9vw, 6rem);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--phos-dim);
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+.footer a { color: var(--phos); text-decoration: none; }
+.footer a:hover { color: var(--magenta); }
+
+/* ---------- Reveal ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .about__grid { grid-template-columns: 1fr; }
+  .hero__ascii { position: static; margin-top: 3rem; }
+}
+
+@media (max-width: 700px) {
+  .burger { display: block; }
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 8, 7, 0.96);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2rem;
+    font-size: 1.2rem;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 90;
+  }
+  .nav.is-open { transform: translateY(0); }
+  .header { z-index: 100; }
+  .burger { position: relative; z-index: 110; }
+  .srow { grid-template-columns: 4.2rem 1fr; }
+  .srow .tr { display: none; }
+  .srow--head span:last-child { display: none; }
+}
+
+@media (min-width: 1920px) {
+  body { font-size: 1.1rem; }
+  .hero, .about, .speakers, .schedule, .tickets { max-width: 1750px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .boot { display: none; }
+  .scanlines { display: none; }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KM 42 — Oficina Mecânica de Precisão</title>
+  <meta name="description" content="Oficina mecânica de precisão. Diagnóstico honesto, torque certo, nada além do necessário." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>TORQUE 110 N·m /// ÓLEO 5W30 API SP /// FOLGA 0.25 mm /// PRESSÃO 32 PSI /// SCANNER OBD-II ATIVO /// ELEVADOR 01: LIVRE /// ELEVADOR 02: OCUPADO ///&nbsp;</span>
+      <span>TORQUE 110 N·m /// ÓLEO 5W30 API SP /// FOLGA 0.25 mm /// PRESSÃO 32 PSI /// SCANNER OBD-II ATIVO /// ELEVADOR 01: LIVRE /// ELEVADOR 02: OCUPADO ///&nbsp;</span>
+    </div>
+  </div>
+
+  <header class="nav">
+    <a class="nav__logo" href="#topo">KM<b>42</b></a>
+    <nav class="nav__menu">
+      <a href="#diagnostico">[ Diagnóstico ]</a>
+      <a href="#bancada">[ Bancada ]</a>
+      <a href="#protocolo">[ Protocolo ]</a>
+      <a href="#box">[ O Box ]</a>
+    </nav>
+    <span class="nav__status"><i></i>OFICINA ABERTA</span>
+  </header>
+
+  <main id="topo">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <p class="hero__tag">// OFICINA MECÂNICA DE PRECISÃO — MOOCA, SP</p>
+      <h1 class="hero__title">
+        <span class="hero__title-row"><span class="hero__fill">SEU CARRO</span></span>
+        <span class="hero__title-row"><span class="hero__stroke">NÃO MENTE.</span></span>
+        <span class="hero__title-row"><span class="hero__fill">NÓS TAMBÉM <em>NÃO.</em></span></span>
+      </h1>
+
+      <div class="terminal" id="diagnostico">
+        <div class="terminal__bar">
+          <span class="terminal__dot"></span>
+          <span class="terminal__dot"></span>
+          <span class="terminal__dot"></span>
+          <span class="terminal__title">km42_diagnostico.sh</span>
+        </div>
+        <pre class="terminal__body"><code id="terminal-out"></code><span class="terminal__cursor">█</span></pre>
+      </div>
+    </section>
+
+    <!-- BANCADA / EQUIPAMENTOS -->
+    <section class="bancada" id="bancada">
+      <h2 class="section-title"><span>01</span> A BANCADA</h2>
+      <p class="section-sub">Ferramenta calibrada não é diferencial. É pré-requisito.</p>
+
+      <div class="bancada__grid">
+        <article class="ferramenta">
+          <span class="ferramenta__cod">EQ-001</span>
+          <h3>Scanner OBD-II profissional</h3>
+          <p>Leitura em tempo real de 4.000+ parâmetros. O mesmo equipamento usado em concessionária — sem o preço de concessionária no laudo.</p>
+          <span class="ferramenta__spec">CAN-BUS / K-LINE / DoIP</span>
+        </article>
+        <article class="ferramenta">
+          <span class="ferramenta__cod">EQ-002</span>
+          <h3>Torquímetros calibrados</h3>
+          <p>Recalibrados a cada 6 meses com certificado rastreável. Parafuso de cabeçote apertado no sentimento não existe aqui.</p>
+          <span class="ferramenta__spec">2–350 N·m ±2%</span>
+        </article>
+        <article class="ferramenta">
+          <span class="ferramenta__cod">EQ-003</span>
+          <h3>Elevadores de 4 toneladas</h3>
+          <p>Dois elevadores hidráulicos com inspeção anual do INMETRO. Seu carro sobe seguro e desce inteiro.</p>
+          <span class="ferramenta__spec">4.000 kg / NR-12</span>
+        </article>
+        <article class="ferramenta">
+          <span class="ferramenta__cod">EQ-004</span>
+          <h3>Alinhamento 3D a laser</h3>
+          <p>Precisão de centésimo de grau em câmber, cáster e convergência. O volante volta reto — e fica reto.</p>
+          <span class="ferramenta__spec">±0.01°</span>
+        </article>
+        <article class="ferramenta">
+          <span class="ferramenta__cod">EQ-005</span>
+          <h3>Estação de fluidos selada</h3>
+          <p>Troca de fluido de freio e arrefecimento em circuito fechado, sem contato com ar. Fluido contaminado não entra.</p>
+          <span class="ferramenta__spec">DOT-4 / G12 / ATF</span>
+        </article>
+        <article class="ferramenta">
+          <span class="ferramenta__cod">EQ-006</span>
+          <h3>Câmera de inspeção boroscópica</h3>
+          <p>Vemos dentro do cilindro sem abrir o motor. Você vê junto, na tela, antes de autorizar qualquer serviço.</p>
+          <span class="ferramenta__spec">Ø 5.5 mm / 1080p</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- MARQUEE SKEW -->
+    <div class="skew-marquee" aria-hidden="true">
+      <div class="skew-marquee__track" id="skew-track">
+        <span>DIAGNÓSTICO HONESTO × TORQUE CERTO × PEÇA ORIGINAL × LAUDO POR ESCRITO ×&nbsp;</span>
+        <span>DIAGNÓSTICO HONESTO × TORQUE CERTO × PEÇA ORIGINAL × LAUDO POR ESCRITO ×&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- PROTOCOLO -->
+    <section class="protocolo" id="protocolo">
+      <h2 class="section-title"><span>02</span> O PROTOCOLO</h2>
+      <p class="section-sub">Todo carro que entra passa pelo mesmo rito. Sem exceção, sem atalho.</p>
+
+      <ol class="protocolo__lista">
+        <li class="etapa">
+          <span class="etapa__num">PASSO_01</span>
+          <div>
+            <h3>Entrevista de bancada</h3>
+            <p>Quinze minutos ouvindo você antes de tocar no carro. Barulho, quando começou, em que velocidade. O dono é o primeiro sensor.</p>
+          </div>
+          <span class="etapa__check">[ ✓ ]</span>
+        </li>
+        <li class="etapa">
+          <span class="etapa__num">PASSO_02</span>
+          <div>
+            <h3>Diagnóstico instrumentado</h3>
+            <p>Scanner, teste de rodagem e inspeção visual com checklist de 62 pontos. Tudo fotografado e anexado ao laudo.</p>
+          </div>
+          <span class="etapa__check">[ ✓ ]</span>
+        </li>
+        <li class="etapa">
+          <span class="etapa__num">PASSO_03</span>
+          <div>
+            <h3>Laudo por escrito</h3>
+            <p>O que precisa agora, o que pode esperar e o que está saudável — em três listas separadas, com valores fechados. Você decide.</p>
+          </div>
+          <span class="etapa__check">[ ✓ ]</span>
+        </li>
+        <li class="etapa">
+          <span class="etapa__num">PASSO_04</span>
+          <div>
+            <h3>Execução e devolutiva</h3>
+            <p>Peças velhas ficam numa caixa com seu nome. Na entrega, mostramos o que foi feito, peça por peça, torque por torque.</p>
+          </div>
+          <span class="etapa__check">[ ✓ ]</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="painel">
+      <div class="painel__item">
+        <span class="painel__valor"><b data-count="62">0</b></span>
+        <span class="painel__label">PONTOS NO CHECKLIST</span>
+      </div>
+      <div class="painel__item">
+        <span class="painel__valor"><b data-count="18">0</b> ANOS</span>
+        <span class="painel__label">NO MESMO GALPÃO</span>
+      </div>
+      <div class="painel__item">
+        <span class="painel__valor"><b data-count="100">0</b>%</span>
+        <span class="painel__label">PEÇAS COM NOTA FISCAL</span>
+      </div>
+      <div class="painel__item">
+        <span class="painel__valor"><b data-count="0">0</b></span>
+        <span class="painel__label">SERVIÇO SEM AUTORIZAÇÃO</span>
+      </div>
+    </section>
+
+    <!-- O BOX -->
+    <section class="box" id="box">
+      <h2 class="section-title"><span>03</span> O BOX</h2>
+      <div class="box__grid">
+        <div class="box__mapa" aria-hidden="true">
+          <div class="box__pin">KM42</div>
+        </div>
+        <div class="box__dados">
+          <div class="box__linha"><span>ENDEREÇO</span><p>Rua do Hipódromo, 1042 — Mooca, São Paulo</p></div>
+          <div class="box__linha"><span>FUNCIONAMENTO</span><p>Segunda a sexta, 8h–18h · Sábado, 8h–13h</p></div>
+          <div class="box__linha"><span>CONTATO</span><p>(11) 3000-4242 · box@km42.com.br</p></div>
+          <div class="box__linha"><span>AGENDAMENTO</span><p>Somente com hora marcada. Diagnóstico leva meio dia — respeite o processo.</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__giant">KM42</p>
+    <div class="footer__row">
+      <span>© 2026 OFICINA KM42</span>
+      <span>// TORQUE CERTO DESDE 2008</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

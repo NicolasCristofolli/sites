@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMEN — Seu dinheiro, em outra frequência</title>
+  <meta name="description" content="Conta digital com rendimento automático, cartão sem tarifas e insights com IA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Aurora de fundo -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora__blob aurora__blob--1"></div>
+    <div class="aurora__blob aurora__blob--2"></div>
+    <div class="aurora__blob aurora__blob--3"></div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header glass">
+    <a href="#" class="logo"><span class="logo__mark"></span>lumen</a>
+    <nav class="nav" id="nav">
+      <a href="#recursos">Recursos</a>
+      <a href="#numeros">Números</a>
+      <a href="#planos">Planos</a>
+    </nav>
+    <a href="#planos" class="btn btn--primary header__cta">Abrir conta</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="pill reveal">✦ Novo — rendimento de 110% do CDI</p>
+        <h1 class="hero__title reveal">Seu dinheiro,<br>em outra <em>frequência</em>.</h1>
+        <p class="hero__sub reveal">Conta digital que rende sozinha, cartão sem tarifas
+          e uma IA que entende seus gastos melhor que você. Tudo em um app translúcido de tão simples.</p>
+        <div class="hero__actions reveal">
+          <a href="#planos" class="btn btn--primary">Criar conta grátis</a>
+          <a href="#recursos" class="btn btn--ghost">Ver recursos ↓</a>
+        </div>
+        <div class="hero__trust reveal">
+          <div class="avatars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <p><strong>+380 mil</strong> pessoas já mudaram de frequência</p>
+        </div>
+      </div>
+
+      <!-- Mockup de celular 100% CSS -->
+      <div class="hero__device reveal" id="device">
+        <div class="phone glass">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <p class="phone__label">Saldo total</p>
+            <p class="phone__balance">R$ 24.618<span>,90</span></p>
+            <div class="phone__chart" aria-hidden="true">
+              <i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:52%"></i>
+              <i style="--h:80%"></i><i style="--h:60%"></i><i style="--h:92%"></i><i style="--h:74%"></i>
+            </div>
+            <div class="phone__tx glass-soft">
+              <span class="phone__tx-icon">🎧</span>
+              <div><strong>Studio Som</strong><small>Assinatura</small></div>
+              <b>− R$ 34,90</b>
+            </div>
+            <div class="phone__tx glass-soft">
+              <span class="phone__tx-icon">💸</span>
+              <div><strong>Rendimento</strong><small>Automático</small></div>
+              <b class="pos">+ R$ 128,44</b>
+            </div>
+          </div>
+        </div>
+        <div class="float-card glass float-card--a"><b>110%</b><span>do CDI</span></div>
+        <div class="float-card glass float-card--b"><b>0</b><span>tarifas</span></div>
+      </div>
+    </section>
+
+    <!-- ==================== RECURSOS ==================== -->
+    <section class="features" id="recursos">
+      <h2 class="section-title reveal">Feito de luz,<br>pensado nos <em>detalhes</em>.</h2>
+      <div class="features__grid">
+        <article class="feature glass reveal">
+          <div class="feature__icon">◐</div>
+          <h3>Rendimento automático</h3>
+          <p>Todo real parado rende 110% do CDI, todos os dias — sem precisar apertar nenhum botão.</p>
+        </article>
+        <article class="feature glass reveal">
+          <div class="feature__icon">✦</div>
+          <h3>IA de gastos</h3>
+          <p>Insights em linguagem natural: "você gastou 23% a mais com delivery esse mês. Quer um limite?"</p>
+        </article>
+        <article class="feature glass reveal">
+          <div class="feature__icon">◈</div>
+          <h3>Cartão sem tarifas</h3>
+          <p>Crédito e débito internacionais, cashback em cripto ou CDB. Anuidade zero, para sempre.</p>
+        </article>
+        <article class="feature glass reveal">
+          <div class="feature__icon">◎</div>
+          <h3>Cofres inteligentes</h3>
+          <p>Metas que se alimentam sozinhas com regras: arredondamento, percentual do salário, pix recebido.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== NÚMEROS ==================== -->
+    <section class="numbers" id="numeros">
+      <div class="numbers__grid glass reveal">
+        <div class="number"><strong><span data-count="380">0</span>mil</strong><span>contas ativas</span></div>
+        <div class="number"><strong>R$ <span data-count="2">0</span>,4bi</strong><span>sob custódia</span></div>
+        <div class="number"><strong><span data-count="99">0</span>,98%</strong><span>de uptime</span></div>
+        <div class="number"><strong><span data-count="4">0</span>,9★</strong><span>nas lojas de apps</span></div>
+      </div>
+    </section>
+
+    <!-- ==================== PLANOS ==================== -->
+    <section class="pricing" id="planos">
+      <h2 class="section-title reveal">Escolha sua <em>frequência</em>.</h2>
+      <div class="pricing__grid">
+        <article class="plan glass reveal">
+          <h3>Essencial</h3>
+          <p class="plan__price">R$ 0<span>/mês</span></p>
+          <ul>
+            <li>Conta + cartão sem tarifas</li>
+            <li>Rendimento de 100% do CDI</li>
+            <li>2 cofres inteligentes</li>
+          </ul>
+          <a href="#" class="btn btn--ghost">Começar grátis</a>
+        </article>
+        <article class="plan plan--pro glass reveal">
+          <p class="plan__badge">Mais escolhido</p>
+          <h3>Prisma</h3>
+          <p class="plan__price">R$ 19<span>/mês</span></p>
+          <ul>
+            <li>Tudo do Essencial</li>
+            <li>Rendimento de 110% do CDI</li>
+            <li>IA de gastos ilimitada</li>
+            <li>Cashback de 1,5% no cartão</li>
+          </ul>
+          <a href="#" class="btn btn--primary">Assinar Prisma</a>
+        </article>
+        <article class="plan glass reveal">
+          <h3>Espectro</h3>
+          <p class="plan__price">R$ 49<span>/mês</span></p>
+          <ul>
+            <li>Tudo do Prisma</li>
+            <li>Gerente humano 24/7</li>
+            <li>Salas VIP em aeroportos</li>
+          </ul>
+          <a href="#" class="btn btn--ghost">Assinar Espectro</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section class="cta">
+      <div class="cta__box glass reveal">
+        <h2>Pronto para mudar<br>de frequência?</h2>
+        <p>Abra sua conta em 3 minutos. Sem papelada, sem fila, sem drama.</p>
+        <a href="#" class="btn btn--primary btn--lg">Abrir minha conta ✦</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <a href="#" class="logo"><span class="logo__mark"></span>lumen</a>
+    <nav class="footer__nav">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Ajuda</a>
+      <a href="#">Carreiras</a>
+    </nav>
+    <p class="footer__legal">© 2026 Lumen Pagamentos S.A. — Este é um template demonstrativo.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forno Vivo — Padaria de Fermentação Natural</title>
+  <meta name="description" content="Padaria artesanal de fermentação natural. Pão é tempo. Desde 2011." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a class="nav__logo" href="#topo">Forno<em>Vivo</em></a>
+    <nav class="nav__links">
+      <a href="#manifesto" data-magnetic>Manifesto</a>
+      <a href="#processo" data-magnetic>Processo</a>
+      <a href="#fornadas" data-magnetic>Fornadas</a>
+      <a href="#casa" data-magnetic>A Casa</a>
+    </nav>
+    <div class="nav__clock" aria-label="Horário atual">
+      <span class="nav__clock-dot"></span>
+      <span id="relogio">--:--</span>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="hero__overline reveal-line">Padaria de fermentação natural — desde 2011</p>
+      <h1 class="hero__title" aria-label="Pão é tempo.">
+        <span class="hero__word"><span>PÃO</span></span>
+        <span class="hero__word hero__word--italic"><span>é</span></span>
+        <span class="hero__word"><span>TEMPO</span></span>
+      </h1>
+      <div class="hero__meta">
+        <p class="reveal-line">48 horas de fermentação lenta.<br />Forno a lenha aceso às 3h da manhã.<br />Todos os dias, sem exceção.</p>
+        <div class="hero__badge" data-magnetic-strong aria-hidden="true">
+          <svg viewBox="0 0 120 120" class="hero__badge-svg">
+            <defs>
+              <path id="circulo" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
+            </defs>
+            <text class="hero__badge-text">
+              <textPath href="#circulo">fermento vivo • forno a lenha • massa mãe • </textPath>
+            </text>
+          </svg>
+          <span class="hero__badge-center">✳</span>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Fermentação natural ✳ 48 horas ✳ Forno a lenha ✳ Trigo orgânico ✳ Massa mãe de 2011 ✳&nbsp;</span>
+        <span>Fermentação natural ✳ 48 horas ✳ Forno a lenha ✳ Trigo orgânico ✳ Massa mãe de 2011 ✳&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto" id="manifesto">
+      <span class="section-index">01 — Manifesto</span>
+      <p class="manifesto__text" id="manifesto-texto">
+        Não temos pressa. A nossa massa mãe nasceu em 2011 e é alimentada duas vezes por dia,
+        todos os dias, há mais de uma década. Cada pão que sai do nosso forno carrega esse tempo
+        — e é por isso que não fazemos pão rápido. Fazemos pão certo.
+      </p>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="processo" id="processo">
+      <span class="section-index">02 — Processo</span>
+      <h2 class="processo__title">Quarenta e oito horas,<br /><em>quatro gestos.</em></h2>
+
+      <div class="processo__steps">
+        <article class="step">
+          <div class="step__num" aria-hidden="true">01</div>
+          <div class="step__body">
+            <h3>Autólise</h3>
+            <p>Farinha e água descansam juntas por duas horas antes de qualquer outra coisa. O glúten se forma sozinho, sem força, sem máquina.</p>
+            <span class="step__tag">H+0 → H+2</span>
+          </div>
+          <div class="step__visual step__visual--1" aria-hidden="true"></div>
+        </article>
+
+        <article class="step">
+          <div class="step__num" aria-hidden="true">02</div>
+          <div class="step__body">
+            <h3>Fermentação longa</h3>
+            <p>A massa fermenta a frio por 36 horas. O sabor não vem de aditivo nenhum — vem de bactéria trabalhando devagar, no escuro, a 4°C.</p>
+            <span class="step__tag">H+2 → H+38</span>
+          </div>
+          <div class="step__visual step__visual--2" aria-hidden="true"></div>
+        </article>
+
+        <article class="step">
+          <div class="step__num" aria-hidden="true">03</div>
+          <div class="step__body">
+            <h3>Modelagem à mão</h3>
+            <p>Nenhuma esteira, nenhuma forma industrial. Cada pão é dobrado, tensionado e selado por mãos que fazem isso há anos.</p>
+            <span class="step__tag">H+38 → H+44</span>
+          </div>
+          <div class="step__visual step__visual--3" aria-hidden="true"></div>
+        </article>
+
+        <article class="step">
+          <div class="step__num" aria-hidden="true">04</div>
+          <div class="step__body">
+            <h3>Forno a lenha</h3>
+            <p>O forno de tijolo atinge 240°C queimando eucalipto de reflorestamento. O vapor da própria massa cria a casca que estala.</p>
+            <span class="step__tag">H+44 → H+48</span>
+          </div>
+          <div class="step__visual step__visual--4" aria-hidden="true"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="numeros">
+      <div class="numeros__grid">
+        <div class="numero">
+          <span class="numero__valor" data-count="48">0</span><span class="numero__unidade">h</span>
+          <p>de fermentação lenta</p>
+        </div>
+        <div class="numero">
+          <span class="numero__valor" data-count="240">0</span><span class="numero__unidade">°C</span>
+          <p>no coração do forno</p>
+        </div>
+        <div class="numero">
+          <span class="numero__valor" data-count="14">0</span><span class="numero__unidade">anos</span>
+          <p>da mesma massa mãe</p>
+        </div>
+        <div class="numero">
+          <span class="numero__valor" data-count="12">0</span><span class="numero__unidade">tipos</span>
+          <p>de pão por dia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORNADAS -->
+    <section class="fornadas" id="fornadas">
+      <span class="section-index">03 — Fornadas</span>
+      <h2 class="fornadas__title">O forno dita <em>o horário.</em></h2>
+      <p class="fornadas__sub">Cada tipo de pão sai em seu momento. Chegue perto da hora e leve ainda quente.</p>
+
+      <ul class="fornadas__lista">
+        <li class="fornada">
+          <span class="fornada__hora">06:00</span>
+          <span class="fornada__nome">Pão de fermentação natural</span>
+          <span class="fornada__nota">o clássico da casa</span>
+        </li>
+        <li class="fornada">
+          <span class="fornada__hora">07:30</span>
+          <span class="fornada__nome">Baguete tradição</span>
+          <span class="fornada__nota">casca fina, miolo aberto</span>
+        </li>
+        <li class="fornada">
+          <span class="fornada__hora">09:00</span>
+          <span class="fornada__nome">Focaccia de alecrim</span>
+          <span class="fornada__nota">azeite extra virgem</span>
+        </li>
+        <li class="fornada">
+          <span class="fornada__hora">11:00</span>
+          <span class="fornada__nome">Pão de centeio 100%</span>
+          <span class="fornada__nota">denso, escuro, honesto</span>
+        </li>
+        <li class="fornada">
+          <span class="fornada__hora">15:30</span>
+          <span class="fornada__nome">Croissant de manteiga</span>
+          <span class="fornada__nota">27 camadas laminadas</span>
+        </li>
+        <li class="fornada">
+          <span class="fornada__hora">16:30</span>
+          <span class="fornada__nome">Segunda fornada do clássico</span>
+          <span class="fornada__nota">para o jantar</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- A CASA -->
+    <section class="casa" id="casa">
+      <span class="section-index">04 — A Casa</span>
+      <div class="casa__grid">
+        <div class="casa__texto">
+          <h2>Uma esquina,<br /><em>um forno,</em><br />uma vizinhança.</h2>
+          <p>
+            Ocupamos o mesmo casarão de 1940 na esquina da Rua dos Pinheiros desde o primeiro dia.
+            O forno de tijolos foi construído dentro da casa — ele não sai daqui, e nós também não.
+          </p>
+          <p>
+            Não entregamos por aplicativo. O pão espera por você no balcão,
+            e a conversa também.
+          </p>
+        </div>
+        <div class="casa__info">
+          <div class="casa__bloco">
+            <h4>Endereço</h4>
+            <p>Rua dos Pinheiros, 742<br />Pinheiros — São Paulo</p>
+          </div>
+          <div class="casa__bloco">
+            <h4>Horário</h4>
+            <p>Terça a domingo<br />6h às 19h</p>
+          </div>
+          <div class="casa__bloco">
+            <h4>Contato</h4>
+            <p>ola@fornovivo.com.br<br />(11) 3000-0000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__giant" aria-hidden="true">FORNO VIVO</p>
+    <div class="footer__row">
+      <span>© 2026 Forno Vivo</span>
+      <span>Pão é tempo.</span>
+      <a href="#topo" data-magnetic>Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

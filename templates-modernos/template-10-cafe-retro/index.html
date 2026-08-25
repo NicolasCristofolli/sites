@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TORRA — Cafés Especiais desde 1974</title>
+  <meta name="description" content="Torrefação artesanal de cafés especiais brasileiros. Grãos frescos, assinatura mensal e cafeteria própria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <a href="#" class="logo">TORRA<span>☕</span></a>
+    <nav class="nav" id="nav">
+      <a href="#historia">História</a>
+      <a href="#cafes">Nossos cafés</a>
+      <a href="#assinatura">Assinatura</a>
+      <a href="#visite">Visite</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="sun" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </div>
+      <h1 class="hero__title">
+        <span class="reveal">Café torrado</span>
+        <span class="reveal">como <em>antigamente</em>,</span>
+        <span class="reveal">provado como <em>nunca</em>.</span>
+      </h1>
+      <p class="hero__sub reveal">Torrefação familiar desde 1974. Grãos de pequenos produtores
+        do Cerrado e da Mantiqueira, torrados toda terça e enviados no mesmo dia.</p>
+      <div class="hero__actions reveal">
+        <a href="#cafes" class="btn">Ver os cafés</a>
+        <a href="#assinatura" class="btn btn--line">Assinar clube</a>
+      </div>
+      <div class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <defs><path id="circ" d="M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"/></defs>
+          <text><textPath href="#circ">· TORRA · CAFÉS ESPECIAIS · DESDE 1974 </textPath></text>
+        </svg>
+        <b>★</b>
+      </div>
+    </section>
+
+    <!-- ==================== MARQUEE ==================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>torra clara ☀ torra média ☕ torra escura ● notas de chocolate ☀ caramelo ☕ frutas amarelas ●&nbsp;</span>
+        <span>torra clara ☀ torra média ☕ torra escura ● notas de chocolate ☀ caramelo ☕ frutas amarelas ●&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ==================== HISTÓRIA ==================== -->
+    <section class="story" id="historia">
+      <figure class="story__img reveal">
+        <img src="https://picsum.photos/seed/torra-story/800/1000" alt="Torrador de café antigo em funcionamento">
+        <figcaption>Nosso torrador Probat de 1968, ainda na ativa</figcaption>
+      </figure>
+      <div class="story__text">
+        <p class="kicker reveal">Meio século de fumaça boa</p>
+        <h2 class="reveal">Três gerações atrás do <em>mesmo balcão</em></h2>
+        <p class="reveal">O seu Waldemar abriu a TORRA em 1974 com um torrador de segunda mão
+          e uma teimosia: só vender café que ele mesmo tomaria. A neta dele, Júlia,
+          comanda a torra hoje — com mais ciência, a mesma teimosia.</p>
+        <ul class="story__facts reveal">
+          <li><b>52</b><span>anos de torra contínua</span></li>
+          <li><b>14</b><span>produtores parceiros</span></li>
+          <li><b>86+</b><span>pontuação média SCA</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== CAFÉS ==================== -->
+    <section class="coffees" id="cafes">
+      <p class="kicker kicker--center reveal">Torrados toda terça-feira</p>
+      <h2 class="sec-title reveal">Os cafés da <em>estação</em></h2>
+      <div class="coffees__grid">
+        <article class="coffee reveal">
+          <div class="coffee__arch">
+            <img src="https://picsum.photos/seed/torra-c1/600/760" alt="Café Manhã de Feira" loading="lazy">
+          </div>
+          <span class="coffee__roast coffee__roast--light">torra clara</span>
+          <h3>Manhã de Feira</h3>
+          <p>Mantiqueira de Minas · notas de laranja-lima, mel e jasmim</p>
+          <div class="coffee__buy"><b>R$ 42</b><small>250g</small><button class="add" data-name="Manhã de Feira">+</button></div>
+        </article>
+        <article class="coffee reveal">
+          <div class="coffee__arch">
+            <img src="https://picsum.photos/seed/torra-c2/600/760" alt="Café Tarde no Quintal" loading="lazy">
+          </div>
+          <span class="coffee__roast coffee__roast--med">torra média</span>
+          <h3>Tarde no Quintal</h3>
+          <p>Cerrado Mineiro · notas de chocolate ao leite, caramelo e nozes</p>
+          <div class="coffee__buy"><b>R$ 38</b><small>250g</small><button class="add" data-name="Tarde no Quintal">+</button></div>
+        </article>
+        <article class="coffee reveal">
+          <div class="coffee__arch">
+            <img src="https://picsum.photos/seed/torra-c3/600/760" alt="Café Noite de Vinil" loading="lazy">
+          </div>
+          <span class="coffee__roast coffee__roast--dark">torra escura</span>
+          <h3>Noite de Vinil</h3>
+          <p>Alta Mogiana · notas de cacau 70%, melaço e especiarias</p>
+          <div class="coffee__buy"><b>R$ 38</b><small>250g</small><button class="add" data-name="Noite de Vinil">+</button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== ASSINATURA ==================== -->
+    <section class="club" id="assinatura">
+      <div class="club__inner">
+        <div class="club__copy">
+          <p class="kicker reveal">Clube TORRA</p>
+          <h2 class="reveal">Café fresco na sua porta, <em>todo mês</em></h2>
+          <p class="reveal">A Júlia escolhe, torra e escreve um bilhete sobre cada café.
+            Você só decide se quer em grão ou moído.</p>
+          <ul class="club__perks reveal">
+            <li>☕ 2 pacotes de 250g por mês</li>
+            <li>📦 Frete grátis para todo o Brasil</li>
+            <li>🎁 Caneca exclusiva na 3ª entrega</li>
+            <li>✌️ Pausa ou cancela quando quiser</li>
+          </ul>
+          <div class="club__price reveal">
+            <b>R$ 69/mês</b>
+            <a href="#" class="btn">Entrar pro clube</a>
+          </div>
+        </div>
+        <div class="club__visual reveal" aria-hidden="true">
+          <div class="bag">
+            <div class="bag__label">
+              <b>TORRA</b>
+              <span>café especial<br>250g · grão</span>
+              <i>★ 1974 ★</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VISITE ==================== -->
+    <section class="visit" id="visite">
+      <h2 class="sec-title reveal">Passa lá em casa</h2>
+      <div class="visit__grid">
+        <div class="visit__card reveal">
+          <h3>☕ Cafeteria</h3>
+          <p>Rua dos Pinheiros, 274<br>São Paulo — SP</p>
+          <p class="visit__hours">ter a dom · 8h às 19h</p>
+        </div>
+        <div class="visit__card reveal">
+          <h3>🔥 Torrefação</h3>
+          <p>Visitas guiadas com prova<br>todo sábado, 10h</p>
+          <p class="visit__hours">reserve pelo instagram</p>
+        </div>
+        <div class="visit__card reveal">
+          <h3>📬 Contato</h3>
+          <p>oi@torra.cafe<br>(11) 3000-0000</p>
+          <p class="visit__hours">respondemos entre uma torra e outra</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__big" aria-hidden="true">até o próximo café ☕</p>
+    <div class="footer__row">
+      <p>© 2026 TORRA Cafés Especiais</p>
+      <p><a href="#">Instagram</a> · <a href="#">Spotify da cafeteria</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

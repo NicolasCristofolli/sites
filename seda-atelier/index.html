@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEDA — atelier de beleza e estética</title>
+<meta name="description" content="Atelier de beleza e estética de alto padrão. Cortes, design de sobrancelha, extensão de cílios, terapia capilar e cuidados de pele — um cuidado por vez, com hora marcada.">
+<meta name="theme-color" content="#faf6f1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italianno&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- véu de entrada: sobe como um tecido, sem clique -->
+<div class="veil" id="veil" aria-hidden="true"><span class="veil__mark">SEDA</span></div>
+
+<header class="head" id="head">
+  <a class="head__mark" href="#topo" aria-label="SEDA, início">SEDA</a>
+  <nav class="head__nav" aria-label="Seções">
+    <a href="#ritual">O Ritual</a>
+    <a href="#casa">A Casa</a>
+    <a href="#convite">Agendar</a>
+  </nav>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <a href="#ritual"><i>i</i>O Ritual</a>
+  <a href="#casa"><i>ii</i>A Casa</a>
+  <a href="#convite"><i>iii</i>Agendar</a>
+  <p class="menu__foot">contato@seda.atelier · +55 54 90000-0000</p>
+</nav>
+
+<main>
+
+<!-- ═════════════════ ABERTURA ═════════════════ -->
+<section class="open" id="topo">
+  <p class="kick" data-open>Atelier de beleza <span>&amp;</span> estética</p>
+
+  <h1 class="open__title">
+    <span class="line" data-open>O cuidado</span>
+    <span class="line script" data-open>como ritual</span>
+    <span class="line" data-open>de todos os dias.</span>
+  </h1>
+
+  <figure class="open__plate" data-cover>
+    <img src="https://images.unsplash.com/photo-1564141696939-9eb6e957ccfc?auto=format&fit=crop&w=1400&q=80"
+         alt="Cabelos ondulados escuros sobre fundo areia, em luz suave">
+  </figure>
+
+  <p class="open__say" data-open>
+    Um lugar onde o tempo desacelera. Uma pessoa por vez, hora marcada,
+    e a mão de quem faz isso há muito tempo.
+  </p>
+
+  <a class="cue" href="#manifesto"><span class="cue__line" aria-hidden="true"></span>role devagar</a>
+</section>
+
+<!-- ═════════════════ MANIFESTO ═════════════════ -->
+<section class="word" id="manifesto">
+  <p class="word__mark" data-reveal>i — o princípio</p>
+  <h2 class="word__say" data-words>
+    Beleza não se aplica. Se cultiva — em gestos lentos,
+    repetidos, quase <em>silenciosos.</em>
+  </h2>
+  <p class="word__sub" data-reveal>Cinco cuidados, um só ritmo.</p>
+</section>
+
+<div class="thread" aria-hidden="true"><span></span></div>
+
+<!-- ═════════════════ O RITUAL — cinco cuidados ═════════════════ -->
+<section class="ritual" id="ritual">
+
+  <ol class="idx" aria-hidden="true">
+    <li data-idx="corte"><i>i</i>Cortes</li>
+    <li data-idx="brow"><i>ii</i>Sobrancelha</li>
+    <li data-idx="cilios"><i>iii</i>Cílios</li>
+    <li data-idx="capilar"><i>iv</i>Terapia</li>
+    <li data-idx="pele"><i>v</i>Pele</li>
+  </ol>
+
+  <!-- i · CORTES -->
+  <article class="rito rito--a" id="corte">
+    <figure class="rito__plate" data-cover>
+      <img src="https://images.unsplash.com/photo-1711274094763-ff442e4719ef?auto=format&fit=crop&w=1300&q=80"
+           alt="Tesoura aparando as pontas de um cabelo longo e liso" loading="lazy" decoding="async">
+    </figure>
+    <div class="rito__text">
+      <p class="rito__n"><i>i</i><span>Cortes de Cabelo</span></p>
+      <h3 class="rito__name">A forma nasce<br><em>do movimento.</em></h3>
+      <p class="rito__say">
+        Antes da tesoura, a leitura: como o fio cai quando ninguém está olhando,
+        onde o rosto pede espaço, o que a rotina de quem senta na cadeira aguenta.
+        O corte vem depois — e vem curto de conversa, longo de intenção.
+      </p>
+      <ul class="rito__list">
+        <li><span>Corte assinatura</span><i>90 min</i></li>
+        <li><span>Leitura de fio e rosto</span><i>inclusa</i></li>
+        <li><span>Finalização e escova</span><i>45 min</i></li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- ii · SOBRANCELHA -->
+  <article class="rito rito--b" id="brow">
+    <figure class="rito__plate" data-cover>
+      <img src="https://images.unsplash.com/photo-1633276115947-8d35f394a309?auto=format&fit=crop&w=1100&q=80"
+           alt="Close de um olho fechado, sobrancelha desenhada em luz natural" loading="lazy" decoding="async">
+    </figure>
+    <p class="rito__edge" aria-hidden="true">moldura</p>
+    <div class="rito__text">
+      <p class="rito__n"><i>ii</i><span>Design de Sobrancelha</span></p>
+      <h3 class="rito__name">A moldura<br><em>do olhar.</em></h3>
+      <p class="rito__say">
+        Milímetros mudam uma expressão inteira. Trabalhamos com o desenho que já
+        existe no seu rosto — não com o que está na vitrine desta estação.
+        Tirar de menos, quase sempre, é tirar o suficiente.
+      </p>
+      <ul class="rito__list">
+        <li><span>Design com linha</span><i>40 min</i></li>
+        <li><span>Henna e tintura</span><i>50 min</i></li>
+        <li><span>Correção de simetria</span><i>sob consulta</i></li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- iii · CÍLIOS -->
+  <article class="rito rito--c" id="cilios">
+    <figure class="rito__plate" data-cover>
+      <img src="https://images.unsplash.com/photo-1561505445-3d89277edf4c?auto=format&fit=crop&w=1800&q=80"
+           alt="Close de olho com cílios longos e pele iluminada" loading="lazy" decoding="async">
+      <figcaption>
+        <p class="rito__n"><i>iii</i><span>Extensão de Cílios</span></p>
+        <h3 class="rito__name">Leveza que se vê<br><em>de muito perto.</em></h3>
+      </figcaption>
+    </figure>
+    <div class="rito__text">
+      <p class="rito__say">
+        Fio a fio, no ritmo de quem tem tempo — porque o resultado bonito é o que
+        ninguém consegue nomear. Você fecha os olhos por uma hora e meia;
+        nós cuidamos do resto.
+      </p>
+      <ul class="rito__list">
+        <li><span>Clássico fio a fio</span><i>2 h</i></li>
+        <li><span>Volume russo</span><i>2 h 30</i></li>
+        <li><span>Manutenção</span><i>a cada 3 semanas</i></li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- iv · TERAPIA CAPILAR -->
+  <article class="rito rito--d" id="capilar">
+    <figure class="rito__plate" data-cover>
+      <img src="https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?auto=format&fit=crop&w=1200&q=80"
+           alt="Cabelo longo e saudável caindo sobre o ombro, em fundo claro" loading="lazy" decoding="async">
+    </figure>
+    <div class="rito__text">
+      <p class="rito__n"><i>iv</i><span>Terapia Capilar</span></p>
+      <h3 class="rito__name">O cuidado começa<br><em>no couro.</em></h3>
+      <p class="rito__say">
+        Fio bonito é consequência. Antes dele vêm o diagnóstico, a higienização
+        profunda e um protocolo desenhado para a sua história — que inclui o que
+        você comeu, dormiu e atravessou nos últimos meses.
+      </p>
+      <ul class="rito__list">
+        <li><span>Diagnóstico capilar</span><i>30 min</i></li>
+        <li><span>Higienização profunda</span><i>60 min</i></li>
+        <li><span>Reconstrução em protocolo</span><i>4 a 8 sessões</i></li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- v · PELE -->
+  <article class="rito rito--e" id="pele">
+    <div class="rito__text rito__text--top">
+      <p class="rito__n"><i>v</i><span>Cuidados de Pele</span></p>
+      <h3 class="rito__name">A pele<br><em>lembra de tudo.</em></h3>
+    </div>
+    <figure class="rito__plate" data-cover>
+      <img src="https://images.unsplash.com/photo-1643932919088-53349a7c3385?auto=format&fit=crop&w=1300&q=80"
+           alt="Retrato de perfil com pele luminosa, sobre fundo bege neutro" loading="lazy" decoding="async">
+    </figure>
+    <div class="rito__text rito__text--low">
+      <p class="rito__say">
+        Sol, noites curtas, o inverno inteiro. Nosso trabalho é devolver água,
+        barreira e luz — devagar, sem prometer em uma sessão o que só o tempo entrega.
+      </p>
+      <ul class="rito__list">
+        <li><span>Limpeza profunda</span><i>80 min</i></li>
+        <li><span>Protocolo de luminosidade</span><i>60 min</i></li>
+        <li><span>Massagem facial</span><i>40 min</i></li>
+      </ul>
+    </div>
+  </article>
+
+</section>
+
+<!-- ═════════════════ A PAUSA ═════════════════ -->
+<section class="pause" id="pausa">
+  <div class="pause__stage">
+    <figure class="pause__plate">
+      <img src="https://images.unsplash.com/photo-1606259457945-67dc66271ee6?auto=format&fit=crop&w=1900&q=80"
+           alt="Tecido de seda em tom champanhe, dobras suaves" loading="lazy" decoding="async">
+    </figure>
+    <div class="pause__type">
+      <p class="pause__script">respire</p>
+      <p class="pause__say">Entre um cuidado e outro,<br>o silêncio também é tratamento.</p>
+    </div>
+  </div>
+</section>
+
+<div class="thread thread--short" aria-hidden="true"><span></span></div>
+
+<!-- ═════════════════ A CASA ═════════════════ -->
+<section class="house" id="casa">
+  <div class="house__type">
+    <p class="kick" data-reveal>ii — a casa</p>
+    <h2 class="house__title" data-reveal>Uma sala clara,<br><em>poucos espelhos.</em></h2>
+    <p class="house__say" data-reveal>
+      Atendemos uma pessoa por vez, com hora marcada, porque pressa e cuidado
+      não cabem no mesmo lugar. Café passado na hora, música baixa e o cheiro
+      de algodão limpo — o resto é conversa.
+    </p>
+    <ul class="house__notes" data-reveal>
+      <li>Agenda fechada, sem espera</li>
+      <li>Produtos veganos e sem crueldade</li>
+      <li>Retorno de acompanhamento incluso</li>
+    </ul>
+  </div>
+
+  <figure class="house__a" data-cover>
+    <img src="https://images.unsplash.com/photo-1605769574581-b2511b6afa08?auto=format&fit=crop&w=1000&q=80"
+         alt="Rosto com sardas ao lado de uma flor branca" loading="lazy" decoding="async">
+  </figure>
+  <figure class="house__b" data-cover>
+    <img src="https://images.unsplash.com/photo-1710527988568-3040fd125358?auto=format&fit=crop&w=900&q=80"
+         alt="Cachos soltos em luz quente, detalhe" loading="lazy" decoding="async">
+  </figure>
+  <figure class="house__c" data-cover>
+    <img src="https://images.unsplash.com/photo-1619043518800-7f14be467dca?auto=format&fit=crop&w=900&q=80"
+         alt="Detalhe de tecido de seda claro" loading="lazy" decoding="async">
+  </figure>
+</section>
+
+<!-- ═════════════════ O CONVITE ═════════════════ -->
+<section class="invite" id="convite">
+  <p class="invite__script" data-reveal>vamos começar?</p>
+  <h2 class="invite__title" data-reveal>Agende sua visita.</h2>
+  <p class="invite__say" data-reveal>
+    Conte o que você procura — e o que já cansou de tentar.
+    A primeira conversa não custa nada e dura o tempo que precisar.
+  </p>
+
+  <a class="btn" href="https://wa.me/5554900000000" target="_blank" rel="noopener" data-reveal>
+    Falar com o atelier <span aria-hidden="true">→</span>
+  </a>
+
+  <!-- dados de contato: placeholders, trocar pelos reais antes de publicar -->
+  <dl class="invite__dl" data-reveal>
+    <div><dt>Endereço</dt><dd>Alameda das Acácias, 128<br>Jardim Europa</dd></div>
+    <div><dt>Horários</dt><dd>Terça a sexta, 9h — 19h<br>Sábado, 9h — 15h</dd></div>
+    <div><dt>Contato</dt><dd><a href="mailto:contato@seda.atelier">contato@seda.atelier</a><br><a href="https://instagram.com" target="_blank" rel="noopener">@seda.atelier</a></dd></div>
+  </dl>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot__mark">SEDA</p>
+  <p class="foot__script">feito à mão, um cuidado por vez</p>
+  <p class="foot__legal">© <span id="ano">2026</span> SEDA Atelier · Todos os direitos reservados</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

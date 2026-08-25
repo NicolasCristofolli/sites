@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOCO® — Estúdio de Design Brutal</title>
+  <meta name="description" content="Estúdio de design que não pede desculpas. Branding, web e motion com impacto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <a href="#" class="logo">BLOCO<sup>®</sup></a>
+    <nav class="nav" id="nav">
+      <a href="#trabalhos" class="nav__link">Trabalhos</a>
+      <a href="#servicos" class="nav__link">Serviços</a>
+      <a href="#manifesto" class="nav__link">Manifesto</a>
+      <a href="#contato" class="nav__link nav__link--cta">Fale conosco ↗</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="hero__badge" data-tilt>★ DESDE 2019</div>
+      <h1 class="hero__title">
+        <span class="line"><span class="word">DESIGN</span></span>
+        <span class="line"><span class="word outline">SEM</span> <span class="word">MEDO</span></span>
+        <span class="line"><span class="word">DO <span class="accent">RUÍDO</span></span></span>
+      </h1>
+      <p class="hero__sub">Somos um estúdio de branding e web que troca o “bonitinho”
+        pelo <strong>inesquecível</strong>. Se sua marca sussurra, a gente ensina ela a gritar.</p>
+      <div class="hero__actions">
+        <a href="#trabalhos" class="btn btn--solid">Ver projetos</a>
+        <a href="#contato" class="btn btn--ghost">Orçamento rápido</a>
+      </div>
+      <div class="hero__sticker" aria-hidden="true">100%<br>HANDMADE</div>
+    </section>
+
+    <!-- ==================== MARQUEE ==================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>BRANDING ✦ WEB DESIGN ✦ MOTION ✦ TIPOGRAFIA ✦ DIREÇÃO DE ARTE ✦&nbsp;</span>
+        <span>BRANDING ✦ WEB DESIGN ✦ MOTION ✦ TIPOGRAFIA ✦ DIREÇÃO DE ARTE ✦&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ==================== TRABALHOS ==================== -->
+    <section class="works" id="trabalhos">
+      <div class="section-head reveal">
+        <h2 class="section-head__title">Trabalhos<span class="accent">.</span></h2>
+        <p class="section-head__count">(2019 — 2026)</p>
+      </div>
+      <div class="works__grid">
+        <article class="card reveal" data-tilt>
+          <div class="card__img card__img--a">
+            <img src="https://picsum.photos/seed/bloco1/900/700" alt="Projeto Furiosa Café" loading="lazy">
+          </div>
+          <div class="card__meta">
+            <h3>Furiosa Café</h3>
+            <span class="tag">Branding</span>
+          </div>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__img card__img--b">
+            <img src="https://picsum.photos/seed/bloco2/900/700" alt="Projeto Trama Fest" loading="lazy">
+          </div>
+          <div class="card__meta">
+            <h3>Trama Fest</h3>
+            <span class="tag">Web + Motion</span>
+          </div>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__img card__img--c">
+            <img src="https://picsum.photos/seed/bloco3/900/700" alt="Projeto Vulto Skate" loading="lazy">
+          </div>
+          <div class="card__meta">
+            <h3>Vulto Skate Co.</h3>
+            <span class="tag">Identidade</span>
+          </div>
+        </article>
+        <article class="card reveal" data-tilt>
+          <div class="card__img card__img--d">
+            <img src="https://picsum.photos/seed/bloco4/900/700" alt="Projeto Ruído Records" loading="lazy">
+          </div>
+          <div class="card__meta">
+            <h3>Ruído Records</h3>
+            <span class="tag">Direção de arte</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== SERVIÇOS ==================== -->
+    <section class="services" id="servicos">
+      <div class="section-head section-head--invert reveal">
+        <h2 class="section-head__title">O que fazemos<span class="accent">.</span></h2>
+      </div>
+      <ul class="services__list">
+        <li class="service reveal">
+          <span class="service__num">01</span>
+          <h3 class="service__name">Branding</h3>
+          <p class="service__desc">Identidades que ocupam espaço na memória. Logo, sistema visual, voz e aplicações.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">02</span>
+          <h3 class="service__name">Web Design</h3>
+          <p class="service__desc">Sites que as pessoas lembram de ter visitado. Design + código, sem template genérico.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">03</span>
+          <h3 class="service__name">Motion</h3>
+          <p class="service__desc">Animação e vídeo para marcas que se mexem. Reels, vinhetas, micro-interações.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">04</span>
+          <h3 class="service__name">Tipografia</h3>
+          <p class="service__desc">Letras sob medida. Fontes display exclusivas e lettering para campanhas.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==================== MANIFESTO ==================== -->
+    <section class="manifesto" id="manifesto">
+      <blockquote class="manifesto__quote reveal">
+        “Neutro é o que a gente chama de design
+        que <span class="scribble">ninguém</span> vai lembrar amanhã.”
+      </blockquote>
+      <div class="manifesto__stats">
+        <div class="stat reveal"><strong data-count="87">0</strong><span>projetos gritando por aí</span></div>
+        <div class="stat reveal"><strong data-count="14">0</strong><span>prêmios de design</span></div>
+        <div class="stat reveal"><strong data-count="6">0</strong><span>anos de barulho</span></div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section class="contact" id="contato">
+      <h2 class="contact__title reveal">
+        <span>TOPA FAZER</span>
+        <span class="outline">BARULHO?</span>
+      </h2>
+      <a href="mailto:oi@bloco.studio" class="contact__mail reveal" data-tilt>oi@bloco.studio ↗</a>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>© 2026 BLOCO® Estúdio — São Paulo, BR</p>
+    <div class="footer__social">
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

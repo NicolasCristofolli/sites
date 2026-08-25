@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serra & Almeida — Advocacia</title>
+  <meta name="description" content="Advocacia de precisão em São Paulo. Direito empresarial, família e sucessões. Atendimento reservado, um caso por vez." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#topo" class="nav__logo">Serra <span>&amp;</span> Almeida</a>
+    <nav class="nav__menu">
+      <a href="#escritorio">O Escritório</a>
+      <a href="#empresas">Para Empresas</a>
+      <a href="#voce">Para Você</a>
+      <a href="#areas">Áreas</a>
+      <a href="#depoimentos">Depoimentos</a>
+    </nav>
+    <div class="nav__acoes">
+      <a href="tel:+551130005500" class="nav__fone">+55 11 3000-5500</a>
+      <a href="#contato" class="btn btn--outline" data-magnetic>Agendar conversa</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="menu-mobile" id="menu-mobile" aria-hidden="true">
+    <a href="#escritorio">O Escritório</a>
+    <a href="#empresas">Para Empresas</a>
+    <a href="#voce">Para Você</a>
+    <a href="#areas">Áreas</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+    <span class="menu-mobile__fone">+55 11 3000-5500</span>
+  </div>
+
+  <main id="topo">
+
+    <!-- HERO (carrossel de taglines) -->
+    <section class="hero">
+      <div class="hero__fundo" aria-hidden="true"></div>
+      <div class="hero__veu" aria-hidden="true"></div>
+
+      <div class="hero__conteudo">
+        <p class="hero__eyebrow">Advocacia — São Paulo · desde 1998</p>
+
+        <div class="hero__slides" id="hero-slides">
+          <h1 class="hero__frase is-ativa">O rigor de defender<br /><em>o que levou uma vida para construir.</em></h1>
+          <h1 class="hero__frase">Discrição não é detalhe.<br /><em>É método.</em></h1>
+          <h1 class="hero__frase">Cada caso, um sócio à frente.<br /><em>Do início ao fim.</em></h1>
+        </div>
+
+        <div class="hero__ctas">
+          <a href="#empresas" class="btn btn--cheio" data-magnetic>Para empresas</a>
+          <a href="#voce" class="btn btn--vazado" data-magnetic>Para você e sua família</a>
+        </div>
+      </div>
+
+      <div class="hero__indicadores" id="hero-dots" aria-hidden="true">
+        <span class="is-ativo"></span><span></span><span></span>
+      </div>
+
+      <div class="hero__rodape">
+        <span>OAB/SP 12.345</span>
+        <span class="hero__scroll">role para conhecer <i>↓</i></span>
+        <span>Itaim Bibi — SP</span>
+      </div>
+    </section>
+
+    <!-- POSICIONAMENTO -->
+    <section class="posicionamento" id="escritorio">
+      <p class="kicker">O Escritório</p>
+      <h2 class="posicionamento__titulo">
+        Advocacia de precisão,<br /><em>no coração de São Paulo.</em>
+      </h2>
+      <p class="posicionamento__texto">
+        Há mais de vinte e cinco anos, o Serra &amp; Almeida atende um número deliberadamente
+        pequeno de clientes. Não somos um escritório de volume: cada caso é conduzido
+        pessoalmente por um dos sócios, com uma equipe dedicada e um único compromisso —
+        a estratégia certa, não a mais rápida.
+      </p>
+      <div class="posicionamento__numeros">
+        <div class="num"><b data-count="27">0</b><span>anos de atuação</span></div>
+        <div class="num"><b data-count="9">0</b><span>advogados, apenas</span></div>
+        <div class="num"><b data-count="2">0</b><span>sócios fundadores à frente</span></div>
+      </div>
+    </section>
+
+    <!-- PARA EMPRESAS (imagem esq / texto dir) -->
+    <section class="dupla" id="empresas">
+      <div class="dupla__visual dupla__visual--empresas" aria-hidden="true">
+        <span class="dupla__selo">§</span>
+      </div>
+      <div class="dupla__conteudo">
+        <p class="kicker">Para Empresas</p>
+        <h2>Da mesa de negociação<br /><em>ao tribunal, se preciso.</em></h2>
+        <p>
+          Assessoria societária, contratos complexos, fusões e aquisições e contencioso
+          estratégico. Atuamos antes do conflito — estruturando operações para que o
+          litígio nunca seja necessário — e dentro dele, quando for inevitável.
+        </p>
+        <ul class="dupla__lista">
+          <li>Societário e M&amp;A</li>
+          <li>Contratos e negociações</li>
+          <li>Contencioso cível estratégico</li>
+          <li>Arbitragem nacional e internacional</li>
+        </ul>
+        <a href="#contato" class="link-seta">Conversar sobre sua empresa <i>→</i></a>
+      </div>
+    </section>
+
+    <!-- PARA VOCÊ (texto esq / imagem dir — espelhado) -->
+    <section class="dupla dupla--invertida" id="voce">
+      <div class="dupla__visual dupla__visual--familia" aria-hidden="true">
+        <span class="dupla__selo">❧</span>
+      </div>
+      <div class="dupla__conteudo">
+        <p class="kicker">Para Você e Sua Família</p>
+        <h2>Patrimônio e família<br /><em>tratados no mesmo silêncio.</em></h2>
+        <p>
+          Planejamento sucessório, holdings familiares, inventários, divórcios e proteção
+          patrimonial. Assuntos que pedem tanto técnica quanto tato — e que aqui são
+          conduzidos sem ruído, sem exposição e sem pressa.
+        </p>
+        <ul class="dupla__lista">
+          <li>Planejamento sucessório e holdings</li>
+          <li>Inventários e testamentos</li>
+          <li>Direito de família</li>
+          <li>Proteção patrimonial</li>
+        </ul>
+        <a href="#contato" class="link-seta">Conversar reservadamente <i>→</i></a>
+      </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO (grade — no lugar da galeria) -->
+    <section class="areas" id="areas">
+      <p class="kicker kicker--centro">Áreas de Atuação</p>
+      <h2 class="areas__titulo">Poucas áreas. <em>Domínio total.</em></h2>
+      <div class="areas__grade">
+        <article class="area"><span>01</span><h3>Societário &amp; M&amp;A</h3><p>Estruturação, due diligence e execução de operações societárias.</p></article>
+        <article class="area"><span>02</span><h3>Contencioso Estratégico</h3><p>Litígios de alta complexidade, conduzidos com tese e paciência.</p></article>
+        <article class="area"><span>03</span><h3>Arbitragem</h3><p>Câmaras nacionais e internacionais, em português e inglês.</p></article>
+        <article class="area"><span>04</span><h3>Sucessões &amp; Holdings</h3><p>O patrimônio de uma geração chegando inteiro à próxima.</p></article>
+        <article class="area"><span>05</span><h3>Família</h3><p>Divórcios e pactos conduzidos com a discrição que a família exige.</p></article>
+        <article class="area"><span>06</span><h3>Imobiliário</h3><p>Operações estruturadas, incorporação e contencioso possessório.</p></article>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos" id="depoimentos">
+      <p class="kicker kicker--centro">Depoimentos</p>
+      <h2 class="depoimentos__titulo">A confiança <em>não se anuncia.</em></h2>
+      <div class="depoimentos__grade">
+        <figure class="depoimento">
+          <blockquote>“Conduziram a venda da empresa que meu pai fundou como se fosse deles. Cada vírgula do contrato tinha um porquê.”</blockquote>
+          <figcaption><b>R. M.</b><span>Empresário — setor industrial</span></figcaption>
+        </figure>
+        <figure class="depoimento">
+          <blockquote>“Um inventário que se arrastava havia seis anos foi resolvido em onze meses. Sem uma única audiência desnecessária.”</blockquote>
+          <figcaption><b>C. F.</b><span>Cliente — sucessões</span></figcaption>
+        </figure>
+        <figure class="depoimento">
+          <blockquote>“Nunca precisei ligar duas vezes. O sócio responde, o sócio aparece, o sócio decide. Isso não tem preço.”</blockquote>
+          <figcaption><b>A. T.</b><span>Diretora jurídica</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- STATEMENT (banner imersivo) -->
+    <section class="statement">
+      <div class="statement__fundo" aria-hidden="true"></div>
+      <div class="statement__conteudo">
+        <h2>Seu caso, tratado com a<br /><em>seriedade que ele merece.</em></h2>
+        <p>Atendemos por indicação e por agenda. A primeira conversa é sempre com um sócio.</p>
+        <a href="#contato" class="btn btn--claro" data-magnetic>Agendar uma conversa</a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+      <div class="contato__coluna">
+        <p class="kicker">Contato</p>
+        <h2>Vamos começar<br /><em>pela sua versão dos fatos.</em></h2>
+        <div class="contato__dados">
+          <div><h4>Endereço</h4><p>Av. Brig. Faria Lima, 3400 — 12º andar<br />Itaim Bibi, São Paulo</p></div>
+          <div><h4>Telefone</h4><p>+55 11 3000-5500</p></div>
+          <div><h4>E-mail</h4><p>contato@serraealmeida.adv.br</p></div>
+          <div><h4>Atendimento</h4><p>Segunda a sexta, 9h–19h<br />somente com hora marcada</p></div>
+        </div>
+      </div>
+      <form class="contato__form" id="form-contato" novalidate>
+        <label>
+          <span>Nome</span>
+          <input type="text" name="nome" required autocomplete="name" />
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          <span>Assunto</span>
+          <select name="assunto">
+            <option>Empresarial / Societário</option>
+            <option>Família / Sucessões</option>
+            <option>Contencioso / Arbitragem</option>
+            <option>Outro</option>
+          </select>
+        </label>
+        <label>
+          <span>Mensagem <small>(o essencial basta — os detalhes ficam para a conversa)</small></span>
+          <textarea name="mensagem" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn btn--cheio btn--largo" data-magnetic>Enviar mensagem</button>
+        <p class="contato__nota">Suas informações são tratadas sob sigilo profissional desde o primeiro contato.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__topo">
+      <a href="#topo" class="footer__logo">Serra <span>&amp;</span> Almeida</a>
+      <nav class="footer__menu">
+        <a href="#escritorio">O Escritório</a>
+        <a href="#empresas">Para Empresas</a>
+        <a href="#voce">Para Você</a>
+        <a href="#areas">Áreas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="footer__base">
+      <span>© 2026 Serra &amp; Almeida Advogados — OAB/SP 12.345</span>
+      <span>Política de privacidade · Aviso legal</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

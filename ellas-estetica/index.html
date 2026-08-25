@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ellas · Beleza &amp; Estética</title>
+<meta name="description" content="Ellas Beleza & Estética — cortes, design de sobrancelhas, extensão de cílios, terapia capilar e cuidados de pele. Um ritual calmo para revelar a sua beleza natural." />
+<meta name="theme-color" content="#F6F1EC" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ellas · Beleza &amp; Estética" />
+<meta property="og:description" content="Um ritual calmo para revelar a beleza que já é sua." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23F6F1EC'/><text y='72' x='50' text-anchor='middle' font-family='Georgia,serif' font-size='68' fill='%23A8845C'>e</text></svg>" />
+
+<script>
+  /* Marca que há JS (estados iniciais de animação) e garante que a página
+     apareça mesmo se o CDN do GSAP falhar. */
+  document.documentElement.classList.add('js');
+  setTimeout(function(){
+    if(!window.__ellasReady) document.documentElement.classList.add('no-motion');
+  }, 3500);
+</script>
+</head>
+
+<body>
+
+<!-- ░░ LOADER ░░ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <span class="loader__mark">Ellas</span>
+    <span class="loader__sub">beleza &amp; estética</span>
+    <span class="loader__bar"><i></i></span>
+  </div>
+</div>
+
+<!-- ░░ CURSOR ░░ -->
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<!-- ░░ NAV ░░ -->
+<header class="nav" id="nav">
+  <a href="#topo" class="nav__brand" aria-label="Ellas, início">
+    <span class="nav__brandName">Ellas</span>
+    <span class="nav__brandSub">beleza &amp; estética</span>
+  </a>
+
+  <nav class="nav__links" aria-label="Navegação principal">
+    <a href="#servicos" data-magnetic>Serviços</a>
+    <a href="#atmosfera" data-magnetic>Atmosfera</a>
+    <a href="#vozes" data-magnetic>Vozes</a>
+    <a href="#contato" data-magnetic>Contato</a>
+  </nav>
+
+  <!-- TROQUE o número abaixo pelo WhatsApp real da clínica (formato 55DDDNÚMERO) -->
+  <a class="nav__cta" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Ellas." target="_blank" rel="noopener" data-magnetic>
+    <span>Agendar</span>
+  </a>
+
+  <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- ░░ MENU MOBILE ░░ -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__list">
+    <a href="#servicos"><span>Serviços</span></a>
+    <a href="#atmosfera"><span>Atmosfera</span></a>
+    <a href="#vozes"><span>Vozes</span></a>
+    <a href="#contato"><span>Contato</span></a>
+  </div>
+  <div class="menu__foot">
+    <p>Seg — Sáb · 09h às 19h</p>
+    <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+  </div>
+</div>
+
+<main id="topo">
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero">
+    <div class="hero__grid">
+
+      <div class="hero__text">
+        <p class="eyebrow" data-anim="fade">
+          <span class="eyebrow__dot"></span> Estética avançada &amp; beleza
+        </p>
+
+        <h1 class="hero__title" data-lines>
+          Revelar a beleza <em>que já é sua</em> — com calma, cuidado e tempo.
+        </h1>
+
+        <p class="hero__lead" data-anim="fade" data-delay="0.15">
+          Na Ellas, cada procedimento é conduzido como um ritual: luz suave, mãos treinadas
+          e o silêncio necessário para você voltar a se reconhecer no espelho.
+        </p>
+
+        <div class="hero__actions" data-anim="fade" data-delay="0.25">
+          <a class="btn btn--solid" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Ellas." target="_blank" rel="noopener" data-magnetic>
+            <span class="btn__label">Agendar horário</span>
+            <span class="btn__fill" aria-hidden="true"></span>
+          </a>
+          <a class="btn btn--ghost" href="#servicos" data-magnetic><span class="btn__label">Ver serviços</span></a>
+        </div>
+      </div>
+
+      <figure class="hero__figure" data-reveal>
+        <div class="media" data-parallax="0.12">
+          <img src="https://images.unsplash.com/photo-1605769574581-b2511b6afa08?auto=format&fit=crop&w=1200&q=80"
+               alt="Rosto feminino em luz natural ao lado de uma flor branca" width="1200" height="1500" />
+        </div>
+        <figcaption>Pele viva, traço leve, nada de excessos.</figcaption>
+      </figure>
+
+      <figure class="hero__figureSmall" data-reveal data-delay="0.2">
+        <div class="media" data-parallax="-0.08">
+          <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?auto=format&fit=crop&w=900&q=80"
+               alt="Potinho de creme com pincel dourado sobre fundo claro" width="900" height="700" loading="lazy" />
+        </div>
+      </figure>
+
+    </div>
+
+    <div class="hero__bottom">
+      <a href="#manifesto" class="scrollcue" aria-label="Rolar para baixo">
+        <span class="scrollcue__line"><i></i></span>
+        <span class="scrollcue__label">role devagar</span>
+      </a>
+      <p class="hero__meta">Atendimento com hora marcada · Seg — Sáb</p>
+    </div>
+  </section>
+
+  <!-- ░░ MARQUEE ░░ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Cortes &amp; Styling <i>·</i> Design de Sobrancelhas <i>·</i> Extensão de Cílios <i>·</i> Terapia Capilar <i>·</i> Cuidados de Pele <i>·</i></span>
+      <span>Cortes &amp; Styling <i>·</i> Design de Sobrancelhas <i>·</i> Extensão de Cílios <i>·</i> Terapia Capilar <i>·</i> Cuidados de Pele <i>·</i></span>
+    </div>
+  </div>
+
+  <!-- ░░ MANIFESTO ░░ -->
+  <section class="manifesto" id="manifesto">
+    <p class="section__index" data-anim="fade">(01) — Filosofia</p>
+
+    <div class="manifesto__grid">
+      <blockquote class="manifesto__quote" data-lines>
+        Acreditamos em beleza que não grita. Aquela que aparece quando a pele descansa,
+        quando o corte respeita o movimento do cabelo, quando o olhar fica <em>simplesmente
+        mais seu</em>.
+      </blockquote>
+
+      <div class="manifesto__side">
+        <figure class="manifesto__img" data-reveal>
+          <div class="media" data-parallax="0.1">
+            <img src="https://images.unsplash.com/photo-1560264641-1b5191cc63e2?auto=format&fit=crop&w=900&q=80"
+                 alt="Cabelo ondulado com brilho natural em luz quente" width="900" height="1200" loading="lazy" />
+          </div>
+        </figure>
+        <p class="manifesto__note" data-anim="fade">
+          Um único atendimento por vez em cada sala. Sem pressa, sem fila, sem ruído —
+          só você e a profissional que cuida de você.
+        </p>
+      </div>
+    </div>
+
+    <ul class="stats">
+      <li data-anim="fade"><strong>+12</strong><span>anos cuidando de mulheres</span></li>
+      <li data-anim="fade" data-delay="0.1"><strong>+9k</strong><span>atendimentos realizados</span></li>
+      <li data-anim="fade" data-delay="0.2"><strong>4.9</strong><span>avaliação média das clientes</span></li>
+      <li data-anim="fade" data-delay="0.3"><strong>100%</strong><span>protocolos com hora marcada</span></li>
+    </ul>
+  </section>
+
+  <!-- ░░ SERVIÇOS ░░ -->
+  <section class="services" id="servicos">
+    <header class="services__head">
+      <p class="section__index" data-anim="fade">(02) — Serviços</p>
+      <h2 class="section__title" data-lines>O que fazemos <em>com as mãos</em></h2>
+      <p class="section__lead" data-anim="fade" data-delay="0.15">
+        Cinco especialidades, um mesmo princípio: técnica precisa e resultado natural,
+        pensado para o seu rosto e para a sua rotina.
+      </p>
+    </header>
+
+    <div class="services__grid">
+
+      <a class="card card--tall" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Cortes%20%26%20Styling%20na%20Ellas." target="_blank" rel="noopener" data-card data-reveal>
+        <div class="card__media"><div class="media">
+          <img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?auto=format&fit=crop&w=1000&q=80"
+               alt="Corte curto feminino em tom prateado, perfil" width="1000" height="1400" loading="lazy" />
+        </div></div>
+        <div class="card__body">
+          <span class="card__num">01</span>
+          <h3>Cortes &amp; Styling</h3>
+          <p>Leitura de rosto, textura e rotina antes da tesoura tocar o fio. O corte que cai bem no dia seguinte, não só no espelho da sala.</p>
+          <span class="card__link">agendar <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+      <a class="card card--wide" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Design%20de%20Sobrancelhas%20na%20Ellas." target="_blank" rel="noopener" data-card data-reveal data-delay="0.1">
+        <div class="card__media"><div class="media">
+          <img src="https://images.unsplash.com/photo-1565113521364-cb12a3ec0f28?auto=format&fit=crop&w=1200&q=80"
+               alt="Detalhe de sobrancelha desenhada em pele iluminada" width="1200" height="800" loading="lazy" />
+        </div></div>
+        <div class="card__body">
+          <span class="card__num">02</span>
+          <h3>Design de Sobrancelhas</h3>
+          <p>Visagismo, henna e correção de falhas — respeitando o desenho que já existe no seu rosto.</p>
+          <span class="card__link">agendar <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+      <a class="card card--offset" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Extens%C3%A3o%20de%20C%C3%ADlios%20na%20Ellas." target="_blank" rel="noopener" data-card data-reveal>
+        <div class="card__media"><div class="media">
+          <img src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?auto=format&fit=crop&w=1000&q=80"
+               alt="Aplicação de extensão de cílios fio a fio" width="1000" height="1300" loading="lazy" />
+        </div></div>
+        <div class="card__body">
+          <span class="card__num">03</span>
+          <h3>Extensão de Cílios</h3>
+          <p>Fio a fio, volume brasileiro ou efeito rímel. Curvatura escolhida a partir do formato do seu olho.</p>
+          <span class="card__link">agendar <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+      <a class="card" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Terapia%20Capilar%20na%20Ellas." target="_blank" rel="noopener" data-card data-reveal data-delay="0.1">
+        <div class="card__media"><div class="media">
+          <img src="https://images.unsplash.com/photo-1706795034830-de41aee06afa?auto=format&fit=crop&w=1000&q=80"
+               alt="Massagem no couro cabeludo durante terapia capilar" width="1000" height="1250" loading="lazy" />
+        </div></div>
+        <div class="card__body">
+          <span class="card__num">04</span>
+          <h3>Terapia Capilar</h3>
+          <p>Diagnóstico do couro cabeludo, protocolos de reequilíbrio e massagem terapêutica para queda, oleosidade e ressecamento.</p>
+          <span class="card__link">agendar <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+      <a class="card card--last" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Cuidados%20de%20Pele%20na%20Ellas." target="_blank" rel="noopener" data-card data-reveal data-delay="0.15">
+        <div class="card__media"><div class="media">
+          <img src="https://images.unsplash.com/photo-1679583156493-a87b85801837?auto=format&fit=crop&w=1200&q=80"
+               alt="Mulher aplicando produto de skincare no rosto" width="1200" height="900" loading="lazy" />
+        </div></div>
+        <div class="card__body">
+          <span class="card__num">05</span>
+          <h3>Cuidados de Pele</h3>
+          <p>Limpeza profunda, peelings suaves e protocolos de viço com ativos sob medida — construídos em consulta, nunca em pacote pronto.</p>
+          <span class="card__link">agendar <i aria-hidden="true">→</i></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ░░ ATMOSFERA ░░ -->
+  <section class="atmos" id="atmosfera">
+    <div class="atmos__head">
+      <p class="section__index" data-anim="fade">(03) — A atmosfera Ellas</p>
+      <h2 class="section__title section__title--wide" data-lines>
+        Um lugar onde o tempo <em>desacelera</em>
+      </h2>
+    </div>
+
+    <div class="atmos__stage">
+      <figure class="atmos__big" data-reveal>
+        <div class="media" data-parallax="0.14">
+          <img src="https://images.unsplash.com/photo-1695527081728-e3a42f0ce261?auto=format&fit=crop&w=1600&q=80"
+               alt="Interior claro e amplo do salão, com plantas e luz natural" width="1600" height="1100" loading="lazy" />
+        </div>
+      </figure>
+
+      <div class="atmos__notes">
+        <div class="note" data-anim="fade">
+          <span class="note__num">i.</span>
+          <h4>Acolhimento</h4>
+          <p>Você chega, senta, respira. Chá quente, música baixa e uma conversa sem pressa antes de qualquer procedimento.</p>
+        </div>
+        <div class="note" data-anim="fade" data-delay="0.1">
+          <span class="note__num">ii.</span>
+          <h4>Segurança</h4>
+          <p>Materiais esterilizados, descartáveis individuais e profissionais certificadas em cada especialidade.</p>
+        </div>
+        <div class="note" data-anim="fade" data-delay="0.2">
+          <span class="note__num">iii.</span>
+          <h4>Ritual</h4>
+          <p>Do primeiro toque ao espelho final, cada etapa foi desenhada para relaxar o corpo — não só embelezar.</p>
+        </div>
+      </div>
+
+      <figure class="atmos__small" data-reveal data-delay="0.15">
+        <div class="media" data-parallax="-0.1">
+          <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1000&q=80"
+               alt="Ambiente de spa com madeira, plantas e luz difusa" width="1000" height="750" loading="lazy" />
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ░░ DEPOIMENTOS ░░ -->
+  <section class="voices" id="vozes">
+    <p class="section__index" data-anim="fade">(04) — Vozes</p>
+
+    <div class="voices__stage" data-voices>
+      <figure class="voice is-active">
+        <blockquote>“Saí de lá com a sensação de ter sido cuidada, não atendida. É outra categoria de serviço.”</blockquote>
+        <figcaption>Marina R. <span>· cliente há 3 anos</span></figcaption>
+      </figure>
+      <figure class="voice">
+        <blockquote>“Meus cílios ficaram naturais do jeito que eu sempre pedi e nunca tinham feito. Ninguém percebe — todo mundo elogia.”</blockquote>
+        <figcaption>Carolina M. <span>· extensão de cílios</span></figcaption>
+      </figure>
+      <figure class="voice">
+        <blockquote>“Tratei a queda de cabelo por meses sem resultado. Aqui fizeram diagnóstico antes de vender qualquer coisa.”</blockquote>
+        <figcaption>Juliana P. <span>· terapia capilar</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="voices__dots" aria-hidden="true">
+      <button class="is-active" type="button" aria-label="Depoimento 1"></button>
+      <button type="button" aria-label="Depoimento 2"></button>
+      <button type="button" aria-label="Depoimento 3"></button>
+    </div>
+  </section>
+
+  <!-- ░░ CTA ░░ -->
+  <section class="cta" id="contato">
+    <div class="cta__inner">
+      <p class="section__index" data-anim="fade">(05) — Agende</p>
+
+      <h2 class="cta__title" data-lines>
+        Reserve o seu tempo <em>de cuidar de si</em>
+      </h2>
+
+      <p class="cta__lead" data-anim="fade" data-delay="0.15">
+        Conte o que você procura pelo WhatsApp. Respondemos com o horário disponível,
+        a duração do procedimento e tudo o que você precisa saber antes de chegar.
+      </p>
+
+      <a class="magnet" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Ellas." target="_blank" rel="noopener" data-magnetic data-anim="fade" data-delay="0.25">
+        <span class="magnet__bg" aria-hidden="true"></span>
+        <span class="magnet__label">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.19-.53.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.47-.01c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/>
+          </svg>
+          Agendar pelo WhatsApp
+        </span>
+      </a>
+
+      <p class="cta__fine" data-anim="fade" data-delay="0.3">Resposta em até 1 hora no horário comercial</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#topo" class="footer__brand">Ellas<span>beleza &amp; estética</span></a>
+
+    <div class="footer__cols">
+      <div>
+        <h5>Endereço</h5>
+        <p>Rua Exemplo, 000 — Centro<br />Sua Cidade · UF</p>
+      </div>
+      <div>
+        <h5>Horários</h5>
+        <p>Seg — Sex · 09h às 19h<br />Sábado · 09h às 16h</p>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <p>
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a><br />
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a><br />
+          <a href="mailto:contato@ellasestetica.com.br">contato@ellasestetica.com.br</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>© <span id="year">2026</span> Ellas Beleza &amp; Estética</p>
+    <p>Fotografias de referência: Unsplash</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

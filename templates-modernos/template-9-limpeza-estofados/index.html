@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SofáNovo — Limpeza de Estofados em Domicílio</title>
+  <meta name="description" content="Higienização profissional de sofás, colchões e tapetes na sua casa. Orçamento em 2 minutos pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#" class="whats-float" aria-label="Chamar no WhatsApp">💬</a>
+
+  <!-- ==================== TOPBAR + HEADER ==================== -->
+  <div class="topbar">⚡ Agenda da semana quase cheia — garanta seu horário hoje</div>
+  <header class="header">
+    <a href="#" class="logo">Sofá<span>Novo</span></a>
+    <nav class="nav" id="nav">
+      <a href="#como">Como funciona</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#avaliacoes">Avaliações</a>
+    </nav>
+    <a href="#orcamento" class="header__cta">Orçamento grátis</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="hero__copy">
+        <h1 class="hero__title reveal">Seu sofá <mark>novo de novo</mark> em 3 horas.</h1>
+        <p class="hero__sub reveal">Higienização profunda com extratora industrial e produtos
+          hipoalergênicos — na sua casa, sem sujeira e com resultado na hora.</p>
+        <ul class="hero__checks reveal">
+          <li>✓ Remove manchas, ácaros e odores</li>
+          <li>✓ Seca em até 4 horas</li>
+          <li>✓ Garantia de satisfação ou reembolso</li>
+        </ul>
+        <div class="hero__actions reveal">
+          <a href="#orcamento" class="btn-big">Quero meu orçamento →</a>
+          <p class="hero__micro">Resposta em até 5 min no horário comercial</p>
+        </div>
+      </div>
+      <figure class="hero__figure reveal">
+        <img src="https://picsum.photos/seed/sofa-hero/900/720" alt="Sofá claro limpo em sala iluminada">
+        <figcaption class="hero__stamp">+2.300 sofás<br>renovados ★ 4,9</figcaption>
+      </figure>
+    </section>
+
+    <!-- ==================== COMO FUNCIONA ==================== -->
+    <section class="steps" id="como">
+      <h2 class="sec-title reveal">Simples assim:</h2>
+      <ol class="steps__list">
+        <li class="step reveal">
+          <span class="step__num">1</span>
+          <h3>Você chama no WhatsApp</h3>
+          <p>Manda uma foto do estofado e recebe o orçamento fechado em minutos. Sem visita, sem surpresa.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">2</span>
+          <h3>A gente vai até você</h3>
+          <p>Equipe uniformizada, horário pontual e proteção total do ambiente antes de começar.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">3</span>
+          <h3>Sofá novo de novo</h3>
+          <p>Extração profunda, neutralização de odores e acabamento. Você confere tudo antes de pagar.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ==================== SERVIÇOS/PREÇOS ==================== -->
+    <section class="services" id="servicos">
+      <h2 class="sec-title reveal">O que limpamos <span class="light">(e quanto custa)</span></h2>
+      <div class="services__grid">
+        <article class="svc reveal">
+          <span class="svc__emoji">🛋️</span>
+          <h3>Sofá 2/3 lugares</h3>
+          <p class="svc__price">a partir de <b>R$ 180</b></p>
+          <p class="svc__desc">Higienização completa com extratora + impermeabilização opcional.</p>
+        </article>
+        <article class="svc svc--pop reveal">
+          <span class="svc__tag">MAIS PEDIDO</span>
+          <span class="svc__emoji">🛏️</span>
+          <h3>Colchão casal/queen</h3>
+          <p class="svc__price">a partir de <b>R$ 160</b></p>
+          <p class="svc__desc">Remove ácaros e manchas — ideal para quem tem alergia ou pets.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__emoji">🪑</span>
+          <h3>Cadeiras & poltronas</h3>
+          <p class="svc__price">a partir de <b>R$ 45</b><small>/unid.</small></p>
+          <p class="svc__desc">Jogo de jantar, poltrona de amamentação, cadeira gamer.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__emoji">🚗</span>
+          <h3>Interior de carro</h3>
+          <p class="svc__price">a partir de <b>R$ 250</b></p>
+          <p class="svc__desc">Bancos, teto, carpete e porta-malas. Carro cheirando a novo.</p>
+        </article>
+      </div>
+      <p class="services__note reveal">💧 Todos os serviços incluem produtos hipoalergênicos e certificado de higienização.</p>
+    </section>
+
+    <!-- ==================== PROVA SOCIAL ==================== -->
+    <section class="reviews" id="avaliacoes">
+      <h2 class="sec-title reveal">Quem contratou, recomenda</h2>
+      <div class="reviews__grid">
+        <blockquote class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <p>"Meu sofá bege tinha mancha de café de ANOS. Saiu tudo. Fiquei olhando sem acreditar."</p>
+          <footer>Renata S. — Tatuapé</footer>
+        </blockquote>
+        <blockquote class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <p>"Chegaram no horário, forraram o chão todo e em 2h30 estava pronto. Muito profissionais."</p>
+          <footer>Marcos A. — Santana</footer>
+        </blockquote>
+        <blockquote class="review reveal">
+          <div class="review__stars">★★★★★</div>
+          <p>"Filha alérgica parou de espirrar depois da limpeza do colchão. Valeu cada centavo."</p>
+          <footer>Débora L. — Osasco</footer>
+        </blockquote>
+      </div>
+      <div class="reviews__bar reveal">
+        <div><b data-count="2300">0</b><span>serviços feitos</span></div>
+        <div><b>4,9★</b><span>média no Google</span></div>
+        <div><b data-count="97">0</b><span>% recomendam</span></div>
+      </div>
+    </section>
+
+    <!-- ==================== ORÇAMENTO ==================== -->
+    <section class="quote-form" id="orcamento">
+      <div class="quote-form__card reveal">
+        <div class="quote-form__copy">
+          <h2>Orçamento em <mark>2 minutos</mark></h2>
+          <p>Preencha ou chame direto no WhatsApp. Atendemos toda a Grande São Paulo, inclusive sábados.</p>
+          <a href="#" class="btn-big btn-big--green">💬 Prefiro o WhatsApp</a>
+        </div>
+        <form id="quoteForm">
+          <input type="text" placeholder="Seu nome" required aria-label="Nome">
+          <input type="tel" placeholder="WhatsApp com DDD" required aria-label="Telefone">
+          <select aria-label="Tipo de serviço">
+            <option>Sofá</option>
+            <option>Colchão</option>
+            <option>Cadeiras / poltronas</option>
+            <option>Carro</option>
+            <option>Outro</option>
+          </select>
+          <button type="submit" class="btn-big">Receber orçamento grátis</button>
+          <p class="quote-form__ok" id="quoteOk" hidden>✓ Recebido! Já já chamamos você.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><b>SofáNovo</b> Higienização · CNPJ 00.000.000/0001-00 · Grande São Paulo</p>
+    <p>seg a sáb, 8h—19h · <a href="#">Instagram</a> · © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

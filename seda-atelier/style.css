@@ -1,0 +1,447 @@
+/* ══════════════════════════════════════════════════════════════
+   SEDA — atelier de beleza e estética
+   Direção: seda, champanhe e nude sobre muito ar. A elegância vem
+   do espaço vazio e das linhas de 1px — nunca de sombra ou brilho.
+   Tipos: Cormorant Garamond (voz) · Italianno (assinatura) · Jost (rótulos)
+   ══════════════════════════════════════════════════════════════ */
+
+:root{
+  --silk:#faf6f1;         /* off-white base */
+  --champagne:#f1e7db;
+  --nude:#e7d8c8;
+  --sand:#dcc7b1;
+  --cocoa:#4a352a;        /* texto: marrom escuro quente */
+  --ink:#2f2119;
+  --bronze:#a67c4f;
+  --line:rgba(74,53,42,.16);
+  --line-soft:rgba(74,53,42,.09);
+  --dim:rgba(74,53,42,.72);
+
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --script:"Italianno","Snell Roundhand",cursive;
+  --ui:"Jost","Helvetica Neue",system-ui,sans-serif;
+
+  --pad:clamp(1.25rem,5vw,5.5rem);
+  --gap:clamp(1rem,2.2vw,2.4rem);
+  --head:clamp(4.2rem,7vw,6rem);
+  --rail:0rem;            /* vão do índice lateral; só existe em tela larga */
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--silk);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.lenis{scroll-behavior:auto}          /* Lenis dirige a rolagem */
+html.lenis body{min-height:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  background:var(--silk);color:var(--cocoa);
+  font-family:var(--serif);font-weight:300;font-size:17px;line-height:1.7;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--nude);color:var(--ink)}
+
+/* grão fino: tira o "digital" do off-white */
+.grain{
+  position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+
+/* ---------- véu de entrada ---------- */
+.veil{
+  position:fixed;inset:0;z-index:1000;background:var(--champagne);
+  display:grid;place-items:center;
+}
+.veil__mark{
+  font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,4vw,2.6rem);
+  letter-spacing:.62em;text-indent:.62em;color:var(--cocoa);
+}
+.veil.is-gone{visibility:hidden}
+
+/* ---------- peças compartilhadas ---------- */
+.kick{
+  font-family:var(--ui);font-weight:300;font-size:.6rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--bronze);text-indent:.34em;
+}
+.kick span{font-family:var(--serif);font-style:italic;letter-spacing:0;font-size:.85rem}
+.script{font-family:var(--script);font-weight:400;letter-spacing:0;line-height:.9}
+
+[data-open],[data-reveal],[data-words] .w > span{opacity:0}
+[data-cover]{clip-path:inset(0 0 100% 0)}
+[data-cover] img{transform:scale(1.16)}
+.no-motion [data-open],.no-motion [data-reveal],.no-motion [data-words] .w > span{opacity:1}
+.no-motion [data-cover]{clip-path:none}
+.no-motion [data-cover] img{transform:none}
+
+/* ---------- cabeçalho ---------- */
+.head{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  height:var(--head);padding:0 var(--pad);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:transform .7s var(--ease),background .6s var(--ease),border-color .6s;
+  border-bottom:1px solid transparent;
+}
+.head.is-solid{background:rgba(250,246,241,.82);backdrop-filter:blur(12px);border-bottom-color:var(--line-soft)}
+.head.is-up{transform:translateY(-102%)}
+.head__mark{font-size:1.05rem;letter-spacing:.5em;text-indent:.5em;font-weight:400}
+.head__nav{display:flex;gap:clamp(1.4rem,3vw,3rem)}
+.head__nav a{
+  font-family:var(--ui);font-weight:300;font-size:.66rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--cocoa);position:relative;padding-bottom:.3rem;
+}
+.head__nav a::after{
+  content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--bronze);
+  transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease);
+}
+.head__nav a:hover::after{transform:scaleX(1);transform-origin:left}
+
+.burger{display:none;width:26px;height:14px;position:relative}
+.burger span{position:absolute;left:0;width:100%;height:1px;background:var(--cocoa);transition:transform .5s var(--ease),opacity .3s}
+.burger span:first-child{top:2px}
+.burger span:last-child{bottom:2px}
+.burger.is-x span:first-child{transform:translateY(5px) rotate(9deg)}
+.burger.is-x span:last-child{transform:translateY(-5px) rotate(-9deg)}
+
+.menu{
+  position:fixed;inset:0;z-index:499;background:var(--champagne);
+  display:flex;flex-direction:column;justify-content:center;gap:.2rem;padding:0 var(--pad);
+  opacity:0;visibility:hidden;transition:opacity .6s var(--ease),visibility .6s;
+}
+.menu.is-open{opacity:1;visibility:visible}
+.menu a{font-size:clamp(2rem,9vw,3.2rem);font-weight:300;line-height:1.5}
+.menu a i{
+  font-family:var(--ui);font-style:normal;font-size:.6rem;letter-spacing:.2em;
+  color:var(--bronze);display:inline-block;width:3em;vertical-align:middle;
+}
+.menu__foot{
+  font-family:var(--ui);font-size:.68rem;letter-spacing:.12em;color:var(--dim);
+  margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line);
+}
+
+/* ════════ ABERTURA ════════ */
+.open{
+  min-height:100svh;padding:calc(var(--head) + clamp(1rem,5vh,3.5rem)) var(--pad) clamp(2rem,6vh,4rem);
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-rows:auto minmax(0,1fr) auto;column-gap:var(--gap);
+  position:relative;
+}
+.open .kick{grid-column:1/7;grid-row:1}
+.open__title{
+  grid-column:1/8;grid-row:2;align-self:center;
+  font-weight:300;font-size:clamp(2.6rem,7.4vw,6.4rem);line-height:1.02;letter-spacing:-.015em;
+}
+.open__title .line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.open__title .line.script{
+  font-size:clamp(3.6rem,10.5vw,9rem);color:var(--bronze);
+  margin:clamp(.1rem,.6vh,.4rem) 0 clamp(.2rem,1vh,.7rem);padding-left:.6em;
+}
+.open__plate{
+  grid-column:8/13;grid-row:1/4;align-self:center;
+  overflow:hidden;margin-right:calc(var(--pad) * -1);background:var(--champagne);
+  /* altura, não aspect-ratio: com proporção fixa o teto de altura encolhe
+     também a largura e a chapa perde o sangramento na borda direita */
+  height:clamp(20rem,calc(100svh - var(--head) - 12vh),48rem);
+}
+.open__plate img{width:100%;height:100%;object-fit:cover}
+.open__say{
+  grid-column:1/6;grid-row:3;align-self:end;
+  font-size:clamp(.95rem,1.35vw,1.12rem);color:var(--dim);max-width:34ch;
+  padding-top:1.6rem;border-top:1px solid var(--line);
+}
+.cue{
+  grid-column:6/8;grid-row:3;align-self:end;justify-self:end;
+  display:flex;align-items:center;gap:.8rem;white-space:nowrap;
+  font-family:var(--ui);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);
+}
+.cue__line{display:block;width:3.4rem;height:1px;background:var(--bronze);opacity:.55;animation:reach 3.4s var(--ease) infinite}
+@keyframes reach{0%,100%{transform:scaleX(.35);transform-origin:left}50%{transform:scaleX(1);transform-origin:left}}
+@media (prefers-reduced-motion:reduce){.cue__line{animation:none}}
+
+/* ════════ MANIFESTO ════════ */
+.word{
+  padding:clamp(7rem,20vh,16rem) var(--pad);
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(2rem,5vh,3.6rem);
+}
+.word__mark{
+  font-family:var(--ui);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--bronze);text-indent:.34em;
+}
+.word__say{
+  font-weight:300;font-size:clamp(1.75rem,4.6vw,3.9rem);line-height:1.24;
+  letter-spacing:-.012em;max-width:19em;
+}
+.word__say em{font-style:italic;color:var(--bronze)}
+.word__say .w{
+  display:inline-block;overflow:hidden;vertical-align:top;
+  /* a máscara de revelação corta no line-box; a Cormorant tem descendente
+     longo, então o vão extra evita decapitar o "p" de "aplica" */
+  padding-bottom:.14em;margin-bottom:-.14em;
+}
+.word__say .w > span{display:inline-block}
+.word__sub{font-family:var(--ui);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+
+/* fio contínuo entre os capítulos */
+.thread{height:clamp(7rem,17vh,13rem);display:grid;place-items:center}
+.thread--short{height:clamp(5rem,11vh,9rem)}
+.thread span{display:block;width:1px;height:100%;background:var(--line);transform:scaleY(0);transform-origin:top}
+.no-motion .thread span{transform:none}
+
+/* ════════ O RITUAL ════════ */
+.ritual{position:relative;padding-left:var(--rail)}
+
+.idx{
+  position:fixed;left:var(--pad);top:50%;transform:translateY(-50%);z-index:300;
+  list-style:none;display:none;opacity:0;pointer-events:none;
+}
+.idx li{
+  font-family:var(--ui);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(74,53,42,.34);padding:.42rem 0;display:flex;align-items:center;gap:.6rem;
+  transition:color .6s var(--ease);
+}
+.idx li i{
+  font-style:normal;font-family:var(--serif);font-size:.8rem;letter-spacing:.06em;
+  width:1.6em;color:inherit;
+}
+.idx li::before{
+  content:"";width:0;height:1px;background:var(--bronze);transition:width .6s var(--ease);
+}
+.idx.is-hidden{opacity:0!important}
+.idx li.is-on{color:var(--bronze)}
+.idx li.is-on::before{width:1.6rem}
+
+.rito{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);
+  padding:clamp(5rem,13vh,11rem) var(--pad);position:relative;align-items:center;
+}
+.rito__plate{overflow:hidden;background:var(--champagne)}
+.rito__plate img{width:100%;height:100%;object-fit:cover}
+.rito__n{
+  display:flex;align-items:baseline;gap:1rem;margin-bottom:clamp(1.2rem,3vh,2rem);
+}
+.rito__n i{font-family:var(--script);font-style:normal;font-size:2.6rem;line-height:.7;color:var(--bronze)}
+.rito__n span{
+  font-family:var(--ui);font-weight:300;font-size:.62rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--cocoa);
+}
+.rito__name{
+  font-weight:300;font-size:clamp(1.9rem,4.2vw,3.5rem);line-height:1.1;letter-spacing:-.015em;
+  margin-bottom:clamp(1.2rem,3vh,2rem);
+}
+.rito__name em{font-style:italic;color:var(--bronze)}
+.rito__say{font-size:clamp(.95rem,1.25vw,1.08rem);color:var(--dim);max-width:38ch;margin-bottom:clamp(1.8rem,4vh,3rem)}
+.rito__list{list-style:none;border-bottom:1px solid var(--line-soft);max-width:34rem}
+.rito__list li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;
+  padding:.85rem 0;border-top:1px solid var(--line-soft);
+}
+.rito__list span{font-size:1.02rem}
+.rito__list i{
+  font-family:var(--ui);font-style:normal;font-size:.6rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--bronze);white-space:nowrap;
+}
+
+/* NOTA: linha explícita em todos os ritos. Sem ela o auto-placement do grid
+   não volta atrás — a chapa ocupa a coluna 7 da linha 1 e o texto, que pede a
+   coluna 1, cai para a linha 2 e a composição vira empilhamento. */
+
+/* i · corte — chapa alta sangrando à direita */
+.rito--a .rito__text{grid-column:1/6;grid-row:1}
+.rito--a .rito__plate{grid-column:7/13;grid-row:1;aspect-ratio:4/5;margin-right:calc(var(--pad) * -1)}
+
+/* ii · sobrancelha — chapa quadrada à esquerda, texto alto e recuado */
+.rito--b{align-items:start}
+.rito--b .rito__plate{grid-column:1/5;grid-row:1;aspect-ratio:1/1;margin-left:calc(var(--pad) * -1);align-self:start}
+.rito--b .rito__text{grid-column:6/12;grid-row:1;margin-top:clamp(2rem,9vh,7rem)}
+.rito__edge{
+  position:absolute;right:calc(var(--pad) * .35);top:50%;
+  font-family:var(--script);font-size:clamp(2.4rem,4vw,3.6rem);color:var(--sand);
+  transform:translateY(-50%) rotate(90deg);transform-origin:center;line-height:1;
+  pointer-events:none;
+}
+
+/* iii · cílios — panorâmica de ponta a ponta, título dentro da foto */
+.rito--c{row-gap:clamp(2rem,5vh,3.4rem)}
+.rito--c .rito__plate{
+  grid-column:1/13;grid-row:1;aspect-ratio:21/9;position:relative;
+  margin-right:calc(var(--pad) * -1);
+  margin-left:calc((var(--pad) + var(--rail)) * -1);   /* atravessa o vão do índice */
+}
+/* o enquadramento 21/9 centralizado cai na íris; 25% traz os cílios e a
+   sobrancelha, que é do que a seção fala */
+.rito--c .rito__plate img{object-position:center 25%}
+.rito--c figcaption{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;pointer-events:none;
+  padding:0 clamp(1.4rem,4vw,4rem) clamp(1.4rem,3.5vw,3rem);
+}
+.rito--c figcaption::before{
+  content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:170%;
+  background:linear-gradient(0deg,rgba(47,33,25,.72) 0%,rgba(47,33,25,.42) 42%,rgba(47,33,25,0) 100%);
+}
+.rito--c figcaption .rito__n span{color:#fff}
+.rito--c figcaption .rito__n i{color:var(--nude)}
+.rito--c figcaption .rito__name{color:#fff;margin-bottom:0}
+.rito--c figcaption .rito__name em{color:var(--nude)}
+.rito--c .rito__text{grid-column:7/13;grid-row:2}
+
+/* iv · terapia — texto baixo à esquerda, chapa alta à direita */
+.rito--d{align-items:end}
+.rito--d .rito__text{grid-column:2/7;grid-row:1;padding-bottom:clamp(0rem,6vh,5rem)}
+.rito--d .rito__plate{grid-column:8/13;grid-row:1;aspect-ratio:3/4;margin-right:calc(var(--pad) * -1)}
+
+/* v · pele — o texto se abre em volta da chapa central */
+.rito--e{align-items:start;row-gap:clamp(1.6rem,4vh,3rem)}
+.rito--e .rito__text--top{grid-column:2/8;grid-row:1}
+.rito--e .rito__plate{grid-column:4/12;grid-row:2;aspect-ratio:16/10}
+.rito--e .rito__text--low{grid-column:7/13;grid-row:3;margin-top:clamp(1rem,3vh,2.4rem)}
+
+/* ════════ A PAUSA ════════ */
+.pause{height:230vh;position:relative}
+.pause__stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center}
+.pause__plate{position:absolute;inset:0}
+.pause__plate img{width:100%;height:100%;object-fit:cover}
+.pause__stage::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(70% 60% at 50% 50%,rgba(250,246,241,.42),rgba(232,216,197,.28) 60%,rgba(198,170,142,.35));
+}
+.pause__type{position:relative;z-index:2;text-align:center;padding:0 var(--pad)}
+.pause__script{
+  font-family:var(--script);font-size:clamp(4rem,13vw,11rem);line-height:.9;color:var(--ink);
+  opacity:.9;
+}
+.pause__say{
+  font-size:clamp(1.05rem,2vw,1.7rem);line-height:1.5;color:var(--ink);
+  margin-top:clamp(1rem,3vh,2rem);
+}
+
+/* ════════ A CASA ════════ */
+.house{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  column-gap:var(--gap);row-gap:clamp(2.5rem,7vh,6rem);
+  padding:clamp(4rem,10vh,9rem) var(--pad) clamp(6rem,14vh,12rem);
+  align-items:start;
+}
+.house__type{grid-column:1/6;grid-row:1;display:flex;flex-direction:column;gap:clamp(1rem,2.5vh,1.8rem)}
+.house__title{font-weight:300;font-size:clamp(1.9rem,4vw,3.4rem);line-height:1.1;letter-spacing:-.015em}
+.house__title em{font-style:italic;color:var(--bronze)}
+.house__say{color:var(--dim);max-width:34ch}
+.house__notes{list-style:none;margin-top:.6rem;border-top:1px solid var(--line-soft)}
+.house__notes li{
+  padding:.8rem 0;border-bottom:1px solid var(--line-soft);
+  font-family:var(--ui);font-weight:300;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cocoa);
+}
+.house__a,.house__b,.house__c{overflow:hidden;background:var(--champagne)}
+.house__a img,.house__b img,.house__c img{width:100%;height:100%;object-fit:cover}
+.house__a{grid-column:7/12;grid-row:1;aspect-ratio:4/5}
+.house__b{grid-column:9/13;grid-row:2;aspect-ratio:1/1;margin-top:clamp(-6rem,-6vh,-2rem)}
+.house__c{grid-column:2/6;grid-row:2;aspect-ratio:5/4}
+
+/* ════════ O CONVITE ════════ */
+.invite{
+  padding:clamp(6rem,16vh,14rem) var(--pad) clamp(5rem,12vh,10rem);
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  background:linear-gradient(180deg,var(--silk) 0%,var(--champagne) 100%);
+}
+.invite__script{font-family:var(--script);font-size:clamp(3rem,8vw,6.4rem);line-height:.9;color:var(--bronze)}
+.invite__title{
+  font-weight:300;font-size:clamp(2rem,5.2vw,4.2rem);line-height:1.06;letter-spacing:-.02em;
+  margin-top:clamp(.4rem,1.5vh,1rem);
+}
+.invite__say{color:var(--dim);max-width:38ch;margin-top:clamp(1rem,3vh,2rem)}
+.btn{
+  margin-top:clamp(2rem,5vh,3.4rem);
+  display:inline-flex;align-items:center;gap:.9rem;
+  padding:1.05rem 2.4rem;border:1px solid var(--bronze);border-radius:999px;
+  font-family:var(--ui);font-weight:300;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cocoa);transition:background .6s var(--ease),color .6s var(--ease);
+}
+.btn span{transition:transform .6s var(--ease)}
+.btn:hover{background:var(--bronze);color:var(--silk)}
+.btn:hover span{transform:translateX(5px)}
+.invite__dl{
+  margin-top:clamp(4rem,10vh,8rem);width:100%;max-width:56rem;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);
+  text-align:left;border-top:1px solid var(--line);padding-top:clamp(1.6rem,4vh,2.6rem);
+}
+.invite__dl dt{
+  font-family:var(--ui);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--bronze);margin-bottom:.7rem;
+}
+.invite__dl dd{font-size:1.02rem;line-height:1.6}
+.invite__dl a{border-bottom:1px solid transparent;transition:border-color .5s}
+.invite__dl a:hover{border-bottom-color:var(--bronze)}
+
+/* ════════ RODAPÉ ════════ */
+.foot{
+  background:var(--champagne);padding:clamp(2.5rem,6vh,4rem) var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+  border-top:1px solid var(--line-soft);
+}
+.foot__mark{font-size:.95rem;letter-spacing:.5em;text-indent:.5em}
+.foot__script{font-family:var(--script);font-size:1.9rem;color:var(--bronze);line-height:1}
+.foot__legal{font-family:var(--ui);font-size:.62rem;letter-spacing:.14em;color:var(--dim)}
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVO — a elegância tem de sobreviver ao retrato.
+   Regra: nada de duas colunas abaixo de 900px; as chapas passam a
+   sangrar dos dois lados, e o texto ganha a largura inteira.
+   ══════════════════════════════════════════════════════════════ */
+@media (min-width:1180px){
+  /* o índice mora numa faixa própria: o ritual recua e nada passa por baixo dele */
+  :root{--rail:9.5rem}
+  .idx{display:block}
+  .rito--b .rito__plate{margin-left:0}
+}
+
+@media (max-width:900px){
+  body{font-size:16px}
+  .head__nav{display:none}
+  .burger{display:block}
+
+  .open{grid-template-columns:1fr;grid-template-rows:auto auto auto auto;row-gap:clamp(1.6rem,4vh,2.6rem)}
+  .open .kick,.open__title,.open__plate,.open__say{grid-column:1;grid-row:auto}
+  .open__title{align-self:start}
+  .open__plate{
+    height:auto;aspect-ratio:4/5;margin:0 calc(var(--pad) * -1);width:100vw;max-width:100vw;
+  }
+  .open__say{align-self:start}
+  .cue{display:none}
+
+  .rito{grid-template-columns:1fr;row-gap:clamp(1.8rem,5vh,3rem);align-items:start}
+  .rito .rito__text,.rito .rito__text--top,.rito .rito__text--low{grid-column:1!important;grid-row:auto!important;margin:0;padding:0}
+  .rito .rito__plate{
+    grid-column:1!important;grid-row:auto!important;margin:0 calc(var(--pad) * -1);
+    width:100vw;max-width:100vw;aspect-ratio:4/5;
+  }
+  .rito--c .rito__plate{aspect-ratio:4/3}
+  .rito--e .rito__plate{aspect-ratio:1/1}
+  .rito--b .rito__plate{aspect-ratio:1/1}
+  .rito__edge{display:none}
+  /* o enquadramento 21/9 centralizado cai na íris; 25% traz os cílios e a
+   sobrancelha, que é do que a seção fala */
+.rito--c .rito__plate img{object-position:center 25%}
+.rito--c figcaption{padding:0 var(--pad) 1.6rem}
+  .rito--c .rito__name{font-size:clamp(1.6rem,7vw,2.4rem)}
+
+  .house{grid-template-columns:1fr;row-gap:clamp(2rem,5vh,3rem)}
+  .house__type,.house__a,.house__b,.house__c{grid-column:1;grid-row:auto}
+  .house__b{margin-top:0;width:70%;margin-left:auto}
+  .house__c{width:85%}
+
+  .invite__dl{grid-template-columns:1fr;gap:2rem;text-align:center}
+  .invite__dl dt{margin-bottom:.4rem}
+
+  .foot{flex-direction:column;text-align:center;gap:1.1rem}
+}
+
+@media (max-width:560px){
+  .open__title{font-size:clamp(2.3rem,10vw,3.2rem)}
+  .open__title .line.script{font-size:clamp(3.4rem,16vw,5rem);padding-left:.3em}
+  .word{padding:clamp(5rem,14vh,8rem) var(--pad)}
+  .word__say{font-size:clamp(1.5rem,7.4vw,2.2rem)}
+  .rito__list li{flex-direction:column;align-items:flex-start;gap:.25rem}
+  .pause{height:180vh}
+  .invite__dl{max-width:24rem}
+}

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>INFOLAB — Tecnologia em outra frequência</title>
+  <meta name="description" content="INFOLAB: certificado digital, assistência técnica, loja de informática, automação comercial e hub de tecnologia. Excelência na Serra Gaúcha há 25 anos.">
+  <meta name="theme-color" content="#04060D">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,400..800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- mapa da loja -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.cursor{display:none}.rail{overflow-x:auto}[data-reveal],[data-reveal-chars] .ch{opacity:1!important;transform:none!important}.tela{display:none}.tela.is-on{display:block}</style></noscript>
+</head>
+<body>
+
+  <!-- ══════════ CURSOR ══════════ -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-core"></span></div>
+
+  <!-- ══════════ NAV PÍLULA ══════════ -->
+  <header class="nav-wrap">
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a class="nav-logo" href="#hero" aria-label="INFOLAB — início">
+        <img src="logo.png" alt="INFOLAB" width="132" height="34">
+      </a>
+      <div class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#loja">A Loja</a>
+        <a href="#casa">Sobre nós</a>
+      </div>
+      <a class="nav-cta" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20INFOLAB%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-magnetic>
+        <svg class="zap-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 4C9.53 4 4.25 9.28 4.25 15.79c0 2.08.55 4.1 1.58 5.89L4.16 28l6.47-1.7a11.77 11.77 0 0 0 5.41 1.32h.01c6.5 0 11.79-5.28 11.79-11.79 0-3.15-1.23-6.11-3.46-8.34A11.72 11.72 0 0 0 16.04 4Zm0 21.63h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.84 1 1.03-3.74-.24-.38a9.77 9.77 0 0 1-1.5-5.14c0-5.41 4.4-9.81 9.82-9.81a9.75 9.75 0 0 1 9.8 9.82c0 5.41-4.4 9.83-9.81 9.83Zm5.38-7.35c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.64.07-.29-.15-1.24-.46-2.36-1.46a8.85 8.85 0 0 1-1.63-2.03c-.17-.3-.02-.45.13-.6.13-.13.3-.34.44-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.03-.52-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.14.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.74-.71 1.98-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.56-.34Z" fill="currentColor"/></svg>
+        <span>Falar no WhatsApp</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════ HERO — CAMPO AZUL FACETADO ══════════ -->
+    <section class="hero" id="hero" data-section="HERO">
+      <div class="hero-field" aria-hidden="true">
+        <svg class="facets" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="gDeep" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#04060D"/><stop offset="0.55" stop-color="#0B1B45"/><stop offset="1" stop-color="#2B5CE6"/>
+            </linearGradient>
+            <linearGradient id="gEdge" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#2B5CE6"/><stop offset="1" stop-color="#3B6FF5"/>
+            </linearGradient>
+          </defs>
+          <rect width="1440" height="900" fill="url(#gDeep)"/>
+          <g class="facet-layer" data-depth="6">
+            <polygon points="0,900 0,560 420,900" fill="#0E2050" opacity="0.85"/>
+            <polygon points="1440,900 1440,430 880,900" fill="url(#gEdge)" opacity="0.32"/>
+          </g>
+          <g class="facet-layer" data-depth="12">
+            <polygon points="1440,900 1440,640 1020,900" fill="#3B6FF5" opacity="0.5"/>
+            <polygon points="0,900 0,760 300,900" fill="#3B6FF5" opacity="0.35"/>
+            <polygon points="620,900 900,900 760,660" fill="#132a63" opacity="0.9"/>
+          </g>
+          <g class="facet-layer" data-depth="22">
+            <polygon points="1180,240 1300,120 1360,300" fill="#3B6FF5" opacity="0.16"/>
+            <polygon points="140,180 260,80 300,260" fill="#2B5CE6" opacity="0.14"/>
+          </g>
+        </svg>
+        <div class="hero-glow"></div>
+      </div>
+
+      <div class="hero-body">
+        <p class="hero-eyebrow mono" data-reveal>▲ INFOLAB — HÁ 25 ANOS ENTREGANDO EXELÊNCIA.</p>
+        <h1 class="hero-h1">
+          <span class="hero-h1-line" data-reveal-chars>Tecnologia que</span>
+          <span class="hero-h1-line hero-h1-line--swap" data-reveal>
+            <span class="swap-viewport" aria-hidden="true">
+              <span class="swap-list" id="swapList">
+                </em><em>impulsiona.</em><em>conserta.</em><em>protege.</em><em>acelera.</em><em>conecta.</em>
+              </span>
+            </span>
+            <span class="sr-only">impulsiona, conserta, protege, acelera e conecta.</span>
+          </span>
+        </h1>
+        <p class="hero-sub" data-reveal>Certificado digital, assistência técnica, loja de informática, automação comercial e desenvolvimento web. Tudo em um só lugar, com atendimento próximo e suporte de verdade.</p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn--light" href="#servicos" data-magnetic><span>Saber mais</span><i aria-hidden="true">↓</i></a>
+          <a class="btn btn--ghost" href="#casa" data-magnetic><span>Onde estamos</span></a>
+        </div>
+      </div>
+
+      <div class="hero-base mono" aria-hidden="true">
+        <span>SCROLL PARA DESCER</span>
+        <span class="hero-base-bar"><i id="heroProgress"></i></span>
+        <span>CANELA · RIO GRANDE DO SUL</span>
+      </div>
+    </section>
+
+    <!-- ══════════ FAIXA MARQUEE ══════════ -->
+    <div class="belt" aria-hidden="true" data-section="BELT">
+      <div class="belt-track" data-marquee>
+        <span>CERTIFICADO DIGITAL ▲ ASSISTÊNCIA TÉCNICA ▲ LOJA DE INFORMÁTICA ▲ AUTOMAÇÃO COMERCIAL ▲ HUB DE TECNOLOGIA ▲ </span>
+        <span>CERTIFICADO DIGITAL ▲ ASSISTÊNCIA TÉCNICA ▲ LOJA DE INFORMÁTICA ▲ AUTOMAÇÃO COMERCIAL ▲ HUB DE TECNOLOGIA ▲ </span>
+      </div>
+    </div>
+
+    <!-- ══════════ SERVIÇOS — CARTAS COM UI VIVA ══════════ -->
+    <section class="deck" id="servicos" data-section="SERVICOS">
+      <header class="deck-head">
+        <p class="mono deck-eyebrow" data-reveal>▲ 01 — O QUE FAZEMOS</p>
+        <h2 class="deck-title" data-reveal-chars>Soluções completas em tecnologia.</h2>
+        <p class="deck-sub" data-reveal>Role: cada carta assume a mesa com a própria interface funcionando.</p>
+      </header>
+
+      <div class="deck-stack">
+
+        <!-- OFÍCIO 01 · CERTIFICADO DIGITAL -->
+        <article class="carta">
+          <div class="carta-grid" data-carta="01">
+            <div class="carta-copy">
+              <p class="mono carta-tag">▲ PIONEIROS EM CANELA/RS</p>
+              <h3 class="carta-name">Certificado Digital</h3>
+              <p class="carta-lead">Emissão rápida e segura de Certificados Digitais.</p>
+              <p class="carta-desc">e-CPF / e-CNPJ podem ser usados para acessar portais de serviços eletrônicos, assinar documentos com segurança e validade jurídica, além de emitir notas fiscais eletrônicas, entre outros.</p>
+              <ul class="carta-list">
+                <li>e-CPF</li><li>e-CNPJ</li><li>Emissão &amp; renovação</li><li>Consultoria especializada</li><li>Suporte na instalação</li>
+              </ul>
+              <a class="carta-cta" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20INFOLAB%20e%20gostaria%20de%20emitir%20um%20certificado%20digital." target="_blank" data-magnetic>Agendar o meu <i aria-hidden="true">→</i></a>
+            </div>
+            <div class="carta-visual carta-visual--mock">
+              <div class="mock mock-cert">
+                <div class="mock-bar">
+                  <span class="mock-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="mono">CENTRAL DO CERTIFICADO</span>
+                </div>
+                <div class="mock-cert-card">
+                  <div class="mock-cert-head">
+                    <span class="mock-avatar">EM</span>
+                    <div><strong>EMPRESA MODELO LTDA</strong><span class="mono">e-CNPJ · A1</span></div>
+                    <span class="pill pill--ok">VÁLIDO ✓</span>
+                  </div>
+                  <div class="mock-meter"><span class="mono">VALIDADE</span><div class="meter"><i style="--w:72%"></i></div><span class="mono meter-cap">RENOVA EM 2027</span></div>
+                  <div class="mock-cert-foot">
+                    <span class="pill">ICP-BRASIL</span><span class="pill">ASSINATURA OK</span><span class="pill pill--blue">NF-e LIBERADA</span>
+                  </div>
+                </div>
+                <div class="mock-row-ghost" aria-hidden="true"></div>
+              </div>
+              <span class="chip chip--a mono">EMISSÃO EM 1 VISITA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- OFÍCIO 02 · ASSISTÊNCIA TÉCNICA -->
+        <article class="carta">
+          <div class="carta-grid carta-grid--flip" data-carta="02">
+            <div class="carta-copy">
+              <p class="mono carta-tag">▲ AQUI VOCÊ PODE CONFIAR</p>
+              <h3 class="carta-name">Assistência Técnica</h3>
+              <p class="carta-lead">Seu equipamento merece um diagnóstico profissional.</p>
+              <p class="carta-desc">Assistência em notebooks, computadores, impressoras, monitores, acessórios, tablets, celulares e periféricos.</p>
+              <ul class="carta-list">
+                <li>Formatação</li><li>Upgrade</li><li>Troca de peças</li><li>Limpeza preventiva</li><li>Remoção de vírus</li><li>Backup</li><li>Recuperação de desempenho</li>
+              </ul>
+              <a class="carta-cta" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20INFOLAB%20e%20gostaria%20de%20assistência%20técnica." target="_blank" data-magnetic>Quero saber mais <i aria-hidden="true">→</i></a>
+            </div>
+            <div class="carta-visual carta-visual--mock">
+              <div class="mock mock-os">
+                <div class="mock-bar">
+                  <span class="mock-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="mono">ORDEM DE SERVIÇO #042</span>
+                </div>
+                <div class="mock-os-title"><strong>Notebook não liga</strong><span class="pill pill--warn">EM REPARO</span></div>
+                <ol class="mock-steps">
+                  <li class="done"><i>✓</i><span>Recebido</span></li>
+                  <li class="done"><i>✓</i><span>Diagnóstico</span></li>
+                  <li class="now"><i>●</i><span>Reparo</span></li>
+                  <li><i>○</i><span>Entrega</span></li>
+                </ol>
+                <div class="mock-meter"><span class="mono">PROGRESSO</span><div class="meter"><i style="--w:65%"></i></div><span class="mono meter-cap">65%</span></div>
+                <div class="mock-os-foot"><span class="mock-avatar mock-avatar--sm">TL</span><span class="mono">TÉCNICO NA BANCADA · AGORA</span></div>
+              </div>
+              <span class="chip chip--b mono">PEÇA ORIGINAL ✓</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- OFÍCIO 03 · LOJA DE INFORMÁTICA -->
+        <article class="carta">
+          <div class="carta-grid" data-carta="03">
+            <div class="carta-copy">
+              <p class="mono carta-tag">▲ QUALIDADE HÁ 25 ANOS</p>
+              <h3 class="carta-name">Loja de Informática</h3>
+              <p class="carta-lead">Tudo em um único lugar.</p>
+              <p class="carta-desc">Ampla e completa loja de informática com computadores, impressoras, bolsas, cadeiras ergonômicas e grande variedade de acessórios e periféricos.</p>
+              <ul class="carta-list">
+                <li>Computadores</li><li>Notebooks</li><li>Periféricos</li><li>Cadeiras</li><li>Suprimentos</li>
+              </ul>
+              <a class="carta-cta" href="#loja" data-magnetic>Conhecer a loja <i aria-hidden="true">→</i></a>
+            </div>
+            <div class="carta-visual carta-visual--mock">
+              <div class="mock mock-loja">
+                <div class="mock-bar">
+                  <span class="mock-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="mono">VITRINE — CATEGORIAS</span>
+                </div>
+                <ul class="mock-prateleira">
+                  <li>
+                    <span class="mock-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="10" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M17 8h3v8h-3" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="9" cy="8" r="1.1" fill="currentColor"/></svg></span>
+                    <span>Computadores</span><span class="pill pill--ok">EM LOJA</span>
+                  </li>
+                  <li>
+                    <span class="mock-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M2 19h20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+                    <span>Notebooks</span><span class="pill pill--ok">EM LOJA</span>
+                  </li>
+                  <li>
+                    <span class="mock-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M6 10.5h.01M9.5 10.5h.01M13 10.5h.01M16.5 10.5h.01M8 13.5h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+                    <span>Periféricos</span><span class="pill pill--blue">VARIEDADE</span>
+                  </li>
+                  <li>
+                    <span class="mock-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10v7H7z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5M8 20l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span>Cadeiras</span><span class="pill">ERGONOMIA</span>
+                  </li>
+                </ul>
+                <div class="mock-loja-foot"><span class="pill pill--blue">ORIENTAÇÃO NA COMPRA</span><span class="pill">GARANTIA</span></div>
+              </div>
+              <span class="chip chip--a mono">ATENDIMENTO QUE EXPLICA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- OFÍCIO 04 · AUTOMAÇÃO COMERCIAL -->
+        <article class="carta">
+          <div class="carta-grid carta-grid--flip" data-carta="04">
+            <div class="carta-copy">
+              <p class="mono carta-tag">▲ MAIS EFICIÊNCIA PARA SEU NEGOCIO</p>
+              <h3 class="carta-name">Automação Comercial</h3>
+              <p class="carta-lead">Tecnologia para facilitar a gestão da sua empresa.</p>
+              <p class="carta-desc">Implantamos soluções de automação comercial para agilizar processos, controlar vendas e oferecer mais eficiência para o dia a dia do seu negócio.</p>
+              <ul class="carta-list">
+                <li>NF-e</li><li>TEF</li><li>NFS-e</li><li>CT-e</li><li>MDF-e</li>
+              </ul>
+              <a class="carta-cta" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20INFOLAB%20e%20gostaria%20de%20automatizar%20minha%20empresa." target="_blank" data-magnetic>Automatizar minha empresa <i aria-hidden="true">→</i></a>
+            </div>
+            <div class="carta-visual carta-visual--mock">
+              <div class="mock mock-pdv">
+                <div class="mock-bar">
+                  <span class="mock-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="mono">PDV — CAIXA 01</span>
+                </div>
+                <ul class="mock-cupom">
+                  <li><span>2× Café em grão 500g</span><b>39,80</b></li>
+                  <li><span>1× Queijo serrano</span><b>52,00</b></li>
+                  <li><span>3× Pão artesanal</span><b>27,10</b></li>
+                </ul>
+                <div class="mock-total"><span class="mono">TOTAL</span><strong>R$ 118,90</strong></div>
+                <div class="mock-pdv-foot"><span class="pill pill--ok">NFC-e AUTORIZADA ✓</span><span class="pill">IMPRESSA EM 1.2s</span></div>
+              </div>
+              <span class="chip chip--a mono">FILA ZERO</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- OFÍCIO 05 · HUB DE TECNOLOGIA -->
+        <article class="carta">
+          <div class="carta-grid" data-carta="05">
+            <div class="carta-copy">
+              <p class="mono carta-tag">▲ NOVIDADE</p>
+              <h3 class="carta-name">Hub de Tecnologia</h3>
+              <p class="carta-lead">Desenvolvimento web e o que mais sua empresa precisar.</p>
+              <p class="carta-desc">Sites personalizados, presença digital, programas desenvolvidos sob medida. Eleve o nível do seu negócio com quem entende.</p>
+              <ul class="carta-list">
+                <li>Sites institucionais</li><li>Landing pages</li><li>Domínio &amp; hospedagem</li><li>Performance real</li>
+              </ul>
+              <a class="carta-cta" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20INFOLAB%20e%20gostaria%20de%20criar%20um%20site%20para%20minha%20empresa." target="_blank" data-magnetic>Criar meu site <i aria-hidden="true">→</i></a>
+            </div>
+            <div class="carta-visual carta-visual--mock">
+              <div class="mock mock-web">
+                <div class="mock-bar">
+                  <span class="mock-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="mock-url mono">suaempresa.com.br</span>
+                </div>
+                <div class="mock-web-canvas">
+                  <div class="sk sk-nav"></div>
+                  <div class="sk sk-h1"></div>
+                  <div class="sk sk-h2"></div>
+                  <div class="sk-row"><div class="sk sk-btn sk-btn--blue"></div><div class="sk sk-btn"></div></div>
+                  <div class="sk-cols"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+                </div>
+                <div class="mock-web-foot"><span class="pill pill--ok">LCP 0.9s ▲</span><span class="pill">NO AR · 24/7</span><span class="pill pill--blue">SEO PRONTO</span></div>
+              </div>
+              <span class="chip chip--a mono">PUBLICADO ✓</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════ A BANCADA — MÁQUINA EXPLODIDA EM WIREFRAME ══════════ -->
+    <section class="bancada" id="bancada" data-section="BANCADA">
+      <header class="bancada-head">
+        <p class="mono bancada-eyebrow" data-reveal>▲ 02 — ASSISTÊNCIA TÉCNICA</p>
+        <h2 class="bancada-title" data-reveal-chars>Seu equipamento merece um diagnóstico profissional.</h2>
+        <p class="bancada-sub" data-reveal>Realizamos manutenção preventiva e corretiva para computadores e notebooks, buscando identificar rapidamente a origem do problema e entregar uma solução segura e eficiente.</p>
+      </header>
+
+      <div class="bancada-stage" aria-hidden="true">
+        <svg class="wire-svg" id="wireMaq" viewBox="337 150 1115 720" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <g class="wire-part" data-dx="0" data-dy="0"><path d="M822.8 631.3 L951.8 621.8" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M951.8 621.8 L942.1 312.2" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M942.1 312.2 L821.4 339.3" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M821.4 339.3 L822.8 631.3" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M624.5 597.8 L769.6 583.1" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M769.6 583.1 L772.0 204.5" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M772.0 204.5 L637.3 245.2" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M637.3 245.2 L624.5 597.8" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M822.8 631.3 L624.5 597.8" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M951.8 621.8 L769.6 583.1" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M821.4 339.3 L637.3 245.2" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M942.1 312.2 L772.0 204.5" fill="none" stroke-opacity="0.72" stroke-width="1.3"/><path d="M822.0 411.9 L944.7 389.0" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M944.7 389.0 L942.9 333.7" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M942.9 333.7 L821.7 359.7" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M821.7 359.7 L822.0 411.9" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M821.5 411.7 L944.3 388.7" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M944.3 388.7 L942.5 333.5" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M942.5 333.5 L821.3 359.4" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M821.3 359.4 L821.5 411.7" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M822.0 411.9 L821.5 411.7" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M944.7 389.0 L944.3 388.7" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M821.7 359.7 L821.3 359.4" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M942.9 333.7 L942.5 333.5" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M850.8 406.2 L850.2 353.2" fill="none" stroke-opacity="0.18000000000000002" stroke-width="0.85"/><path d="M881.0 400.6 L880.1 346.9" fill="none" stroke-opacity="0.18000000000000002" stroke-width="0.85"/><path d="M912.2 394.8 L910.8 340.3" fill="none" stroke-opacity="0.18000000000000002" stroke-width="0.85"/><path d="M822.4 559.9 L949.4 545.8" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M627.7 510.6 L770.2 489.1" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M822.4 559.9 L627.7 510.6" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M949.4 545.8 L770.2 489.1" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M822.6 597.0 L950.6 585.3" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M822.5 563.3 L949.5 549.4" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M822.3 529.9 L948.4 514.0" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M822.1 497.1 L947.3 479.1" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M822.0 464.7 L946.2 444.8" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M821.8 432.7 L945.2 410.9" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M821.7 401.1 L944.1 377.6" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M821.6 370.0 L943.1 344.7" fill="none" stroke-opacity="0.22" stroke-width="0.8"/><path d="M818.2 325.3 L683.0 254.3" fill="none" stroke-opacity="0.25" stroke-width="0.8"/><path d="M835.0 321.4 L701.2 249.0" fill="none" stroke-opacity="0.25" stroke-width="0.8"/><path d="M852.2 317.5 L719.8 243.6" fill="none" stroke-opacity="0.25" stroke-width="0.8"/><path d="M869.7 313.4 L738.7 238.2" fill="none" stroke-opacity="0.25" stroke-width="0.8"/><path d="M887.5 309.3 L758.1 232.6" fill="none" stroke-opacity="0.25" stroke-width="0.8"/><path d="M905.6 305.1 L777.8 226.9" fill="none" stroke-opacity="0.25" stroke-width="0.8"/><path d="M634.3 353.0 L689.6 339.7" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M689.6 339.7 L691.1 277.9" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M691.1 277.9 L636.5 292.9" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M636.5 292.9 L634.3 353.0" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M633.7 352.8 L689.0 339.4" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M689.0 339.4 L690.5 277.6" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M690.5 277.6 L635.9 292.6" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M635.9 292.6 L633.7 352.8" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M634.3 353.0 L633.7 352.8" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M689.6 339.7 L689.0 339.4" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M636.5 292.9 L635.9 292.6" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M691.1 277.9 L690.5 277.6" fill="none" stroke-opacity="0.4" stroke-width="0.95"/><path d="M672.0 471.1 L682.5 469.3" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M682.5 469.3 L684.9 372.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M684.9 372.1 L674.6 374.5" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M674.6 374.5 L672.0 471.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M671.3 470.9 L681.9 469.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M681.9 469.1 L684.3 371.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M684.3 371.9 L674.0 374.2" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M674.0 374.2 L671.3 470.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M672.0 471.1 L671.3 470.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M682.5 469.3 L681.9 469.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M674.6 374.5 L674.0 374.2" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M684.9 372.1 L684.3 371.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M686.5 468.6 L697.2 466.8" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M697.2 466.8 L699.3 368.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M699.3 368.9 L688.8 371.3" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M688.8 371.3 L686.5 468.6" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M685.8 468.4 L696.5 466.6" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M696.5 466.6 L698.7 368.7" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M698.7 368.7 L688.2 371.0" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M688.2 371.0 L685.8 468.4" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M686.5 468.6 L685.8 468.4" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M697.2 466.8 L696.5 466.6" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M688.8 371.3 L688.2 371.0" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M699.3 368.9 L698.7 368.7" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M701.2 466.1 L712.1 464.3" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M712.1 464.3 L714.0 365.7" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M714.0 365.7 L703.3 368.0" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M703.3 368.0 L701.2 466.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M700.6 465.9 L711.5 464.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M711.5 464.1 L713.3 365.4" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M713.3 365.4 L702.7 367.8" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M702.7 367.8 L700.6 465.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M701.2 466.1 L700.6 465.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M712.1 464.3 L711.5 464.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M703.3 368.0 L702.7 367.8" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M714.0 365.7 L713.3 365.4" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M716.2 463.6 L727.3 461.7" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M727.3 461.7 L728.8 362.3" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M728.8 362.3 L718.0 364.8" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M718.0 364.8 L716.2 463.6" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M715.6 463.4 L726.6 461.5" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M726.6 461.5 L728.2 362.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M728.2 362.1 L717.4 364.5" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M717.4 364.5 L715.6 463.4" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M716.2 463.6 L715.6 463.4" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M727.3 461.7 L726.6 461.5" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M718.0 364.8 L717.4 364.5" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M728.8 362.3 L728.2 362.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M818.2 647.5 L834.8 646.4" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M834.8 646.4 L834.6 628.0" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M834.6 628.0 L818.2 629.3" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M818.2 629.3 L818.2 647.5" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M807.4 645.9 L824.0 644.8" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M824.0 644.8 L823.9 626.2" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M823.9 626.2 L807.4 627.4" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M807.4 627.4 L807.4 645.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M818.2 647.5 L807.4 645.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M834.8 646.4 L824.0 644.8" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M818.2 629.3 L807.4 627.4" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M834.6 628.0 L823.9 626.2" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M659.4 623.9 L677.4 622.3" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M677.4 622.3 L678.0 600.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M678.0 600.6 L660.0 602.3" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M660.0 602.3 L659.4 623.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M644.1 621.6 L662.2 620.0" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M662.2 620.0 L662.9 597.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M662.9 597.9 L644.8 599.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M644.8 599.7 L644.1 621.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M659.4 623.9 L644.1 621.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M677.4 622.3 L662.2 620.0" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M660.0 602.3 L644.8 599.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M678.0 600.6 L662.9 597.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M919.2 640.9 L937.5 639.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M937.5 639.7 L936.9 620.3" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M936.9 620.3 L918.7 621.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M918.7 621.7 L919.2 640.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M909.1 639.1 L927.6 637.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M927.6 637.9 L927.0 618.3" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M927.0 618.3 L908.7 619.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M908.7 619.7 L909.1 639.1" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M919.2 640.9 L909.1 639.1" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M937.5 639.7 L927.6 637.9" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M918.7 621.7 L908.7 619.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M936.9 620.3 L927.0 618.3" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M770.4 614.4 L790.7 612.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M790.7 612.7 L790.7 589.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M790.7 589.6 L770.5 591.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M770.5 591.6 L770.4 614.4" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M755.9 611.8 L776.4 610.1" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M776.4 610.1 L776.5 586.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M776.5 586.6 L756.1 588.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M756.1 588.7 L755.9 611.8" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M770.4 614.4 L755.9 611.8" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M790.7 612.7 L776.4 610.1" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M770.5 591.6 L756.1 588.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M790.7 589.6 L776.5 586.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/></g>
+          <g transform="translate(380.5 -162.6)"><g class="wire-part" data-dx="-380.5" data-dy="162.6"><path d="M950.3 619.4 L951.1 619.3" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M951.1 619.3 L941.5 313.5" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M941.5 313.5 L940.8 313.6" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M940.8 313.6 L950.3 619.4" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M770.7 580.7 L771.6 580.6" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M771.6 580.6 L773.8 207.7" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M773.8 207.7 L773.0 207.9" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M773.0 207.9 L770.7 580.7" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M950.3 619.4 L770.7 580.7" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M951.1 619.3 L771.6 580.6" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M940.8 313.6 L773.0 207.9" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M941.5 313.5 L773.8 207.7" fill="none" stroke-opacity="0.68" stroke-width="1.15"/><path d="M926.8 546.1 L927.6 546.0" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M927.6 546.0 L922.0 335.2" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M922.0 335.2 L921.2 335.4" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M921.2 335.4 L926.8 546.1" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M802.3 508.0 L803.2 507.8" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M803.2 507.8 L803.0 265.6" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M803.0 265.6 L802.2 265.8" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M802.2 265.8 L802.3 508.0" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M926.8 546.1 L802.3 508.0" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M927.6 546.0 L803.2 507.8" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M921.2 335.4 L802.2 265.8" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M922.0 335.2 L803.0 265.6" fill="none" stroke-opacity="0.35" stroke-width="0.9"/><path d="M944.3 600.4 L943.4 600.6 L942.7 601.5 L942.2 603.0 L942.1 605.0 L942.3 607.0 L942.9 608.8 L943.7 610.1 L944.6 610.7 L945.6 610.5 L946.3 609.6 L946.8 608.0 L946.9 606.1 L946.6 604.1 L946.1 602.3 L945.3 601.0 L944.3 600.4" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M780.2 561.1 L778.8 561.2 L777.6 562.3 L776.8 564.1 L776.5 566.5 L776.8 569.0 L777.6 571.2 L778.7 572.8 L780.1 573.6 L781.5 573.4 L782.7 572.3 L783.5 570.5 L783.7 568.2 L783.5 565.7 L782.7 563.5 L781.5 561.9 L780.2 561.1" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M935.8 316.6 L935.0 316.4 L934.3 316.9 L933.8 318.1 L933.7 319.7 L933.9 321.6 L934.5 323.4 L935.2 324.8 L936.1 325.7 L937.0 325.9 L937.7 325.4 L938.2 324.2 L938.3 322.6 L938.0 320.7 L937.5 318.9 L936.7 317.5 L935.8 316.6" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><path d="M781.6 220.7 L780.3 220.3 L779.2 220.8 L778.5 222.1 L778.2 224.0 L778.4 226.2 L779.2 228.4 L780.2 230.3 L781.5 231.5 L782.8 231.8 L783.9 231.3 L784.6 230.0 L784.9 228.1 L784.6 225.9 L783.9 223.7 L782.9 221.9 L781.6 220.7" fill="none" stroke-opacity="0.4" stroke-width="0.9"/><g class="wire-cap"><path d="M868 428 L868 474" stroke="#E07B1A" stroke-opacity=".55" stroke-width="1.1" stroke-dasharray="3 4"/><circle cx="868" cy="478" r="3.6" fill="#E07B1A"/><text class="wire-num" x="868" y="504" text-anchor="middle">01</text><text class="wire-txt" x="868" y="528" text-anchor="middle">PAINEL LATERAL</text></g></g></g>
+          <g transform="translate(-199.9 27.5)"><g class="wire-part" data-dx="199.9" data-dy="-27.5"><path d="M818.0 570.6 L818.7 570.5" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M818.7 570.5 L817.8 349.1" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M817.8 349.1 L817.2 349.2" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M817.2 349.2 L818.0 570.6" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M656.9 532.1 L657.6 532.0" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M657.6 532.0 L665.4 273.2" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M665.4 273.2 L664.7 273.4" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M664.7 273.4 L656.9 532.1" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M818.0 570.6 L656.9 532.1" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M818.7 570.5 L657.6 532.0" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M817.2 349.2 L664.7 273.4" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M817.8 349.1 L665.4 273.2" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M810.7 555.0 L726.9 533.6" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M810.7 540.0 L727.1 517.2" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M810.6 525.1 L727.4 501.0" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M810.6 510.3 L727.6 484.8" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M806.1 416.6 L811.7 415.5" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M811.7 415.5 L811.6 371.7" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M811.6 371.7 L806.1 372.9" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M806.1 372.9 L806.1 416.6" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M775.1 403.8 L780.8 402.6" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M780.8 402.6 L781.0 357.4" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M781.0 357.4 L775.3 358.7" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M775.3 358.7 L775.1 403.8" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M806.1 416.6 L775.1 403.8" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M811.7 415.5 L780.8 402.6" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M806.1 372.9 L775.3 358.7" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M811.6 371.7 L781.0 357.4" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M725.4 471.2 L731.4 470.2" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M731.4 470.2 L731.9 432.4" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M731.9 432.4 L726.0 433.5" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M726.0 433.5 L725.4 471.2" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M701.1 463.4 L707.2 462.3" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M707.2 462.3 L707.9 423.7" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M707.9 423.7 L701.9 424.8" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M701.9 424.8 L701.1 463.4" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M725.4 471.2 L701.1 463.4" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M731.4 470.2 L707.2 462.3" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M726.0 433.5 L701.9 424.8" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M731.9 432.4 L707.9 423.7" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M769.1 440.8 L774.9 439.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M774.9 439.8 L775.4 356.1" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M775.4 356.1 L769.7 357.4" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M769.7 357.4 L769.1 440.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M764.2 439.0 L770.0 437.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M770.0 437.9 L770.5 353.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M770.5 353.9 L764.8 355.1" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M764.8 355.1 L764.2 439.0" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M769.1 440.8 L764.2 439.0" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M774.9 439.8 L770.0 437.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M769.7 357.4 L764.8 355.1" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M775.4 356.1 L770.5 353.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M758.3 436.8 L764.2 435.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M764.2 435.8 L764.8 351.2" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M764.8 351.2 L759.1 352.5" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M759.1 352.5 L758.3 436.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M753.3 434.9 L759.1 433.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M759.1 433.9 L759.9 348.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M759.9 348.9 L754.1 350.2" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M754.1 350.2 L753.3 434.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M758.3 436.8 L753.3 434.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M764.2 435.8 L759.1 433.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M759.1 352.5 L754.1 350.2" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M764.8 351.2 L759.9 348.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M747.3 432.7 L753.1 431.7" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M753.1 431.7 L754.0 346.1" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M754.0 346.1 L748.2 347.5" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M748.2 347.5 L747.3 432.7" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M742.1 430.8 L748.0 429.7" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M748.0 429.7 L748.9 343.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M748.9 343.8 L743.1 345.1" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M743.1 345.1 L742.1 430.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M747.3 432.7 L742.1 430.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M753.1 431.7 L748.0 429.7" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M748.2 347.5 L743.1 345.1" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M754.0 346.1 L748.9 343.8" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M735.9 428.5 L741.8 427.4" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M741.8 427.4 L742.9 341.0" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M742.9 341.0 L737.1 342.3" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M737.1 342.3 L735.9 428.5" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M730.6 426.6 L736.5 425.5" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M736.5 425.5 L737.7 338.5" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M737.7 338.5 L731.9 339.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M731.9 339.9 L730.6 426.6" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M735.9 428.5 L730.6 426.6" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M741.8 427.4 L736.5 425.5" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M737.1 342.3 L731.9 339.9" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><path d="M742.9 341.0 L737.7 338.5" fill="none" stroke-opacity="0.35" stroke-width="0.85"/><g class="wire-cap"><path d="M746 431 L746 479" stroke="#E07B1A" stroke-opacity=".55" stroke-width="1.1" stroke-dasharray="3 4"/><circle cx="746" cy="483" r="3.6" fill="#E07B1A"/><text class="wire-num" x="746" y="509" text-anchor="middle">02</text><text class="wire-txt" x="746" y="533" text-anchor="middle">PLACA-MÃE</text></g></g></g>
+          <g transform="translate(-57.9 -118.4)"><g class="wire-part" data-dx="57.9" data-dy="118.4"><path d="M782.1 421.7 L836.8 411.6" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M836.8 411.6 L836.1 327.0" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M836.1 327.0 L782.4 339.3" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M782.4 339.3 L782.1 421.7" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M729.4 400.8 L785.8 389.4" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M785.8 389.4 L786.1 300.2" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M786.1 300.2 L730.7 314.0" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M730.7 314.0 L729.4 400.8" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M782.1 421.7 L729.4 400.8" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M836.8 411.6 L785.8 389.4" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M782.4 339.3 L730.7 314.0" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M836.1 327.0 L786.1 300.2" fill="none" stroke-opacity="0.6" stroke-width="1.1"/><path d="M782.1 421.7 L782.4 339.3" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M729.4 400.8 L730.7 314.0" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M788.5 420.5 L788.7 337.9" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M736.0 399.5 L737.2 312.4" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M794.9 419.3 L795.0 336.4" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M742.6 398.2 L743.7 310.8" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M801.4 418.1 L801.3 335.0" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M749.2 396.8 L750.2 309.1" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M807.9 416.9 L807.7 333.5" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M755.9 395.4 L756.8 307.5" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M814.4 415.7 L814.2 332.0" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M762.7 394.1 L763.4 305.8" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M821.0 414.5 L820.6 330.5" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M769.5 392.7 L770.1 304.2" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M827.7 413.3 L827.1 329.0" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M776.4 391.3 L776.8 302.5" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M834.3 412.0 L833.7 327.5" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M783.3 389.9 L783.6 300.8" fill="none" stroke-opacity="0.28" stroke-width="0.8"/><path d="M811.8 316.7 L808.1 315.3 L804.5 314.8 L801.1 315.4 L797.8 317.0 L794.9 319.7 L792.4 323.3 L790.4 327.7 L788.9 333.0 L788.0 338.8 L787.7 345.2 L787.9 351.9 L788.8 358.7 L790.3 365.5 L792.4 372.0 L794.9 378.1 L797.8 383.7 L801.1 388.6 L804.6 392.7 L808.3 395.8 L812.0 398.0 L815.7 399.1 L819.3 399.1 L822.7 398.2 L825.8 396.2 L828.5 393.3 L830.8 389.6 L832.6 385.1 L833.9 379.9 L834.7 374.2 L834.9 368.1 L834.6 361.8 L833.7 355.4 L832.3 349.0 L830.5 342.8 L828.1 336.9 L825.4 331.5 L822.3 326.6 L819.0 322.5 L815.5 319.2 L811.8 316.7" fill="none" stroke-opacity="0.6" stroke-width="1.05"/><path d="M811.8 320.7 L808.5 319.4 L805.3 319.0 L802.2 319.6 L799.3 321.1 L796.7 323.5 L794.4 326.7 L792.6 330.7 L791.3 335.4 L790.4 340.7 L790.1 346.4 L790.4 352.4 L791.2 358.5 L792.5 364.6 L794.4 370.5 L796.6 376.0 L799.2 381.0 L802.2 385.4 L805.3 389.0 L808.7 391.9 L812.0 393.8 L815.4 394.9 L818.6 394.9 L821.6 394.1 L824.4 392.3 L826.8 389.7 L828.9 386.4 L830.6 382.3 L831.7 377.7 L832.4 372.5 L832.7 367.1 L832.4 361.3 L831.6 355.5 L830.3 349.8 L828.6 344.2 L826.5 338.9 L824.1 334.0 L821.3 329.6 L818.3 325.9 L815.1 322.9 L811.8 320.7" fill="none" stroke-opacity="0.36" stroke-width="0.9"/><path d="M811.9 348.1 L810.6 347.7 L809.3 348.0 L808.2 348.9 L807.4 350.3 L806.9 352.2 L806.7 354.5 L806.9 356.9 L807.4 359.3 L808.2 361.5 L809.3 363.5 L810.6 365.0 L811.9 365.9 L813.3 366.3 L814.5 366.0 L815.6 365.1 L816.4 363.6 L816.9 361.7 L817.1 359.5 L816.9 357.1 L816.4 354.7 L815.6 352.5 L814.5 350.5 L813.2 349.0 L811.9 348.1" fill="none" stroke-opacity="0.48" stroke-width="1"/><path d="M811.9 348.1 L800.9 321.0" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M807.8 349.4 L790.8 342.2" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M806.8 356.5 L796.8 375.2" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M809.7 364.0 L814.1 393.8" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M814.2 366.1 L829.2 384.4" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M817.0 361.4 L831.1 355.2" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M815.9 353.4 L818.8 327.3" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M834.8 408.2 L835.6 408.0" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M835.6 408.0 L835.0 328.8" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M835.0 328.8 L834.2 328.9" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M834.2 328.9 L834.8 408.2" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M787.2 387.3 L787.9 387.2" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M787.9 387.2 L788.1 303.8" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M788.1 303.8 L787.4 304.0" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M787.4 304.0 L787.2 387.3" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M834.8 408.2 L787.2 387.3" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M835.6 408.0 L787.9 387.2" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M834.2 328.9 L787.4 304.0" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M835.0 328.8 L788.1 303.8" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M764.6 395.6 L771.5 394.2" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M771.5 394.2 L771.8 353.8" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M771.8 353.8 L764.9 355.3" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M764.9 355.3 L764.6 395.6" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M739.2 385.0 L746.2 383.5" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M746.2 383.5 L746.7 342.1" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M746.7 342.1 L739.7 343.7" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M739.7 343.7 L739.2 385.0" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M764.6 395.6 L739.2 385.0" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M771.5 394.2 L746.2 383.5" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M764.9 355.3 L739.7 343.7" fill="none" stroke-opacity="0.5" stroke-width="1"/><path d="M771.8 353.8 L746.7 342.1" fill="none" stroke-opacity="0.5" stroke-width="1"/><g class="wire-cap"><path d="M784 363 L954 343" stroke="#E07B1A" stroke-opacity=".55" stroke-width="1.1" stroke-dasharray="3 4"/><circle cx="954" cy="347" r="3.6" fill="#E07B1A"/><text class="wire-num" x="954" y="373" text-anchor="middle">03</text><text class="wire-txt" x="954" y="397" text-anchor="middle">PROCESSADOR + COOLER</text></g></g></g>
+          <g transform="translate(-209.5 -84.6)"><g class="wire-part" data-dx="209.5" data-dy="84.6"><path d="M763.8 437.5 L769.6 436.4" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M769.6 436.4 L770.2 347.0" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M770.2 347.0 L764.5 348.3" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M764.5 348.3 L763.8 437.5" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M757.9 435.3 L763.8 434.2" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M763.8 434.2 L764.5 344.3" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M764.5 344.3 L758.7 345.6" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M758.7 345.6 L757.9 435.3" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M763.8 437.5 L757.9 435.3" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M769.6 436.4 L763.8 434.2" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M764.5 348.3 L758.7 345.6" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M770.2 347.0 L764.5 344.3" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M762.2 430.0 L762.1 436.8" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M761.6 429.7 L761.5 436.6" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M761.0 429.5 L760.9 436.4" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M760.4 429.3 L760.4 436.2" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M759.8 429.1 L759.8 436.0" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M746.9 431.2 L752.7 430.1" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M752.7 430.1 L753.7 339.2" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M753.7 339.2 L747.9 340.5" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M747.9 340.5 L746.9 431.2" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M740.8 428.9 L746.7 427.8" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M746.7 427.8 L747.7 336.4" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M747.7 336.4 L741.9 337.7" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M741.9 337.7 L740.8 428.9" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M746.9 431.2 L740.8 428.9" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M752.7 430.1 L746.7 427.8" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M747.9 340.5 L741.9 337.7" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M753.7 339.2 L747.7 336.4" fill="none" stroke-opacity="0.62" stroke-width="1.05"/><path d="M745.2 423.5 L745.1 430.5" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M744.6 423.3 L744.5 430.3" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M744.0 423.1 L743.9 430.1" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M743.4 422.8 L743.3 429.9" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><path d="M742.8 422.6 L742.7 429.6" fill="none" stroke-opacity="0.3" stroke-width="0.8"/><g class="wire-cap"><path d="M756 387 L626 365" stroke="#E07B1A" stroke-opacity=".55" stroke-width="1.1" stroke-dasharray="3 4"/><circle cx="626" cy="369" r="3.6" fill="#E07B1A"/><text class="wire-num" x="626" y="395" text-anchor="middle">04</text><text class="wire-txt" x="626" y="419" text-anchor="middle">MEMÓRIAS</text></g></g></g>
+          <g transform="translate(302.0 92.9)"><g class="wire-part" data-dx="-302.0" data-dy="-92.9"><path d="M813.2 511.6 L874.3 503.3" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M874.3 503.3 L873.8 473.1" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M873.8 473.1 L813.2 482.3" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M813.2 482.3 L813.2 511.6" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M683.6 471.9 L749.5 460.8" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M749.5 460.8 L749.8 426.3" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M749.8 426.3 L684.4 438.5" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M684.4 438.5 L683.6 471.9" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M813.2 511.6 L683.6 471.9" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M874.3 503.3 L749.5 460.8" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M813.2 482.3 L684.4 438.5" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M873.8 473.1 L749.8 426.3" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M829.0 460.2 L826.2 459.3 L822.9 458.6 L819.1 457.9 L814.9 457.5 L810.5 457.2 L805.9 457.0 L801.3 457.1 L796.7 457.3 L792.4 457.7 L788.4 458.3 L784.9 459.0 L781.8 459.8 L779.3 460.7 L777.5 461.7 L776.4 462.8 L776.0 463.9 L776.2 464.9 L777.2 466.0 L778.9 467.0 L781.1 467.9 L783.9 468.8 L787.2 469.5 L791.0 470.0 L795.0 470.5 L799.3 470.7 L803.7 470.9 L808.1 470.8 L812.4 470.6 L816.6 470.2 L820.5 469.7 L824.0 469.1 L827.1 468.3 L829.6 467.4 L831.6 466.5 L832.9 465.4 L833.5 464.3 L833.4 463.3 L832.6 462.2 L831.1 461.2 L829.0 460.2" fill="none" stroke-opacity="0.5" stroke-width="1.05"/><path d="M826.5 460.6 L824.0 459.8 L821.0 459.1 L817.6 458.6 L813.9 458.1 L809.9 457.9 L805.8 457.8 L801.6 457.8 L797.6 458.0 L793.7 458.4 L790.1 458.9 L786.9 459.5 L784.1 460.2 L781.9 461.1 L780.3 462.0 L779.2 462.9 L778.8 463.9 L779.1 464.9 L779.9 465.8 L781.4 466.7 L783.5 467.5 L786.0 468.3 L789.0 468.9 L792.3 469.5 L796.0 469.8 L799.8 470.1 L803.8 470.2 L807.8 470.2 L811.7 470.0 L815.4 469.6 L818.9 469.2 L822.1 468.6 L824.9 467.9 L827.2 467.1 L828.9 466.2 L830.1 465.3 L830.6 464.3 L830.5 463.3 L829.8 462.4 L828.5 461.5 L826.5 460.6" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M810.0 463.3 L808.9 463.0 L807.6 462.7 L806.0 462.6 L804.3 462.6 L802.7 462.7 L801.2 462.8 L800.0 463.1 L799.1 463.4 L798.5 463.8 L798.4 464.2 L798.8 464.6 L799.5 465.0 L800.6 465.2 L802.0 465.5 L803.5 465.6 L805.2 465.6 L806.8 465.5 L808.3 465.4 L809.5 465.1 L810.4 464.8 L811.0 464.4 L811.1 464.0 L810.8 463.6 L810.0 463.3" fill="none" stroke-opacity="0.4" stroke-width="1"/><path d="M810.0 463.3 L815.5 458.5" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M805.3 462.6 L793.2 458.6" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M800.1 463.1 L779.9 462.9" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M798.5 464.3 L785.5 468.0" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M801.5 465.4 L805.2 470.1" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M807.0 465.5 L824.6 467.8" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M810.8 464.6 L829.5 462.6" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M797.1 473.8 L844.5 466.4" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M844.5 466.4 L844.5 465.5" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M844.5 465.5 L797.1 473.0" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M797.1 473.0 L797.1 473.8" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M764.6 462.6 L812.9 454.6" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M812.9 454.6 L812.9 453.8" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M812.9 453.8 L764.6 461.8" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M764.6 461.8 L764.6 462.6" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M797.1 473.8 L764.6 462.6" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M844.5 466.4 L812.9 454.6" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M797.1 473.0 L764.6 461.8" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M844.5 465.5 L812.9 453.8" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M783.3 443.1 L780.2 442.2 L776.6 441.3 L772.5 440.6 L768.0 440.1 L763.3 439.8 L758.4 439.6 L753.6 439.7 L748.8 439.9 L744.4 440.4 L740.2 441.0 L736.6 441.8 L733.5 442.7 L731.0 443.7 L729.3 444.8 L728.3 446.0 L728.0 447.2 L728.5 448.4 L729.7 449.6 L731.5 450.7 L734.1 451.7 L737.2 452.6 L740.8 453.4 L744.8 454.1 L749.1 454.6 L753.6 454.9 L758.3 455.0 L762.9 454.9 L767.5 454.7 L771.8 454.3 L775.8 453.7 L779.4 453.0 L782.5 452.2 L785.1 451.2 L787.0 450.1 L788.2 449.0 L788.7 447.8 L788.4 446.6 L787.4 445.4 L785.7 444.2 L783.3 443.1" fill="none" stroke-opacity="0.5" stroke-width="1.05"/><path d="M780.8 443.6 L778.0 442.7 L774.7 442.0 L771.1 441.3 L767.0 440.9 L762.8 440.6 L758.4 440.4 L754.1 440.5 L749.8 440.7 L745.8 441.1 L742.1 441.7 L738.8 442.4 L736.0 443.2 L733.8 444.1 L732.2 445.1 L731.3 446.2 L731.0 447.3 L731.4 448.3 L732.5 449.4 L734.2 450.4 L736.5 451.3 L739.3 452.1 L742.5 452.8 L746.1 453.4 L750.0 453.9 L754.1 454.1 L758.3 454.3 L762.5 454.2 L766.6 454.0 L770.5 453.6 L774.1 453.1 L777.3 452.5 L780.1 451.7 L782.4 450.8 L784.1 449.8 L785.2 448.8 L785.7 447.7 L785.4 446.6 L784.5 445.6 L782.9 444.5 L780.8 443.6" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M763.8 446.5 L762.6 446.2 L761.1 446.0 L759.4 445.8 L757.7 445.8 L756.0 445.9 L754.4 446.1 L753.2 446.4 L752.2 446.8 L751.8 447.2 L751.7 447.6 L752.1 448.0 L753.0 448.4 L754.2 448.8 L755.6 449.0 L757.3 449.1 L759.0 449.2 L760.7 449.1 L762.2 448.9 L763.5 448.6 L764.4 448.2 L764.9 447.8 L765.0 447.4 L764.6 446.9 L763.8 446.5" fill="none" stroke-opacity="0.4" stroke-width="1"/><path d="M763.8 446.5 L768.8 441.2" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M758.7 445.8 L745.3 441.4" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M753.3 446.3 L731.9 446.1" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M751.8 447.7 L738.7 451.8" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M755.2 448.9 L759.8 454.1" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M761.0 449.1 L779.8 451.5" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M764.8 448.0 L784.2 445.8" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M751.7 458.2 L800.5 450.0" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M800.5 450.0 L800.5 449.1" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M800.5 449.1 L751.7 457.4" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M751.7 457.4 L751.7 458.2" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M715.7 445.9 L765.4 436.9" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M765.4 436.9 L765.4 436.0" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M765.4 436.0 L715.7 445.0" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M715.7 445.0 L715.7 445.9" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M751.7 458.2 L715.7 445.9" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M800.5 450.0 L765.4 436.9" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M751.7 457.4 L715.7 445.0" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M800.5 449.1 L765.4 436.0" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M807.2 521.5 L807.9 521.5" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M807.9 521.5 L807.8 467.8" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M807.8 467.8 L807.2 468.0" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M807.2 468.0 L807.2 521.5" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M790.1 516.5 L790.8 516.4" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M790.8 516.4 L790.9 461.8" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M790.9 461.8 L790.2 461.9" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M790.2 461.9 L790.1 516.5" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M807.2 521.5 L790.1 516.5" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M807.9 521.5 L790.8 516.4" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M807.2 468.0 L790.2 461.9" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><path d="M807.8 467.8 L790.9 461.8" fill="none" stroke-opacity="0.45" stroke-width="0.95"/><g class="wire-cap"><path d="M784 473 L784 519" stroke="#E07B1A" stroke-opacity=".55" stroke-width="1.1" stroke-dasharray="3 4"/><circle cx="784" cy="523" r="3.6" fill="#E07B1A"/><text class="wire-num" x="784" y="549" text-anchor="middle">05</text><text class="wire-txt" x="784" y="573" text-anchor="middle">PLACA DE VÍDEO</text></g></g></g>
+          <g transform="translate(76.8 181.7)"><g class="wire-part" data-dx="-76.8" data-dy="-181.7"><path d="M817.1 626.4 L931.1 617.6" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M931.1 617.6 L929.3 553.1" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M929.3 553.1 L816.8 565.3" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M816.8 565.3 L817.1 626.4" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M723.4 610.1 L844.6 599.3" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M844.6 599.3 L843.9 527.7" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M843.9 527.7 L724.5 542.7" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M724.5 542.7 L723.4 610.1" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M817.1 626.4 L723.4 610.1" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M931.1 617.6 L844.6 599.3" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M816.8 565.3 L724.5 542.7" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M929.3 553.1 L843.9 527.7" fill="none" stroke-opacity="0.62" stroke-width="1.1"/><path d="M869.1 543.4 L864.8 542.4 L859.5 541.4 L853.4 540.7 L846.7 540.1 L839.5 539.8 L832.0 539.6 L824.5 539.7 L817.1 539.9 L810.0 540.4 L803.4 541.1 L797.6 541.9 L792.6 542.9 L788.5 544.0 L785.5 545.2 L783.6 546.5 L782.9 547.8 L783.3 549.0 L784.9 550.3 L787.4 551.4 L791.0 552.5 L795.5 553.4 L800.7 554.3 L806.6 554.9 L813.0 555.4 L819.7 555.7 L826.7 555.9 L833.7 555.8 L840.7 555.6 L847.3 555.2 L853.6 554.6 L859.3 553.8 L864.4 552.9 L868.6 551.9 L872.0 550.8 L874.3 549.6 L875.5 548.3 L875.6 547.0 L874.6 545.8 L872.4 544.5 L869.1 543.4" fill="none" stroke-opacity="0.5" stroke-width="1.05"/><path d="M865.0 543.9 L861.1 542.9 L856.4 542.1 L850.9 541.4 L844.9 540.9 L838.5 540.6 L831.8 540.5 L825.0 540.5 L818.3 540.8 L812.0 541.2 L806.1 541.8 L800.8 542.6 L796.3 543.4 L792.7 544.4 L789.9 545.5 L788.2 546.6 L787.6 547.8 L787.9 548.9 L789.3 550.0 L791.6 551.1 L794.8 552.1 L798.8 552.9 L803.5 553.7 L808.8 554.3 L814.6 554.7 L820.7 555.0 L826.9 555.1 L833.3 555.1 L839.6 554.9 L845.6 554.5 L851.2 553.9 L856.4 553.3 L861.0 552.5 L864.8 551.5 L867.7 550.5 L869.8 549.4 L870.9 548.3 L871.0 547.1 L870.0 546.0 L868.0 544.9 L865.0 543.9" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M837.9 547.0 L836.2 546.7 L834.0 546.4 L831.5 546.3 L828.8 546.2 L826.1 546.3 L823.7 546.5 L821.7 546.9 L820.2 547.2 L819.3 547.7 L819.1 548.2 L819.6 548.6 L820.7 549.0 L822.4 549.4 L824.6 549.6 L827.1 549.8 L829.8 549.8 L832.4 549.7 L834.8 549.5 L836.8 549.2 L838.3 548.8 L839.2 548.4 L839.5 547.9 L839.0 547.5 L837.9 547.0" fill="none" stroke-opacity="0.4" stroke-width="1"/><path d="M837.9 547.0 L847.6 541.3" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M830.3 546.2 L811.1 541.5" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M821.9 546.8 L789.2 546.6" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M819.2 548.3 L798.0 552.5" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M824.0 549.6 L829.2 555.0" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M832.7 549.7 L860.6 552.3" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M838.9 548.6 L869.4 546.3" fill="none" stroke-opacity="0.25" stroke-width="0.9"/><path d="M816.0 559.2 L892.8 550.6" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M892.8 550.6 L892.7 549.8" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M892.7 549.8 L816.0 558.4" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M816.0 558.4 L816.0 559.2" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M764.6 546.3 L844.0 536.6" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M844.0 536.6 L844.0 535.7" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M844.0 535.7 L764.6 545.4" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M764.6 545.4 L764.6 546.3" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M816.0 559.2 L764.6 546.3" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M892.8 550.6 L844.0 536.6" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M816.0 558.4 L764.6 545.4" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M892.7 549.8 L844.0 535.7" fill="none" stroke-opacity="0.35" stroke-width="1"/><path d="M830.0 618.3 L829.7 570.8" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M846.7 617.0 L846.2 569.1" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M863.7 615.6 L863.1 567.3" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M881.0 614.2 L880.2 565.5" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M898.7 612.8 L897.6 563.7" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><path d="M916.6 611.4 L915.4 561.9" fill="none" stroke-opacity="0.3" stroke-width="0.85"/><g class="wire-cap"><path d="M829 581 L829 625" stroke="#E07B1A" stroke-opacity=".55" stroke-width="1.1" stroke-dasharray="3 4"/><circle cx="829" cy="629" r="3.6" fill="#E07B1A"/><text class="wire-num" x="829" y="655" text-anchor="middle">06</text><text class="wire-txt" x="829" y="679" text-anchor="middle">FONTE</text></g></g></g>
+          <g transform="translate(-170.7 120.5)"><g class="wire-part" data-dx="170.7" data-dy="-120.5"><path d="M916.1 486.7 L915.5 480.8 L914.1 475.1 L911.9 469.9 L909.0 465.3 L905.4 461.3 L901.3 458.1 L896.7 455.7 L891.8 454.3 L886.7 453.7 L881.5 454.1 L876.3 455.4 L871.3 457.5 L866.6 460.5 L862.3 464.2 L858.5 468.6 L855.2 473.5 L852.6 478.8 L850.8 484.5 L849.6 490.3 L849.3 496.1 L849.8 501.9 L851.0 507.4 L853.0 512.6 L855.7 517.3 L859.1 521.3 L863.1 524.7 L867.6 527.2 L872.4 528.9 L877.5 529.7 L882.8 529.5 L888.1 528.4 L893.2 526.3 L898.1 523.4 L902.6 519.7 L906.6 515.2 L910.0 510.2 L912.7 504.6 L914.7 498.8 L915.8 492.7 L916.1 486.7" fill="none" stroke-opacity="0.6" stroke-width="1.05"/><path d="M912.6 487.2 L912.1 481.9 L910.9 476.8 L908.9 472.1 L906.3 467.9 L903.1 464.3 L899.4 461.4 L895.2 459.3 L890.8 458.0 L886.2 457.5 L881.5 457.8 L876.9 458.9 L872.4 460.9 L868.1 463.6 L864.3 466.9 L860.8 470.8 L857.9 475.3 L855.5 480.1 L853.8 485.2 L852.8 490.4 L852.5 495.7 L852.9 500.9 L854.1 505.9 L855.9 510.5 L858.4 514.7 L861.4 518.4 L865.0 521.4 L869.0 523.7 L873.4 525.2 L878.0 525.8 L882.7 525.7 L887.5 524.7 L892.1 522.8 L896.5 520.2 L900.5 516.8 L904.1 512.8 L907.2 508.3 L909.6 503.3 L911.4 498.0 L912.4 492.6 L912.6 487.2" fill="none" stroke-opacity="0.36" stroke-width="0.9"/><path d="M889.5 490.5 L889.2 488.3 L888.4 486.4 L887.2 484.9 L885.7 483.8 L883.9 483.2 L882.0 483.2 L880.1 483.8 L878.3 484.9 L876.9 486.4 L875.7 488.3 L875.0 490.4 L874.8 492.5 L875.1 494.6 L875.9 496.5 L877.0 498.1 L878.6 499.2 L880.4 499.8 L882.3 499.8 L884.2 499.3 L885.9 498.2 L887.4 496.6 L888.6 494.8 L889.3 492.6 L889.5 490.5" fill="none" stroke-opacity="0.48" stroke-width="1"/><path d="M889.5 490.5 L907.1 470.4" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M886.6 484.4 L885.2 458.2" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M880.4 483.7 L861.5 471.0" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M875.5 488.8 L853.4 498.9" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M875.6 496.0 L866.7 521.6" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M880.6 499.8 L892.2 522.0" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M886.8 497.4 L910.4 499.0" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M849.9 533.6 L917.2 525.4" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M917.2 525.4 L915.3 448.8" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M915.3 448.8 L849.1 459.4" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M849.1 459.4 L849.9 533.6" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M849.5 533.5 L916.8 525.2" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M916.8 525.2 L914.9 448.6" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M914.9 448.6 L848.7 459.2" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M848.7 459.2 L849.5 533.5" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M849.9 533.6 L849.5 533.5" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M917.2 525.4 L916.8 525.2" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M849.1 459.4 L848.7 459.2" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M915.3 448.8 L914.9 448.6" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M914.1 407.3 L913.6 401.6 L912.2 396.2 L910.0 391.3 L907.2 386.9 L903.7 383.2 L899.6 380.2 L895.1 378.1 L890.3 376.9 L885.3 376.6 L880.1 377.2 L875.1 378.6 L870.2 380.9 L865.5 384.0 L861.3 387.7 L857.5 392.1 L854.3 397.0 L851.8 402.3 L849.9 407.8 L848.8 413.5 L848.5 419.2 L848.9 424.7 L850.2 430.0 L852.1 435.0 L854.8 439.4 L858.2 443.2 L862.1 446.2 L866.4 448.5 L871.2 450.0 L876.2 450.5 L881.4 450.1 L886.6 448.8 L891.6 446.6 L896.5 443.6 L900.9 439.8 L904.8 435.3 L908.2 430.3 L910.8 424.8 L912.7 419.1 L913.8 413.2 L914.1 407.3" fill="none" stroke-opacity="0.6" stroke-width="1.05"/><path d="M910.7 407.9 L910.2 402.8 L909.0 397.9 L907.1 393.5 L904.5 389.6 L901.4 386.2 L897.7 383.6 L893.7 381.7 L889.3 380.6 L884.8 380.3 L880.2 380.8 L875.6 382.1 L871.2 384.1 L867.0 386.9 L863.2 390.3 L859.8 394.2 L856.9 398.6 L854.6 403.4 L853.0 408.4 L852.0 413.5 L851.7 418.6 L852.1 423.6 L853.2 428.4 L855.0 432.8 L857.4 436.8 L860.4 440.2 L863.9 443.0 L867.9 445.0 L872.2 446.3 L876.7 446.8 L881.3 446.4 L886.0 445.2 L890.5 443.3 L894.9 440.5 L898.8 437.1 L902.4 433.1 L905.4 428.6 L907.8 423.7 L909.5 418.5 L910.5 413.2 L910.7 407.9" fill="none" stroke-opacity="0.36" stroke-width="0.9"/><path d="M888.0 412.0 L887.7 410.0 L887.0 408.2 L885.8 406.7 L884.3 405.7 L882.5 405.3 L880.6 405.3 L878.8 406.0 L877.1 407.1 L875.6 408.6 L874.5 410.5 L873.8 412.5 L873.6 414.7 L873.9 416.7 L874.6 418.5 L875.8 419.9 L877.3 421.0 L879.0 421.4 L880.9 421.4 L882.8 420.8 L884.5 419.7 L886.0 418.1 L887.1 416.2 L887.8 414.2 L888.0 412.0" fill="none" stroke-opacity="0.48" stroke-width="1"/><path d="M888.0 412.0 L905.3 391.9" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M885.2 406.3 L883.7 381.0" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M879.0 405.8 L860.5 394.3" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M874.2 411.1 L852.5 421.7" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M874.3 418.0 L865.6 443.1" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M879.3 421.5 L890.6 442.4" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M885.4 418.8 L908.5 419.5" fill="none" stroke-opacity="0.3" stroke-width="0.9"/><path d="M849.1 455.5 L915.2 444.7" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M915.2 444.7 L913.4 370.7" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M913.4 370.7 L848.3 383.6" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M848.3 383.6 L849.1 455.5" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M848.7 455.3 L914.8 444.6" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M914.8 444.6 L913.0 370.5" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M913.0 370.5 L847.9 383.4" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M847.9 383.4 L848.7 455.3" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M849.1 455.5 L848.7 455.3" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M915.2 444.7 L914.8 444.6" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M848.3 383.6 L847.9 383.4" fill="none" stroke-opacity="0.42" stroke-width="1"/><path d="M913.4 370.7 L913.0 370.5" fill="none" stroke-opacity="0.42" stroke-width="1"/><g class="wire-cap"><path d="M881 452 L881 496" stroke="#E07B1A" stroke-opacity=".55" stroke-width="1.1" stroke-dasharray="3 4"/><circle cx="881" cy="500" r="3.6" fill="#E07B1A"/><text class="wire-num" x="881" y="526" text-anchor="middle">07</text><text class="wire-txt" x="881" y="550" text-anchor="middle">VENTOINHAS</text></g></g></g>
+        </svg>
+      </div>
+
+      <ul class="bancada-servicos">
+        <li data-reveal>
+          <span class="mono serv-num">01</span>
+          <h3>Formatação</h3>
+          <p>Sistema reinstalado do zero, drivers em dia e os seus arquivos preservados.</p>
+        </li>
+        <li data-reveal>
+          <span class="mono serv-num">02</span>
+          <h3>Upgrade</h3>
+          <p>Mais memória, SSD ou placa — o salto de desempenho que o seu equipamento aceita.</p>
+        </li>
+        <li data-reveal>
+          <span class="mono serv-num">03</span>
+          <h3>Limpeza preventiva</h3>
+          <p>Pó removido, pasta térmica trocada e a temperatura de volta ao normal.</p>
+        </li>
+        <li data-reveal>
+          <span class="mono serv-num">04</span>
+          <h3>Remoção de vírus</h3>
+          <p>Varredura completa, ameaças eliminadas e o navegador limpo outra vez.</p>
+        </li>
+        <li data-reveal>
+          <span class="mono serv-num">05</span>
+          <h3>Backup</h3>
+          <p>Fotos, documentos e sistemas copiados antes que qualquer coisa dê errado.</p>
+        </li>
+        <li data-reveal>
+          <span class="mono serv-num">06</span>
+          <h3>Recuperação de desempenho</h3>
+          <p>A máquina lenta volta a responder: inicialização, disco e processos revisados.</p>
+        </li>
+      </ul>
+
+      <div class="bancada-acao" data-reveal>
+        <a class="btn btn--zap btn--big" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Gostaria%20de%20levar%20meu%20equipamento%20na%20assist%C3%AAncia%20t%C3%A9cnica%20da%20INFOLAB." target="_blank" rel="noopener" data-magnetic>
+          <svg class="zap-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 4C9.53 4 4.25 9.28 4.25 15.79c0 2.08.55 4.1 1.58 5.89L4.16 28l6.47-1.7a11.77 11.77 0 0 0 5.41 1.32h.01c6.5 0 11.79-5.28 11.79-11.79 0-3.15-1.23-6.11-3.46-8.34A11.72 11.72 0 0 0 16.04 4Zm0 21.63h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.84 1 1.03-3.74-.24-.38a9.77 9.77 0 0 1-1.5-5.14c0-5.41 4.4-9.81 9.82-9.81a9.75 9.75 0 0 1 9.8 9.82c0 5.41-4.4 9.83-9.81 9.83Zm5.38-7.35c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.64.07-.29-.15-1.24-.46-2.36-1.46a8.85 8.85 0 0 1-1.63-2.03c-.17-.3-.02-.45.13-.6.13-.13.3-.34.44-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.03-.52-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.14.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.74-.71 1.98-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.56-.34Z" fill="currentColor"/></svg>
+          <span>Falar no WhatsApp da loja</span><i aria-hidden="true">→</i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════ NA TELA — MONITOR VIVO ══════════ -->
+    <section class="telas" id="telas" data-section="TELAS">
+      <div class="telas-grid">
+        <div class="telas-copy">
+          <p class="mono" data-reveal>▲ 03 — SOLUÇÕES PARA EMPRESAS</p>
+          <h2 class="telas-title" id="telasTitle" data-reveal>Comércio</h2>
+          <p class="telas-sub" id="telasSub" data-reveal>Frente de caixa com fiscal integrado: cupom autorizado, fila andando e fechamento sem surpresa.</p>
+          <div class="telas-dots" role="tablist" aria-label="Perfis">
+            <button class="tdot is-on" role="tab" aria-selected="true" data-tela="0" aria-label="Comércio"></button>
+            <button class="tdot" role="tab" aria-selected="false" data-tela="1" aria-label="Empresas"></button>
+            <button class="tdot" role="tab" aria-selected="false" data-tela="2" aria-label="Gamers"></button>
+            <button class="tdot" role="tab" aria-selected="false" data-tela="3" aria-label="Criadores"></button>
+          </div>
+        </div>
+
+        <div class="monitor-wrap" data-reveal>
+          <div class="monitor">
+            <div class="screen">
+
+              <div class="tela is-on" data-tela-panel="0">
+                <div class="mock-bar mock-bar--dark">
+                  <span class="mock-avatar mock-avatar--sm">C1</span>
+                  <span class="mono">PDV — CAIXA 01</span>
+                  <span class="pill pill--ok">ONLINE</span>
+                </div>
+                <div class="tela-pdv">
+                  <div class="tela-pdv-grid">
+                    <i></i><i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="tela-pdv-side">
+                    <span class="mono">TOTAL</span>
+                    <strong>R$ 118,90</strong>
+                    <span class="pill pill--ok">NFC-e ✓</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tela" data-tela-panel="1">
+                <div class="mock-bar mock-bar--dark">
+                  <span class="mock-avatar mock-avatar--sm">RH</span>
+                  <span class="mono">CERTIFICADOS DA EQUIPE</span>
+                  <span class="pill pill--blue">4 ATIVOS</span>
+                </div>
+                <ul class="tela-certs">
+                  <li><span class="mock-avatar mock-avatar--sm">DI</span><div><strong>Diretoria</strong><span class="mono">e-CNPJ A1</span></div><span class="pill pill--ok">VÁLIDO</span></li>
+                  <li><span class="mock-avatar mock-avatar--sm">FI</span><div><strong>Fiscal</strong><span class="mono">e-CPF A3</span></div><span class="pill pill--ok">VÁLIDO</span></li>
+                  <li><span class="mock-avatar mock-avatar--sm">CO</span><div><strong>Contábil</strong><span class="mono">e-CNPJ A1</span></div><span class="pill pill--warn">RENOVAR</span></li>
+                </ul>
+              </div>
+
+              <div class="tela" data-tela-panel="2">
+                <div class="mock-bar mock-bar--dark">
+                  <span class="mock-avatar mock-avatar--sm">GG</span>
+                  <span class="mono">BUILD — SOB MEDIDA</span>
+                  <span class="pill pill--ok">144 FPS ▲</span>
+                </div>
+                <ul class="tela-specs">
+                  <li><span class="mono">GPU</span><div class="meter"><i style="--w:92%"></i></div></li>
+                  <li><span class="mono">CPU</span><div class="meter"><i style="--w:84%"></i></div></li>
+                  <li><span class="mono">RAM</span><div class="meter"><i style="--w:76%"></i></div></li>
+                  <li><span class="mono">SSD</span><div class="meter"><i style="--w:88%"></i></div></li>
+                </ul>
+                <div class="tela-specs-foot"><span class="pill">AIRFLOW OK</span><span class="pill pill--blue">RGB OPCIONAL</span></div>
+              </div>
+
+              <div class="tela" data-tela-panel="3">
+                <div class="mock-bar mock-bar--dark">
+                  <span class="mock-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="mock-url mono">seuportfolio.com.br</span>
+                </div>
+                <div class="tela-site">
+                  <div class="sk sk-h1"></div>
+                  <div class="sk sk-h2"></div>
+                  <div class="sk-cols"><div class="sk"></div><div class="sk"></div></div>
+                  <div class="tela-site-foot"><span class="pill pill--ok">PUBLICADO ✓</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="monitor-neck" aria-hidden="true"></div>
+          <div class="monitor-base" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ A LOJA — TÚNEL HORIZONTAL ══════════ -->
+    <section class="vitrine" id="loja" data-section="LOJA">
+      <div class="vitrine-pin">
+        <header class="vitrine-head">
+          <p class="mono" data-reveal>▲ 04 — A LOJA</p>
+          <h2 class="vitrine-title" data-reveal-chars>Tudo em um único lugar.</h2>
+          <p class="vitrine-hint mono" aria-hidden="true"><span class="hint-desktop">CONTINUE ROLANDO ⟶</span><span class="hint-touch">ARRASTE ⟶</span></p>
+        </header>
+        <div class="rail" id="rail">
+          <div class="rail-track" id="railTrack">
+
+            <article class="peca">
+              <span class="peca-num mono" aria-hidden="true">01</span>
+              <figure class="peca-fig"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1100&auto=format&fit=crop" alt="Gabinete gamer com ventoinhas azuis" loading="lazy" data-shift></figure>
+              <div class="peca-meta"><h3>Computadores</h3><p class="mono">MONTAGEM SOB MEDIDA</p></div>
+            </article>
+
+            <article class="peca peca--up">
+              <span class="peca-num mono" aria-hidden="true">02</span>
+              <figure class="peca-fig">
+                <img src="img/note.jpg" alt="Notebook sobre mesa clara" loading="lazy" data-shift style="transform: translateX(15px);">
+              </figure>
+              <div class="peca-meta">
+                <h3>Notebooks</h3>
+                <p class="mono">TRABALHO · ESTUDO · CRIAÇÃO</p>
+              </div>
+            </article>
+
+            <article class="peca">
+              <span class="peca-num mono" aria-hidden="true">03</span>
+              <figure class="peca-fig"><img src="img/teclado.jpg" alt="Teclado mecânico e switches" loading="lazy" data-shift></figure>
+              <div class="peca-meta"><h3>Periféricos</h3><p class="mono">TECLADOS · MOUSES · HEADSETS</p></div>
+            </article>
+
+            <article class="peca peca--up">
+              <span class="peca-num mono" aria-hidden="true">04</span>
+              <figure class="peca-fig"><img src="img/cadeiras.jpg" alt="Setup completo com cadeira" loading="lazy" data-shift></figure>
+              <div class="peca-meta"><h3>Cadeiras</h3><p class="mono">ERGONOMIA PARA LONGAS SESSÕES</p></div>
+            </article>
+
+            <article class="peca">
+              <span class="peca-num mono" aria-hidden="true">05</span>
+              <figure class="peca-fig"><img src="img/mobile.jpg" alt="Smartphone flutuando sobre uma mão" loading="lazy" data-shift></figure>
+              <div class="peca-meta"><h3>Mobile &amp; acessórios</h3><p class="mono">APARELHOS &amp; SUPRIMENTOS</p></div>
+            </article>
+
+            <article class="peca">
+              <span class="peca-num mono" aria-hidden="true">06</span>
+              <figure class="peca-fig"><img src="img/jogo.jpg" Jogos" loading="lazy" data-shift ></figure>
+              <div class="peca-meta"><h3>Jogos</h3><p class="mono">XBOX &amp; PLAYSTATION</p></div>
+            </article>
+
+            <aside class="peca peca--fim">
+              <p class="peca-fim-text">Variedade, qualidade e preço justo.</p>
+              <a class="btn btn--light" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20da%20loja." target="_blank" data-magnetic><span>Consultar disponibilidade</span><i aria-hidden="true">→</i></a>
+            </aside>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 25 ANOS — ISOMÉTRICO ══════════ -->
+    <section class="eco" data-section="ECO">
+      <div class="eco-grid">
+        <div class="eco-visual" data-reveal>
+          <svg class="eco-svg" viewBox="0 0 520 620" aria-hidden="true">
+            <defs>
+              <linearGradient id="cubeTop" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#9CC0FF"/><stop offset="1" stop-color="#3B6FF5"/>
+              </linearGradient>
+              <linearGradient id="cubeL" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2B5CE6"/><stop offset="1" stop-color="#0B1B45"/>
+              </linearGradient>
+              <linearGradient id="cubeR" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#132a63"/><stop offset="1" stop-color="#04060D"/>
+              </linearGradient>
+              <linearGradient id="ecoBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#04060D"/><stop offset="1" stop-color="#0E2050"/>
+              </linearGradient>
+            </defs>
+            <rect width="520" height="620" rx="26" fill="url(#ecoBg)"/>
+
+            <!-- torre central -->
+            <g class="cube cube--slow">
+              <polygon points="260,120 360,175 260,230 160,175" fill="url(#cubeTop)"/>
+              <polygon points="160,175 260,230 260,430 160,375" fill="url(#cubeL)"/>
+              <polygon points="360,175 260,230 260,430 360,375" fill="url(#cubeR)"/>
+            </g>
+            <!-- cubos satélites -->
+            <g class="cube">
+              <polygon points="120,360 190,398 120,436 50,398" fill="url(#cubeTop)"/>
+              <polygon points="50,398 120,436 120,540 50,502" fill="url(#cubeL)"/>
+              <polygon points="190,398 120,436 120,540 190,502" fill="url(#cubeR)"/>
+            </g>
+            <g class="cube cube--rev">
+              <polygon points="400,360 470,398 400,436 330,398" fill="url(#cubeTop)"/>
+              <polygon points="330,398 400,436 400,540 330,502" fill="url(#cubeL)"/>
+              <polygon points="470,398 400,436 400,540 470,502" fill="url(#cubeR)"/>
+            </g>
+            <g class="cube">
+              <polygon points="260,440 330,478 260,516 190,478" fill="url(#cubeTop)"/>
+              <polygon points="190,478 260,516 260,596 190,558" fill="url(#cubeL)"/>
+              <polygon points="330,478 260,516 260,596 330,558" fill="url(#cubeR)"/>
+            </g>
+
+            <!-- selo dos 25 anos -->
+            <g class="eco-badge">
+              <circle cx="260" cy="230" r="52" fill="#04060D" opacity="0.88"/>
+              <circle cx="260" cy="230" r="52" fill="none" stroke="#3B6FF5" opacity="0.6"/>
+              <text x="260" y="228" text-anchor="middle" class="eco-badge-num">25</text>
+              <text x="260" y="248" text-anchor="middle" class="eco-badge-cap">ANOS</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="eco-copy">
+          <p class="mono" data-reveal>▲ 05 — A CASA</p>
+          <h2 class="eco-title" data-reveal-chars>Excelência na área de <br>tecnologia há 25 anos.</h2>
+          <p class="eco-lead" data-reveal>Transparência, qualidade e dedicação são valores que fazem nosso trabalho ser reconhecido na Serra Gaúcha.</p>
+
+          <ol class="eco-marcos">
+            <li class="eco-item" data-reveal>
+              <span class="eco-marco-num" aria-hidden="true">01</span>
+              <div>
+                <h3>Pioneiros na emissão de certificados digitais</h3>
+                <p>Os primeiros a emitir Certificados Digitais em Canela e Região — e desde então referência no assunto.</p>
+              </div>
+            </li>
+            <li class="eco-item" data-reveal>
+              <span class="eco-marco-num" aria-hidden="true">02</span>
+              <div>
+                <h3>Profissionais experientes</h3>
+                <p>Uma equipe formada para um atendimento diferenciado e personalizado: cada cliente é ouvido antes de ser orçado.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ A CASA — FOTO DA LOJA + MAPA ISOMÉTRICO ══════════ -->
+    <section class="casa" id="casa" data-section="CASA">
+      <header class="casa-head">
+        <p class="mono casa-eyebrow" data-reveal>▲ 06 — ONDE ESTAMOS</p>
+        <h2 class="casa-title" data-reveal-chars>Venha até a loja.</h2>
+      </header>
+
+      <div class="casa-grid">
+        <!--
+          ▸ MAPA INTERATIVO DA LOJA
+            Leaflet (CDN) + tiles escuros CARTO. As coordenadas ficam no
+            atributo data-lat/data-lng abaixo — ajuste ali se quiser afinar
+            o pino sobre a porta da loja.
+        -->
+        <figure class="casa-foto" data-reveal>
+          <div class="casa-map-wrap">
+            <div
+              id="mapaLoja"
+              class="casa-map"
+              data-lat="-29.35852"
+              data-lng="-50.81190"
+              data-zoom="17"
+              role="application"
+              aria-label="Mapa interativo com a localização da loja INFOLAB na R. João Pessoa, 77 — Centro, Canela/RS"
+            >
+              <!-- fallback: aparece se o Leaflet não carregar -->
+              <div class="casa-map-off">
+                <p class="mono">MAPA INDISPONÍVEL NO MOMENTO</p>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=R.+Jo%C3%A3o+Pessoa%2C+77+-+loja+5+-+Centro%2C+Canela+-+RS%2C+95686-050" target="_blank" rel="noopener">Abrir no Google Maps →</a>
+              </div>
+            </div>
+            <span class="casa-map-chip mono">▲ INFOLAB<span class="casa-map-chip-rua"> · R. JOÃO PESSOA, 77</span></span>
+            <button type="button" class="casa-map-lock" hidden>
+              <span class="mono">TOQUE PARA EXPLORAR O MAPA</span>
+            </button>
+          </div>
+          <figcaption class="casa-foto-cap">
+            <span class="mono">A LOJA · CANELA/RS</span>
+            <p>Portas abertas de segunda a sábado, no coração do Centro.</p>
+          </figcaption>
+        </figure>
+
+        <div class="casa-info" data-reveal>
+          <p class="mono casa-info-tag">▲ ENDEREÇO</p>
+          <address class="casa-endereco">
+            R. João Pessoa, 77 — Loja 5<br>
+            Centro · Canela, RS<br>
+            <span class="casa-cep">CEP 95686-050</span>
+          </address>
+
+          <ul class="casa-horarios">
+            <li><span class="mono">SEG — SEX</span><b>8h45 — 11h45 · 13h30 — 18h30</b></li>
+            <li><span class="mono">SÁBADO</span><b>8h45 — 11h45</b></li>
+            <li><span class="mono">DOMINGO</span><b class="fechado">Fechado</b></li>
+          </ul>
+
+          <div class="casa-btns">
+            <a class="btn btn--claro" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.+Jo%C3%A3o+Pessoa%2C+77+-+loja+5+-+Centro%2C+Canela+-+RS%2C+95686-050" target="_blank" rel="noopener" data-magnetic>
+              <span>Traçar rota até a loja</span><i aria-hidden="true">→</i>
+            </a>
+            <a class="btn btn--zap" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20como%20chegar%20na%20loja." target="_blank" rel="noopener" data-magnetic>
+              <svg class="zap-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 4C9.53 4 4.25 9.28 4.25 15.79c0 2.08.55 4.1 1.58 5.89L4.16 28l6.47-1.7a11.77 11.77 0 0 0 5.41 1.32h.01c6.5 0 11.79-5.28 11.79-11.79 0-3.15-1.23-6.11-3.46-8.34A11.72 11.72 0 0 0 16.04 4Zm0 21.63h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.84 1 1.03-3.74-.24-.38a9.77 9.77 0 0 1-1.5-5.14c0-5.41 4.4-9.81 9.82-9.81a9.75 9.75 0 0 1 9.8 9.82c0 5.41-4.4 9.83-9.81 9.83Zm5.38-7.35c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.64.07-.29-.15-1.24-.46-2.36-1.46a8.85 8.85 0 0 1-1.63-2.03c-.17-.3-.02-.45.13-.6.13-.13.3-.34.44-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.03-.52-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.14.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.74-.71 1.98-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.56-.34Z" fill="currentColor"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTATO ══════════ -->
+    <section class="contato" id="contato" data-section="CONTATO">
+      <div class="contato-grid">
+        <div class="contato-intro">
+          <p class="mono" data-reveal>▲ 07 — CONTATO</p>
+          <h2 class="contato-title" data-reveal-chars>Diga o que <br>precisa existir.</h2>
+          <p class="contato-sub" data-reveal>Certificado, conserto, um computador novo, automação da loja ou um site.</p>
+          <a class="zap-linha" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20INFOLAB%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" data-reveal data-magnetic>
+            <svg class="zap-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 4C9.53 4 4.25 9.28 4.25 15.79c0 2.08.55 4.1 1.58 5.89L4.16 28l6.47-1.7a11.77 11.77 0 0 0 5.41 1.32h.01c6.5 0 11.79-5.28 11.79-11.79 0-3.15-1.23-6.11-3.46-8.34A11.72 11.72 0 0 0 16.04 4Zm0 21.63h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.84 1 1.03-3.74-.24-.38a9.77 9.77 0 0 1-1.5-5.14c0-5.41 4.4-9.81 9.82-9.81a9.75 9.75 0 0 1 9.8 9.82c0 5.41-4.4 9.83-9.81 9.83Zm5.38-7.35c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.64.07-.29-.15-1.24-.46-2.36-1.46a8.85 8.85 0 0 1-1.63-2.03c-.17-.3-.02-.45.13-.6.13-.13.3-.34.44-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.03-.52-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.14.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.74-.71 1.98-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.56-.34Z" fill="currentColor"/></svg>
+            <span><b>Prefere conversar agora?</b>WhatsApp da loja — (54) 3282-2040</span>
+            <i aria-hidden="true">→</i>
+          </a>
+        </div>
+        <form class="contato-form" id="contatoForm" novalidate>
+          <label class="campo">
+            <span class="mono">NOME</span>
+            <input type="text" name="nome" placeholder="Como podemos te chamar?" required>
+          </label>
+          <label class="campo">
+            <span class="mono">CONTATO</span>
+            <input type="text" name="contato" placeholder="Telefone ou e-mail" required>
+          </label>
+          <label class="campo">
+            <span class="mono">O QUE PRECISA?</span>
+            <textarea name="mensagem" rows="4" placeholder="Ex.: meu notebook não liga desde ontem…" required></textarea>
+          </label>
+          <button class="btn btn--dark btn--big" type="submit" data-magnetic><span>Enviar para a equipe</span><i aria-hidden="true">→</i></button>
+          <p class="form-ok mono" id="formOk" role="status" hidden>▲ RECEBIDO — A EQUIPE RETORNA EM BREVE.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ RODAPÉ ══════════ -->
+  <footer class="rodape" data-section="RODAPE">
+    <div class="rodape-giant" aria-hidden="true"><span data-marquee-slow>INFOLAB ▲ INFOLAB ▲ INFOLAB ▲ INFOLAB ▲ </span></div>
+    <div class="rodape-row">
+      <img class="rodape-logo" src="logo.png" alt="INFOLAB" width="110" height="28">
+      <nav class="rodape-links mono" aria-label="Seções">
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#loja">A LOJA</a>
+        <a href="#bancada">BANCADA</a>
+        <a href="#casa">SOBRE NÓS</a>
+        <a href="#contato">CONTATO</a>
+      </nav>
+      <p class="mono rodape-note">© <span id="ano">2026</span> INFOLAB — CANELA/RS · 25 ANOS</p>
+    </div>
+  </footer>
+
+  <!-- botão flutuante do WhatsApp -->
+  <a class="zap-fab" href="https://wa.me/555432822040?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20INFOLAB%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp da loja INFOLAB">
+    <span class="zap-fab__label">Falar no WhatsApp</span>
+    <svg class="zap-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 4C9.53 4 4.25 9.28 4.25 15.79c0 2.08.55 4.1 1.58 5.89L4.16 28l6.47-1.7a11.77 11.77 0 0 0 5.41 1.32h.01c6.5 0 11.79-5.28 11.79-11.79 0-3.15-1.23-6.11-3.46-8.34A11.72 11.72 0 0 0 16.04 4Zm0 21.63h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.84 1 1.03-3.74-.24-.38a9.77 9.77 0 0 1-1.5-5.14c0-5.41 4.4-9.81 9.82-9.81a9.75 9.75 0 0 1 9.8 9.82c0 5.41-4.4 9.83-9.81 9.83Zm5.38-7.35c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.64.07-.29-.15-1.24-.46-2.36-1.46a8.85 8.85 0 0 1-1.63-2.03c-.17-.3-.02-.45.13-.6.13-.13.3-.34.44-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.03-.52-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.03 1-1.03 2.45s1.05 2.84 1.2 3.04c.14.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.74-.71 1.98-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.56-.34Z" fill="currentColor"/></svg>
+  </a>
+
+  <!-- CDN: GSAP + ScrollTrigger + Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <!-- CDN: Leaflet (mapa da loja) -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

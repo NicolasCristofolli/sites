@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates Modernos — Coleção</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #101014;
+      color: #f2f2f0;
+      min-height: 100vh;
+      padding: clamp(2rem, 6vw, 5rem);
+    }
+    h1 { font-size: clamp(1.8rem, 5vw, 3.2rem); letter-spacing: -0.02em; }
+    p.sub { color: rgba(242, 242, 240, 0.55); margin: 0.8rem 0 3rem; max-width: 46rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 1.2rem;
+    }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 1.8rem 1.6rem;
+      transition: transform 0.25s, border-color 0.25s, background 0.25s;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    a.card:hover { transform: translateY(-6px); border-color: var(--c); background: rgba(255, 255, 255, 0.06); }
+    .swatch { display: flex; gap: 6px; margin-bottom: 1.2rem; }
+    .swatch i { width: 22px; height: 22px; border-radius: 6px; }
+    h2 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+    a.card p { font-size: 0.88rem; color: rgba(242, 242, 240, 0.55); line-height: 1.5; }
+    .tag { display: inline-block; margin-top: 1rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c); }
+  </style>
+</head>
+<body>
+  <h1>Templates Modernos</h1>
+  <p class="sub">Dez templates prontos para produção, cada um com uma linguagem visual radicalmente diferente.
+    Clique para abrir cada um.</p>
+
+  <div class="grid">
+    <a class="card" href="template-1-neo-brutalismo/index.html" style="--c:#d9ff3f">
+      <div class="swatch"><i style="background:#f4f1ea"></i><i style="background:#131313"></i><i style="background:#d9ff3f"></i><i style="background:#ff4d2e"></i></div>
+      <h2>BLOCO® — Neo-Brutalismo</h2>
+      <p>Estúdio de design. Bordas duras, sombras deslocadas, marquee, cursor custom e stickers rotacionados.</p>
+      <span class="tag">Agência criativa</span>
+    </a>
+
+    <a class="card" href="template-2-editorial-noir/index.html" style="--c:#7a1f2b">
+      <div class="swatch"><i style="background:#0b0a0a"></i><i style="background:#ece6da"></i><i style="background:#7a1f2b"></i></div>
+      <h2>NOCTURNE — Editorial Noir</h2>
+      <p>Revista de moda. Tipografia cinética serifada, galeria com scroll horizontal (GSAP), grão de filme e smooth scroll.</p>
+      <span class="tag">Revista / editorial</span>
+    </a>
+
+    <a class="card" href="template-3-glass-aurora/index.html" style="--c:#8b5cf6">
+      <div class="swatch"><i style="background:#070b1a"></i><i style="background:#8b5cf6"></i><i style="background:#22d3ee"></i><i style="background:#f472b6"></i></div>
+      <h2>LUMEN — Glass Aurora</h2>
+      <p>Fintech. Glassmorphism, aurora animada de fundo, mockup de celular em CSS puro com tilt 3D e contadores.</p>
+      <span class="tag">SaaS / fintech</span>
+    </a>
+
+    <a class="card" href="template-4-cyber-terminal/index.html" style="--c:#0aff9d">
+      <div class="swatch"><i style="background:#050807"></i><i style="background:#0aff9d"></i><i style="background:#ff2ec4"></i><i style="background:#ffb340"></i></div>
+      <h2>NEXO://26 — Cyber Terminal</h2>
+      <p>Conferência de tecnologia. Boot sequence, glitch, scanlines CRT, efeito de digitação e countdown ao vivo.</p>
+      <span class="tag">Evento / tech</span>
+    </a>
+
+    <a class="card" href="template-5-organico-minimal/index.html" style="--c:#b0592f">
+      <div class="swatch"><i style="background:#efeae2"></i><i style="background:#23201c"></i><i style="background:#b0592f"></i></div>
+      <h2>Terrā — Minimalismo Orgânico</h2>
+      <p>Estúdio de arquitetura. Brancura imersiva, reveals com clip-path, preview de projetos que segue o cursor e Lenis.</p>
+      <span class="tag">Portfólio / arquitetura</span>
+    </a>
+
+    <a class="card" href="template-6-tech-store/index.html" style="--c:#a3e635">
+      <div class="swatch"><i style="background:#0d0f14"></i><i style="background:#3b82f6"></i><i style="background:#a3e635"></i></div>
+      <h2>HYPERBYTE — Tech Store</h2>
+      <p>Loja de informática. Bento grid, GPU animada em CSS, carrinho com toast, countdown de oferta e malha de fundo.</p>
+      <span class="tag">E-commerce / hardware</span>
+    </a>
+
+    <a class="card" href="template-7-clinica-dental/index.html" style="--c:#8fdcd2">
+      <div class="swatch"><i style="background:#f7fbfa"></i><i style="background:#0e4f4a"></i><i style="background:#8fdcd2"></i><i style="background:#c9a86a"></i></div>
+      <h2>Aurea — Clínica Odontológica</h2>
+      <p>Dentista premium clean. Slider antes/depois arrastável (mouse, toque e teclado), arcos suaves e formulário de agendamento.</p>
+      <span class="tag">Saúde / odontologia</span>
+    </a>
+
+    <a class="card" href="template-8-veterinaria/index.html" style="--c:#ff8a3d">
+      <div class="swatch"><i style="background:#fff6ea"></i><i style="background:#ff8a3d"></i><i style="background:#2ec4b6"></i><i style="background:#4a3226"></i></div>
+      <h2>Pata & Cia — Veterinária</h2>
+      <p>Clínica vet lúdica. Blob orgânico que se transforma, patinhas confete no clique, planos de saúde pet e balões flutuantes.</p>
+      <span class="tag">Pets / veterinária</span>
+    </a>
+
+    <a class="card" href="template-9-limpeza-estofados/index.html" style="--c:#2196f3">
+      <div class="swatch"><i style="background:#f1f7fc"></i><i style="background:#12365c"></i><i style="background:#2196f3"></i><i style="background:#ffd23f"></i></div>
+      <h2>SofáNovo — Limpeza de Estofados</h2>
+      <p>Landing de conversão local. Tipografia pesada com marca-texto, botão WhatsApp pulsante, preços e prova social.</p>
+      <span class="tag">Serviço local</span>
+    </a>
+
+    <a class="card" href="template-10-cafe-retro/index.html" style="--c:#d96c2f">
+      <div class="swatch"><i style="background:#f3e9d7"></i><i style="background:#3b2416"></i><i style="background:#d96c2f"></i><i style="background:#e0a32e"></i></div>
+      <h2>TORRA — Café Retrô 70s</h2>
+      <p>Torrefação de café. Sol de arcos concêntricos, selo giratório em SVG, imagens em arco, pacote de café em CSS puro.</p>
+      <span class="tag">Café / varejo</span>
+    </a>
+  </div>
+</body>
+</html>

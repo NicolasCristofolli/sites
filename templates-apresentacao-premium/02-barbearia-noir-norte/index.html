@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NORTE — Barbearia Clássica</title>
+  <meta name="description" content="Barbearia clássica. Navalha, tesoura e tempo. Desde 2015." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="rail" aria-hidden="true">
+    <span class="rail__text">NAVALHA · TESOURA · TEMPO — NORTE BARBEARIA — EST. 2015</span>
+  </aside>
+
+  <header class="nav">
+    <a href="#topo" class="nav__logo">N<span>ORTE</span></a>
+    <nav class="nav__menu">
+      <a href="#oficio" data-magnetic>O Ofício</a>
+      <a href="#servicos" data-magnetic>Serviços</a>
+      <a href="#cadeiras" data-magnetic>As Cadeiras</a>
+      <a href="#casa" data-magnetic>A Casa</a>
+    </nav>
+    <span class="nav__est">EST. 2015</span>
+  </header>
+
+  <main id="topo">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__stack" aria-label="Norte Barbearia">
+        <span class="hero__line hero__line--ghost" data-depth="0.3">NORTE</span>
+        <span class="hero__line hero__line--solid" data-depth="0.6">NORTE</span>
+        <span class="hero__line hero__line--gold" data-depth="1">NORTE</span>
+      </div>
+      <p class="hero__sub">
+        <em>Barbearia clássica.</em> Navalha afiada à mão, tesoura forjada em Solingen
+        e quarenta minutos que são só seus.
+      </p>
+      <div class="hero__foot">
+        <span>Vila Madalena — SP</span>
+        <span class="hero__scroll">desça <i>↓</i></span>
+        <span>Ter–Sáb · 10h–20h</span>
+      </div>
+    </section>
+
+    <!-- OFÍCIO -->
+    <section class="oficio" id="oficio">
+      <span class="index">I. O Ofício</span>
+      <h2 class="oficio__title split-reveal">
+        Corte não é serviço.<br />É <em>ofício.</em>
+      </h2>
+      <div class="oficio__cols">
+        <p>
+          Cada barbeiro da casa passou por no mínimo cinco anos de formação antes de tocar
+          uma cabeça aqui dentro. Não existe fila, não existe pressa: cada horário é um
+          bloco fechado de quarenta minutos, e a cadeira é sua.
+        </p>
+        <p>
+          Afiamos as navalhas na pedra toda manhã. Esterilizamos cada ferramenta entre
+          clientes em autoclave hospitalar. A toalha quente sai do vaporizador a 65°C.
+          Detalhe não é luxo — é o mínimo.
+        </p>
+      </div>
+      <div class="oficio__stats">
+        <div class="stat"><span data-count="5">0</span><small>anos mínimos de formação</small></div>
+        <div class="stat"><span data-count="40">0</span><small>minutos por cliente</small></div>
+        <div class="stat"><span data-count="65">0</span><small>°C na toalha quente</small></div>
+        <div class="stat"><span data-count="9">0</span><small>anos na mesma esquina</small></div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos" id="servicos">
+      <span class="index">II. Serviços</span>
+      <ul class="servicos__lista">
+        <li class="servico" tabindex="0">
+          <div class="servico__head">
+            <span class="servico__num">01</span>
+            <h3>Corte clássico</h3>
+            <span class="servico__tempo">40 min</span>
+          </div>
+          <div class="servico__detalhe">
+            <p>Tesoura e navalha, sem máquina se você preferir. Termina com toalha quente, tônico e acabamento na nuca feito no fio da navalha.</p>
+          </div>
+        </li>
+        <li class="servico" tabindex="0">
+          <div class="servico__head">
+            <span class="servico__num">02</span>
+            <h3>Barba de navalha</h3>
+            <span class="servico__tempo">35 min</span>
+          </div>
+          <div class="servico__detalhe">
+            <p>Duas toalhas quentes, óleo pré-barba, espuma batida na hora em tigela de cerâmica e navalha livre. O ritual completo, sem atalho.</p>
+          </div>
+        </li>
+        <li class="servico" tabindex="0">
+          <div class="servico__head">
+            <span class="servico__num">03</span>
+            <h3>Ritual completo</h3>
+            <span class="servico__tempo">80 min</span>
+          </div>
+          <div class="servico__detalhe">
+            <p>Corte, barba, limpeza de pele com vapor e massagem no couro cabeludo. O horário mais disputado da casa — e o motivo de tanta gente sair daqui em silêncio.</p>
+          </div>
+        </li>
+        <li class="servico" tabindex="0">
+          <div class="servico__head">
+            <span class="servico__num">04</span>
+            <h3>Pai & filho</h3>
+            <span class="servico__tempo">60 min</span>
+          </div>
+          <div class="servico__detalhe">
+            <p>Duas cadeiras lado a lado, dois barbeiros, mesma hora. Primeira lição de barbearia passa de geração em geração.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>NAVALHA LIVRE — TOALHA QUENTE — SOLINGEN — CADEIRA 1928 — </span>
+        <span>NAVALHA LIVRE — TOALHA QUENTE — SOLINGEN — CADEIRA 1928 — </span>
+      </div>
+    </div>
+
+    <!-- CADEIRAS -->
+    <section class="cadeiras" id="cadeiras">
+      <span class="index">III. As Cadeiras</span>
+      <h2 class="cadeiras__title split-reveal">Três tronos <em>de ferro fundido.</em></h2>
+      <div class="cadeiras__grid">
+        <article class="cadeira" data-tilt>
+          <div class="cadeira__arte" aria-hidden="true">
+            <span class="cadeira__ano">1928</span>
+          </div>
+          <h3>Koken — Chicago</h3>
+          <p>Restaurada parafuso a parafuso durante oito meses. O couro é original; a hidráulica, também.</p>
+        </article>
+        <article class="cadeira" data-tilt>
+          <div class="cadeira__arte" aria-hidden="true">
+            <span class="cadeira__ano">1955</span>
+          </div>
+          <h3>Ferrante — São Paulo</h3>
+          <p>Fabricada no Brás quando o Brás ainda forjava ferro. Encontrada num galpão em Sorocaba, voltou à vida aqui.</p>
+        </article>
+        <article class="cadeira" data-tilt>
+          <div class="cadeira__arte" aria-hidden="true">
+            <span class="cadeira__ano">1962</span>
+          </div>
+          <h3>Takara Belmont — Osaka</h3>
+          <p>A precisão japonesa numa cadeira que reclina ao ângulo exato da navalha. A favorita dos barbeiros da casa.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- A CASA -->
+    <section class="casa" id="casa">
+      <div class="casa__inner">
+        <span class="index">IV. A Casa</span>
+        <h2 class="split-reveal">Rua Harmonia, 455 <em>— e em nenhum outro lugar.</em></h2>
+        <p>
+          Não abrimos filial, não vendemos franquia. A Norte é uma casa só,
+          com três cadeiras, quatro barbeiros e um toca-discos que só toca vinil.
+        </p>
+        <div class="casa__dados">
+          <div><h4>Horário</h4><p>Terça a sábado<br />10h às 20h</p></div>
+          <div><h4>Agenda</h4><p>Somente horário marcado<br />(11) 3000-1111</p></div>
+          <div><h4>Endereço</h4><p>Rua Harmonia, 455<br />Vila Madalena — SP</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__mark" aria-hidden="true">✂</p>
+    <p class="footer__giant">NORTE</p>
+    <div class="footer__row">
+      <span>© 2026 Norte Barbearia</span>
+      <span><em>Navalha, tesoura e tempo.</em></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

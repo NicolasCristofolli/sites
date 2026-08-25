@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXO://26 — Conferência de Tecnologia & Futuro</title>
+  <meta name="description" content="3 dias sobre criptografia, IA e o futuro da rede. São Paulo, novembro de 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- ==================== BOOT ==================== -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <pre class="boot__log" id="bootLog"></pre>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <a href="#" class="logo" data-glitch="NEXO://26">NEXO://26</a>
+    <nav class="nav" id="nav">
+      <a href="#sobre">[ sobre ]</a>
+      <a href="#palestrantes">[ palestrantes ]</a>
+      <a href="#agenda">[ agenda ]</a>
+      <a href="#ingressos" class="nav__cta">&gt; garantir_acesso</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">[≡]</button>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <p class="hero__pre">// são_paulo.br — 13—15 nov 2026</p>
+      <h1 class="hero__title glitch" data-glitch="A REDE NUNCA DORME">A REDE NUNCA DORME</h1>
+      <p class="hero__typed"><span id="typed"></span><span class="caret" aria-hidden="true">█</span></p>
+
+      <div class="hero__countdown" id="countdown" aria-label="Contagem regressiva">
+        <div class="count"><b id="cd-d">000</b><span>dias</span></div>
+        <div class="count"><b id="cd-h">00</b><span>horas</span></div>
+        <div class="count"><b id="cd-m">00</b><span>min</span></div>
+        <div class="count"><b id="cd-s">00</b><span>seg</span></div>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#ingressos" class="btn-term btn-term--solid">&gt; garantir_acesso()</a>
+        <a href="#agenda" class="btn-term">&gt; ver_agenda()</a>
+      </div>
+
+      <pre class="hero__ascii" aria-hidden="true">
+┌──────────────────────────────┐
+│ uptime: 3 dias               │
+│ talks:  42                   │
+│ tracks: cripto · ia · rede   │
+│ status: <i>ONLINE</i>               │
+└──────────────────────────────┘</pre>
+    </section>
+
+    <!-- ==================== SOBRE ==================== -->
+    <section class="about" id="sobre">
+      <h2 class="sec-title reveal"><span>01.</span> cat sobre.txt</h2>
+      <div class="about__grid">
+        <p class="about__text reveal">O NEXO reúne, há 8 edições, as pessoas que constroem
+          e questionam a infraestrutura do mundo digital. Sem palco de vendas,
+          sem keynote de patrocinador: <mark>três dias de conteúdo denso</mark> sobre
+          criptografia, inteligência artificial e a próxima década da rede.</p>
+        <ul class="about__facts reveal">
+          <li><b>42</b> palestras + workshops hands-on</li>
+          <li><b>1.200</b> participantes (esgota todo ano)</li>
+          <li><b>3</b> trilhas paralelas + CTF aberto 24h</li>
+          <li><b>0</b> gravações — o que acontece aqui, fica aqui</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== PALESTRANTES ==================== -->
+    <section class="speakers" id="palestrantes">
+      <h2 class="sec-title reveal"><span>02.</span> ls palestrantes/</h2>
+      <div class="speakers__grid">
+        <article class="speaker reveal">
+          <div class="speaker__frame"><img src="https://picsum.photos/seed/nexo1/600/600" alt="Foto de Lia Fontes" loading="lazy"></div>
+          <h3 data-glitch="Lia Fontes">Lia Fontes</h3>
+          <p>Criptografia pós-quântica<br><span>@ Instituto Cifra</span></p>
+        </article>
+        <article class="speaker reveal">
+          <div class="speaker__frame"><img src="https://picsum.photos/seed/nexo2/600/600" alt="Foto de Davi Okafor" loading="lazy"></div>
+          <h3 data-glitch="Davi Okafor">Davi Okafor</h3>
+          <p>Agentes autônomos & segurança<br><span>@ Deriva Labs</span></p>
+        </article>
+        <article class="speaker reveal">
+          <div class="speaker__frame"><img src="https://picsum.photos/seed/nexo3/600/600" alt="Foto de Marta Ruiz" loading="lazy"></div>
+          <h3 data-glitch="Marta Ruiz">Marta Ruiz</h3>
+          <p>Redes mesh comunitárias<br><span>@ Rede Livre</span></p>
+        </article>
+        <article class="speaker reveal">
+          <div class="speaker__frame"><img src="https://picsum.photos/seed/nexo4/600/600" alt="Foto de Ivo Tanaka" loading="lazy"></div>
+          <h3 data-glitch="Ivo Tanaka">Ivo Tanaka</h3>
+          <p>Arqueologia de protocolos<br><span>@ ncurses.club</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== AGENDA ==================== -->
+    <section class="schedule" id="agenda">
+      <h2 class="sec-title reveal"><span>03.</span> tail -f agenda.log</h2>
+      <div class="schedule__table reveal" role="table" aria-label="Agenda do evento">
+        <div class="srow srow--head" role="row">
+          <span>hora</span><span>talk</span><span>trilha</span>
+        </div>
+        <div class="srow" role="row">
+          <span>09:00</span><span>Quebrando RSA com calma e paciência</span><span class="tr tr--c">cripto</span>
+        </div>
+        <div class="srow" role="row">
+          <span>11:00</span><span>Seu agente de IA confia demais em você</span><span class="tr tr--a">ia</span>
+        </div>
+        <div class="srow" role="row">
+          <span>14:00</span><span>BGP: o castelo de cartas que sustenta tudo</span><span class="tr tr--r">rede</span>
+        </div>
+        <div class="srow" role="row">
+          <span>16:00</span><span>Painel: quem paga a conta da infraestrutura livre?</span><span class="tr tr--r">rede</span>
+        </div>
+        <div class="srow" role="row">
+          <span>19:00</span><span>CTF — abertura oficial (24h non-stop)</span><span class="tr tr--c">cripto</span>
+        </div>
+      </div>
+      <p class="schedule__note reveal">// agenda completa dos 3 dias liberada para inscritos</p>
+    </section>
+
+    <!-- ==================== INGRESSOS ==================== -->
+    <section class="tickets" id="ingressos">
+      <h2 class="sec-title reveal"><span>04.</span> sudo comprar_ingresso</h2>
+      <div class="tickets__grid">
+        <article class="ticket reveal">
+          <h3>lote_01 <s>R$ 390</s></h3>
+          <p class="ticket__status">// esgotado_</p>
+        </article>
+        <article class="ticket ticket--active reveal">
+          <h3>lote_02 — R$ 490</h3>
+          <p>Acesso aos 3 dias, workshops e CTF. Camiseta da edição inclusa.</p>
+          <a href="#" class="btn-term btn-term--solid">&gt; executar_compra()</a>
+          <p class="ticket__bar" aria-hidden="true">[████████████░░░░░] 71% vendido</p>
+        </article>
+        <article class="ticket reveal">
+          <h3>lote_03 — R$ 590</h3>
+          <p class="ticket__status">// abre quando o lote_02 esgotar_</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <pre class="footer__ascii" aria-hidden="true">NEXO://26</pre>
+    <p>© 2026 nexo.conf — feito com &lt;/&gt; e café coado &nbsp;·&nbsp;
+      <a href="#">mastodon</a> · <a href="#">matrix</a> · <a href="#">codigo_de_conduta.txt</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

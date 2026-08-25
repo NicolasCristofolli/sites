@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bunny Bear Language Immersion — escola bilíngue e Bunny Box</title>
+<meta name="description" content="Imersão em inglês para crianças em Gramado/RS. Na escola, a segunda língua é vivida todo dia. Em casa, a Bunny Box mantém a imersão acesa o mês inteiro.">
+<meta name="theme-color" content="#FBF2E4">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Nunito:ital,wght@0,300..900;1,400..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/mascot.png">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+
+<noscript><style>
+  .pre{display:none!important}
+  [data-rev],.ln>i{opacity:1!important;transform:none!important}
+  .shot-clip{clip-path:none!important}
+  .cursor,.peek{display:none!important}
+  .circled svg path,.loop-svg path{stroke-dasharray:none!important;stroke-dashoffset:0!important}
+</style></noscript>
+</head>
+<body>
+
+<!-- ══════════════ PRELOADER ══════════════ -->
+<div class="pre" id="pre">
+  <div class="pre-in">
+    <img src="assets/mascot.png" alt="" class="pre-mascot">
+    <p class="pre-hand">abrindo o caderno…</p>
+    <div class="pre-bar"><i id="preBar"></i></div>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+<div class="peek" id="peek" aria-hidden="true"><img alt="" id="peekImg"></div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Bunny Bear, início">
+    <img src="assets/mascot.png" alt="" class="brand-mascot">
+    <img src="assets/wordmark.png" alt="Bunny Bear Language Immersion" class="brand-word">
+  </a>
+  <nav class="nav-links" aria-label="Seções">
+    <a href="#escola">A escola</a>
+    <a href="#box">A Bunny Box</a>
+    <a href="#juntos">O ecossistema</a>
+    <a href="#planos">Planos</a>
+  </nav>
+  <a href="#contato" class="btn btn-red nav-cta" data-magnet><span>Falar com a gente</span></a>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="#escola"><b>01</b> A escola</a>
+  <a href="#box"><b>02</b> A Bunny Box</a>
+  <a href="#juntos"><b>03</b> O ecossistema</a>
+  <a href="#planos"><b>04</b> Planos</a>
+  <a href="#contato" class="drawer-cta">Falar com a gente</a>
+</div>
+
+<main id="top">
+
+<!-- ══════════════ ABERTURA ══════════════ -->
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow" data-rev><i></i> Gramado · Rio Grande do Sul</p>
+
+    <h1 class="mega">
+      <span class="ln"><i>Uma segunda</i></span>
+      <span class="ln"><i>língua aprendida</i></span>
+      <span class="ln"><i>como a <em class="circled">primeira<svg viewBox="0 0 340 110" aria-hidden="true"><path d="M300 26 C250 4, 92 -2, 40 24 C-8 48, 6 84, 78 96 C160 110, 296 100, 322 70 C338 52, 322 36, 296 28" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg></em>.</i></span>
+    </h1>
+
+    <p class="lede" data-rev>
+      Somos uma escola de imersão em inglês para crianças. Aqui ninguém traduz:
+      <mark class="hl">canta-se, brinca-se, pede-se colo em inglês</mark> — do jeito
+      que a primeira língua chegou. E, quando a aula acaba, a imersão vai embora
+      junto com a criança, dentro de uma caixa.
+    </p>
+
+    <div class="doors" data-rev>
+      <a class="door door-a" href="#escola">
+        <span class="door-n">01</span>
+        <span class="door-t">Na escola</span>
+        <span class="door-d">Turmas presenciais do berçário aos 7 anos</span>
+        <span class="door-go" aria-hidden="true">→</span>
+      </a>
+      <a class="door door-b" href="#box">
+        <span class="door-n">02</span>
+        <span class="door-t">Em casa</span>
+        <span class="door-d">A Bunny Box, todo mês na sua porta</span>
+        <span class="door-go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-board" aria-hidden="true">
+    <figure class="pola pola-1" data-float="0.14">
+      <div class="pola-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=760&q=74" alt=""></div>
+      <figcaption>messy = learning</figcaption>
+      <span class="tape tape-y" aria-hidden="true"></span>
+    </figure>
+
+    <figure class="pola pola-2" data-float="0.3">
+      <div class="pola-img"><img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&fit=crop&w=720&q=74" alt=""></div>
+      <figcaption>super heróis bilíngues</figcaption>
+      <span class="tape tape-r" aria-hidden="true"></span>
+    </figure>
+
+    <figure class="pola pola-3 pola-bare" data-float="-0.1">
+      <div class="pola-img"><img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=660&q=74" alt=""></div>
+      <svg class="clip" viewBox="0 0 40 96" aria-hidden="true"><path d="M12 84 V20 a10 10 0 0 1 20 0 v58 a15 15 0 0 1-30 0 V24" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/></svg>
+    </figure>
+
+    <p class="scribble hand" aria-hidden="true">turma dos <b>Kids</b>, terça de manhã</p>
+  </div>
+
+  <img src="assets/mascot.png" alt="" class="hero-mascot" data-float="0.06">
+
+  <a href="#manifesto" class="cue" aria-label="Rolar"><span class="cue-ring"><b></b></span><span class="hand">role &amp; entre</span></a>
+</section>
+
+<!-- ══════════════ TICKER ══════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker">
+    <span>Listen <b>✦</b> Speak <b>✦</b> Sing <b>✦</b> Play <b>✦</b> Read <b>✦</b> Create <b>✦</b> </span>
+    <span>Listen <b>✦</b> Speak <b>✦</b> Sing <b>✦</b> Play <b>✦</b> Read <b>✦</b> Create <b>✦</b> </span>
+    <span>Listen <b>✦</b> Speak <b>✦</b> Sing <b>✦</b> Play <b>✦</b> Read <b>✦</b> Create <b>✦</b> </span>
+  </div>
+</div>
+
+<!-- ══════════════ MANIFESTO ══════════════ -->
+<section class="manifesto" id="manifesto">
+  <div class="mani-grid">
+    <div class="mani-text">
+      <p class="ato" data-rev><b>O princípio</b> <i></i> por que imersão</p>
+      <h2 class="big">
+        <span class="ln"><i>A criança não</i></span>
+        <span class="ln"><i>estuda inglês.</i></span>
+        <span class="ln ln-red"><i>Ela mora nele.</i></span>
+      </h2>
+      <p data-rev>Ninguém entregou uma lista de verbos para o seu filho aprender português.
+      Ele ouviu, imitou, errou alto, riu do erro e tentou de novo — até a palavra virar dele.
+      <mark class="hl">Imersão é devolver esse caminho ao inglês.</mark></p>
+      <p data-rev>É por isso que a Bunny Bear existe em dois lugares ao mesmo tempo: dentro
+      da sala, onde o idioma é o ar que se respira, e dentro da sua casa, onde ele precisa
+      continuar respirando nos outros seis dias da semana.</p>
+      <p class="sign hand" data-rev>— não damos aula de inglês. damos vida em inglês.</p>
+    </div>
+
+    <ul class="mani-stats">
+      <li data-rev><b data-count="30" data-suffix="+">0</b><span>anos de estrada da nossa fundadora</span></li>
+      <li data-rev><b>0<i>–</i>7</b><span>a janela em que o ouvido copia som puro</span></li>
+      <li data-rev><b data-count="4">0</b><span>habilidades trabalhadas sempre juntas</span></li>
+      <li data-rev><b data-count="12">0</b><span>experiências novas por ano dentro de casa</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════ 01 · NA ESCOLA ══════════════ -->
+<section class="folder folder-school" id="escola">
+  <div class="tabs" role="navigation" aria-label="Os dois pilares">
+    <a class="tab tab-on" href="#escola"><b>01</b> Na escola</a>
+    <a class="tab" href="#box"><b>02</b> Em casa</a>
+  </div>
+
+  <div class="sheet">
+    <header class="folder-head">
+      <p class="ato" data-rev><b>Pilar 01</b> <i></i> presencial, em Gramado</p>
+      <h2 class="big">
+        <span class="ln"><i>Aqui a aula</i></span>
+        <span class="ln"><i>não <em>parece</em></i></span>
+        <span class="ln ln-blue"><i>aula.</i></span>
+      </h2>
+      <p class="folder-sub" data-rev>Salas pensadas como casa, não como sala. Turmas pequenas,
+      chão para sentar, material que suja a mão. E uma regra só: dentro da porta, fala-se inglês.</p>
+    </header>
+
+    <div class="board">
+      <figure class="pola pola-lg" data-float="0.09" data-rev-img>
+        <div class="pola-img shot-clip"><img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=76" alt="Crianças trabalhando em mesa com a professora"></div>
+        <figcaption>roda da manhã — todo dia, sem exceção</figcaption>
+        <span class="tape tape-y" aria-hidden="true"></span>
+      </figure>
+
+      <div class="board-side">
+        <figure class="pola pola-sm" data-float="0.2" data-rev-img>
+          <div class="pola-img shot-clip"><img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=680&q=74" alt="Crianças pequenas em fila com mochilas"></div>
+          <span class="tape tape-r" aria-hidden="true"></span>
+        </figure>
+        <figure class="pola pola-sm" data-float="-0.12" data-rev-img>
+          <div class="pola-img shot-clip"><img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?auto=format&fit=crop&w=680&q=74" alt="Criança montando torre de blocos coloridos"></div>
+          <span class="tape tape-y" aria-hidden="true"></span>
+        </figure>
+      </div>
+    </div>
+
+    <!-- um dia na escola -->
+    <div class="day">
+      <h3 class="mid" data-rev>Um dia, de ponta a ponta</h3>
+      <ol class="day-list">
+        <li data-rev><span class="day-h">08h00</span><h4>Good morning circle</h4><p>Chamada cantada, clima do dia, quem trouxe novidade. Ninguém é obrigado a falar — todo mundo é obrigado a ouvir.</p></li>
+        <li data-rev><span class="day-h">09h15</span><h4>Hands on</h4><p>Massinha, tinta, água, terra. O vocabulário do dia entra pela mão antes de entrar pela boca.</p></li>
+        <li data-rev><span class="day-h">10h30</span><h4>Story time</h4><p>Um livro por dia, lido inteiro em inglês, com voz de personagem e pausa para palpite.</p></li>
+        <li data-rev><span class="day-h">11h20</span><h4>Snack &amp; talk</h4><p>A hora mais produtiva: pedir, dividir, reclamar e agradecer — tudo em inglês, sem perceber.</p></li>
+      </ol>
+    </div>
+
+    <!-- turmas -->
+    <div class="turmas">
+      <h3 class="mid" data-rev>Para cada idade, um jeito de entrar</h3>
+      <div class="turma-grid">
+        <article class="card" data-rev>
+          <span class="card-tag">0–2 anos</span>
+          <h4>Baby Bunnies</h4>
+          <p>Música, colo e repetição. A fase da escuta pura, em que o ouvido guarda sons que a boca ainda nem tenta.</p>
+          <span class="card-pin" aria-hidden="true"></span>
+        </article>
+        <article class="card" data-rev>
+          <span class="card-tag">3–4 anos</span>
+          <h4>Little Bears</h4>
+          <p>O faz de conta assume. Cozinha, mercado, consultório — cenários inteiros montados para dar motivo de falar.</p>
+          <span class="card-pin" aria-hidden="true"></span>
+        </article>
+        <article class="card" data-rev>
+          <span class="card-tag">5–7 anos</span>
+          <h4>Big Bears</h4>
+          <p>Entram a leitura e o traço. Projetos de duas, três semanas, com produto final para levar pra casa.</p>
+          <span class="card-pin" aria-hidden="true"></span>
+        </article>
+        <article class="card" data-rev>
+          <span class="card-tag">8+ e adultos</span>
+          <h4>Family Club</h4>
+          <p>Turmas para irmãos maiores e para os pais que decidiram aprender junto. Mesma filosofia, outro repertório.</p>
+          <span class="card-pin" aria-hidden="true"></span>
+        </article>
+      </div>
+    </div>
+
+    <div class="folder-cta" data-rev>
+      <p class="hand">quer ver de perto?</p>
+      <a class="btn btn-navy" href="https://wa.me/5554981503248?text=Quero%20agendar%20uma%20aula%20experimental" target="_blank" rel="noopener" data-magnet><span>Agendar aula experimental</span></a>
+      <small>Gratuita, sem compromisso, com a turma da idade da sua criança.</small>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PONTE ══════════════ -->
+<section class="bridge">
+  <h2 class="ponte">
+    <span class="ln"><i>Mas a aula tem</i></span>
+    <span class="ln"><i>hora pra acabar.</i></span>
+  </h2>
+  <p class="ponte-p" data-rev>A imersão, não.</p>
+  <div class="bridge-arrow" aria-hidden="true">
+    <span class="hand">foi daí que nasceu a caixa</span>
+    <svg viewBox="0 0 130 96"><path d="M8 8 C46 26, 50 66, 86 80" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="1 8"/><path d="M70 76 l18 7 -7 -18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<!-- ══════════════ 02 · EM CASA ══════════════ -->
+<section class="folder folder-box" id="box">
+  <div class="tabs" role="navigation" aria-label="Os dois pilares">
+    <a class="tab" href="#escola"><b>01</b> Na escola</a>
+    <a class="tab tab-on" href="#box"><b>02</b> Em casa</a>
+  </div>
+
+  <div class="sheet sheet-dark">
+    <header class="folder-head">
+      <p class="ato ato-light" data-rev><b>Pilar 02</b> <i></i> assinatura mensal</p>
+      <h2 class="giga" aria-label="Bunny Box">
+        <span class="ln"><i>Bunny</i></span>
+        <span class="ln ln-mustard"><i>Box</i></span>
+      </h2>
+      <p class="folder-sub folder-sub-light" data-rev>Uma caixa por mês, com o nome da criança no envelope.
+      Dentro, um pedaço inteiro do universo Bunny Bear — feito para ser aberto no chão da sala, de pijama,
+      sem hora marcada. <mark class="hl hl-blue">Você não precisa falar inglês.</mark></p>
+      <p class="chips" data-rev><span>0–7 anos</span><span>envio para todo o Brasil</span><span>cancele quando quiser</span></p>
+    </header>
+
+    <!-- índice do conteúdo -->
+    <div class="idx" id="idx">
+      <div class="idx-head" data-rev><span>Como funciona a Bunny Box?</span><span>04 itens</span></div>
+      <a class="idx-row" href="#planos" data-img="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=680&q=74">
+        <span class="idx-n">01</span><span class="idx-t">Experiência</span>
+        <span class="idx-d">O método de imersão Bunny Bear visa ensinar inglês através da experiência. De forma lúdica, a criança irá aprender enquanto se diverte!</span>
+        <span class="idx-go" aria-hidden="true">→</span>
+      </a>
+      <a class="idx-row" href="#planos" data-img="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=680&q=74">
+        <span class="idx-n">02</span><span class="idx-t">Habilidades</span>
+        <span class="idx-d">A Bunny Box trará para o seu filho as habilidades necessárias para a aquisição de uma nova linguagem. Ouvir, falar, ler e escrever!</span>
+        <span class="idx-go" aria-hidden="true">→</span>
+      </a>
+      <a class="idx-row" href="#planos" data-img="https://images.unsplash.com/photo-1476234251651-f353703a034d?auto=format&fit=crop&w=680&q=74">
+        <span class="idx-n">03</span><span class="idx-t">Imersão</span>
+        <span class="idx-d">Um produto desenvolvido por profissionais experientes em método de imersão e ensino de inglês para bebês e crianças!</span>
+        <span class="idx-go" aria-hidden="true">→</span>
+      </a>
+      <a class="idx-row" href="#planos" data-img="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=680&q=74">
+        <span class="idx-n">04</span><span class="idx-t">Presente-surpresa</span>
+        <span class="idx-d">Ninguém sabe o que é. Nem nós contamos. É o item que faz a caixa ser esperada no mês seguinte!</span>
+        <span class="idx-go" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- o mês -->
+    <div class="mes">
+      <h3 class="mid mid-light" data-rev>Como um mês com a Box acontece</h3>
+      <ol class="mes-list">
+        <li data-rev><span class="mes-k">semana 01</span><h4>A caixa chega</h4><p>E chega para a criança, não para você. Nome dela no envelope, lacre para ela romper.</p></li>
+        <li data-rev><span class="mes-k">semana 02</span><h4>Vocês assistem juntos</h4><p>Material espalhado no chão, vídeo na TV. Sua função é estar por perto e repetir junto.</p></li>
+        <li data-rev><span class="mes-k">semana 03</span><h4>O tema invade a casa</h4><p>As palavras do mês viram piada de família, música do banho, apelido do cachorro.</p></li>
+        <li data-rev><span class="mes-k">semana 04</span><h4>Fica a memória</h4><p>O que foi feito vai pra parede. No mês seguinte, uma nova batida na porta.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 03 · O ECOSSISTEMA ══════════════ -->
+<section class="juntos" id="juntos">
+  <p class="ato" data-rev><b>Pilar 01 + 02</b> <i></i> o ciclo completo</p>
+  <h2 class="big center">
+    <span class="ln"><i>Um ensina.</i></span>
+    <span class="ln ln-red"><i>O outro não</i></span>
+    <span class="ln ln-red"><i>deixa esquecer.</i></span>
+  </h2>
+
+  <div class="loop">
+    <article class="loop-card loop-a" data-rev>
+      <span class="loop-n">01</span>
+      <h3>Na escola<br>ela <em>vive</em></h3>
+      <p>Cinco manhãs por semana dentro de um ambiente onde o inglês não é conteúdo — é
+      o meio. É onde nasce o repertório, a pronúncia e a coragem de falar errado.</p>
+      <ul>
+        <li>turmas pequenas, professora fixa</li>
+        <li>avaliação por observação, nunca por prova</li>
+        <li>relatório de desenvolvimento a cada bimestre</li>
+      </ul>
+      <span class="tape tape-y" aria-hidden="true"></span>
+    </article>
+
+    <div class="loop-mid" aria-hidden="true">
+      <svg class="loop-svg" viewBox="0 0 200 200">
+        <path id="loopPath" d="M40 62 C 74 22, 126 22, 160 62 M160 138 C 126 178, 74 178, 40 138"
+              fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <path d="M150 52 l12 12 -14 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M50 148 l-12 -12 14 -8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <img src="assets/mascot.png" alt="" class="loop-mascot">
+    </div>
+
+    <article class="loop-card loop-b" data-rev>
+      <span class="loop-n">02</span>
+      <h3>Em casa<br>ela <em>repete</em></h3>
+      <p>Aprender uma língua é uma questão de reencontro. A Box pega o que foi vivido na
+      sala e devolve em outro formato, em outro dia, com outra brincadeira — até virar dela.</p>
+      <ul>
+        <li>tema alinhado ao calendário da escola</li>
+        <li>funciona também para quem ainda não estuda</li>
+        <li>a família inteira participa, sem preparo</li>
+      </ul>
+      <span class="tape tape-r" aria-hidden="true"></span>
+    </article>
+  </div>
+
+  <p class="juntos-note" data-rev>
+    <b>Dá para ter só um dos dois?</b> Dá. Muita família começa pela Box e depois matricula;
+    outras estudam na escola e usam a Box só nas férias. <mark class="hl">Juntos, porém, o
+    resultado é outro</mark> — e é por isso que assinantes matriculados têm condição especial.
+  </p>
+</section>
+
+<!-- ══════════════ FUNDADORA ══════════════ -->
+<section class="anelise">
+  <figure class="pola pola-tall" data-float="0.1" data-rev-img>
+    <div class="pola-img shot-clip"><img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=880&q=76" alt="Professora sorrindo em sala de aula"></div>
+    <figcaption>Anelise, entre uma turma e outra</figcaption>
+    <span class="tape tape-y" aria-hidden="true"></span>
+    <span class="pin pin-2" aria-hidden="true"></span>
+  </figure>
+
+  <blockquote class="quote">
+    <p class="quote-l">
+      <span class="ln"><i>“Bunny Bear não é </i></span>
+      <span class="ln"><i>só uma escola. </i></span>
+      <span class="ln"><i>É um universo que cresce junto</i></span>
+      <span class="ln ln-red"><i>com nossos pequenos!”</i></span>
+    </p>
+    <footer data-rev>
+      <b>Anelise Salgado</b> — sócia-fundadora da Bunny Bear Language Immersion, especialista
+      em bilinguismo, membro do conselho da associação de professores de inglês do Brasil e
+      responsável pela curadoria de cada Bunny Box, uma a uma.
+    </footer>
+  </blockquote>
+</section>
+
+<!-- ══════════════ TEACHERS ══════════════ -->
+<section class="vozes" id="teachers">
+  <p class="ato" data-rev><b>Teachers</b> <i></i> quem está do outro lado da porta</p>
+  <h2 class="big vozes-title" data-rev>Conheça <em>os teachers</em>.</h2>
+
+  <div class="notes">
+    <article class="teacher teacher-a" data-rev>
+      <figure class="pola pola-bare teacher-shot" data-rev-img>
+        <div class="pola-img shot-clip"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=680&q=76" alt="Bruna Kessler, teacher da turma Bunnies"></div>
+        <span class="tape tape-y" aria-hidden="true"></span>
+      </figure>
+      <h3 class="teacher-name">Bruna Kessler</h3>
+      <p class="teacher-role">Teacher · turma Bunnies, 2 a 4 anos <span>early years</span></p>
+      <p class="teacher-bio">Apresentação teacher.</p>
+      <span class="pin pin-t" aria-hidden="true"></span>
+    </article>
+
+    <article class="teacher teacher-b" data-rev>
+      <figure class="pola pola-bare teacher-shot" data-rev-img>
+        <div class="pola-img shot-clip"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=680&q=76" alt="Marcelo Antunes, teacher da turma Bears"></div>
+        <span class="tape tape-r" aria-hidden="true"></span>
+      </figure>
+      <h3 class="teacher-name">Marcelo Antunes</h3>
+      <p class="teacher-role">Teacher · turma Bears, 5 a 7 anos <span>7 anos de casa</span></p>
+      <p class="teacher-bio">Apresentação teacher.</p>
+      <span class="pin pin-t" aria-hidden="true"></span>
+    </article>
+
+    <article class="teacher teacher-c" data-rev>
+      <figure class="pola pola-bare teacher-shot" data-rev-img>
+        <div class="pola-img shot-clip"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=680&q=76" alt="Sophie Marchand, teacher de conversação"></div>
+        <span class="tape tape-y" aria-hidden="true"></span>
+      </figure>
+      <h3 class="teacher-name">Sophie Marchand</h3>
+      <p class="teacher-role">Teacher · conversação, 7 anos ou mais <span>bilíngue nativa</span></p>
+      <p class="teacher-bio">Apresentação teacher.</p>
+      <span class="pin pin-t" aria-hidden="true"></span>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════════ PLANOS ══════════════ -->
+<section class="planos" id="planos">
+  <div class="torn torn-paper" aria-hidden="true"></div>
+
+  <header class="planos-head">
+    <p class="ato" data-rev><b>Planos</b> <i></i> escolha por onde entrar</p>
+    <h2 class="big" data-rev>Duas portas.<br>O <em>mesmo</em> universo.</h2>
+  </header>
+
+  <div class="tickets">
+    <article class="ticket" data-rev>
+      <span class="ticket-kicker">Pilar 01 · presencial</span>
+      <h3>A escola</h3>
+      <p class="ticket-lead">Matrícula aberta o ano todo, com vagas por turma e faixa etária.</p>
+      <div class="price price-quote"><b>Aula experimental</b><small>gratuita</small></div>
+      <ul>
+        <li>Turmas de até 10 crianças</li>
+        <li>Professora fixa e bilíngue</li>
+        <li>Material didático incluso</li>
+        <li>Relatório bimestral de desenvolvimento</li>
+        <li>Desconto na Bunny Box para matriculados</li>
+      </ul>
+      <a class="btn btn-navy" href="https://wa.me/5554981503248?text=Quero%20saber%20sobre%20as%20turmas%20presenciais" target="_blank" rel="noopener" data-magnet><span>Ver turmas e valores</span></a>
+      <span class="card-pin" aria-hidden="true"></span>
+    </article>
+
+    <article class="ticket ticket-hero" data-rev>
+      <span class="ticket-flag">mais escolhido</span>
+      <span class="ticket-kicker">Pilar 02 · Bunny Box anual</span>
+      <h3>A caixa</h3>
+      <p class="ticket-lead">12 caixas, 12 temas — um ano inteiro de continuidade, que é onde a fluência mora.</p>
+      <div class="price"><span>R$</span><b>89</b><i>,90</i><small>/mês</small></div>
+      <ul>
+        <li>12 Bunny Boxes com curadoria própria</li>
+        <li>Vídeo-aula mensal com professora Bunny Bear</li>
+        <li>Guia dos pais em cada envio</li>
+        <li>Presente-surpresa todo mês</li>
+        <li>Frete incluso para todo o Brasil</li>
+      </ul>
+      <a class="btn btn-red" href="https://wa.me/5554981503248?text=Quero%20assinar%20a%20Bunny%20Box%20anual" target="_blank" rel="noopener" data-magnet><span>Assinar o plano anual</span></a>
+    </article>
+
+    <article class="ticket" data-rev>
+      <span class="ticket-kicker">Pilar 02 · Bunny Box semestral</span>
+      <h3>A caixa, meio ano</h3>
+      <p class="ticket-lead">Seis meses para o ritual entrar na rotina da casa, sem compromisso longo.</p>
+      <div class="price"><span>R$</span><b>99</b><i>,90</i><small>/mês</small></div>
+      <ul>
+        <li>6 Bunny Boxes com curadoria própria</li>
+        <li>Vídeo-aula mensal com professora Bunny Bear</li>
+        <li>Guia dos pais em cada envio</li>
+        <li>Presente-surpresa todo mês</li>
+      </ul>
+      <a class="btn btn-navy" href="https://wa.me/5554981503248?text=Quero%20assinar%20a%20Bunny%20Box%20semestral" target="_blank" rel="noopener" data-magnet><span>Assinar o semestral</span></a>
+      <span class="card-pin" aria-hidden="true"></span>
+    </article>
+  </div>
+
+  <div class="torn torn-paper torn-bottom" aria-hidden="true"></div>
+
+  <p class="planos-note" data-rev>
+    <b>É de uma escola?</b> Montamos edições da Box para turmas inteiras, com adaptação curricular
+    e formação para os professores. <a href="https://wa.me/5554981465253?text=Quero%20falar%20sobre%20a%20Bunny%20Box%20para%20escolas" target="_blank" rel="noopener">Falar sobre isso →</a>
+  </p>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section class="faq">
+  <h2 class="big" data-rev>Antes que<br>você pergunte</h2>
+  <div class="acc">
+    <div class="acc-item">
+      <button class="acc-q" aria-expanded="false"><span>A Bunny Box substitui a aula presencial?</span><i></i></button>
+      <div class="acc-a"><p>Não, e nem tenta. Aula é convivência, correção na hora e outras crianças — coisas
+      que nenhuma caixa entrega. A Box é o que segura o idioma vivo nos dias em que não tem aula, e para
+      quem mora longe de Gramado ela funciona como porta de entrada sem susto.</p></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-q" aria-expanded="false"><span>Minha filha não sabe nada de inglês. Serve?</span><i></i></button>
+      <div class="acc-a"><p>É exatamente para ela — nos dois pilares. Toda turma e toda edição da Box partem
+      do zero absoluto e sobem pelo contexto, nunca pela gramática. Ninguém precisa saber nada para começar,
+      só topar brincar.</p></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-q" aria-expanded="false"><span>E se eu não falar inglês?</span><i></i></button>
+      <div class="acc-a"><p>Melhor ainda: vocês aprendem juntos e a criança vê um adulto errando sem drama.
+      O guia dos pais traz a pronúncia escrita do jeito que se fala e o passo a passo da atividade. Não existe
+      preparo prévio nem lição de casa para você.</p></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-q" aria-expanded="false"><span>Quanto tempo por dia isso exige de mim?</span><i></i></button>
+      <div class="acc-a"><p>Quinze minutos de vídeo por mês. O resto acontece espalhado, sozinho, no meio da
+      rotina. A Box foi desenhada para famílias cansadas, não para famílias disponíveis.</p></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-q" aria-expanded="false"><span>Onde fica a escola e para onde a caixa vai?</span><i></i></button>
+      <div class="acc-a"><p>A escola fica em Gramado, na serra gaúcha, e recebe turmas presenciais o ano todo.
+      A Bunny Box sai daqui para todo o Brasil — no plano anual, com o frete já dentro do valor.</p></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-q" aria-expanded="false"><span>Dá para assinar e estudar ao mesmo tempo?</span><i></i></button>
+      <div class="acc-a"><p>Dá, e é a combinação que mais recomendamos: o tema da caixa acompanha o calendário
+      das turmas, então a criança reencontra em casa o que viveu na sala. Famílias matriculadas têm condição
+      especial na assinatura — é só avisar na hora de fechar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA FINAL ══════════════ -->
+<section class="fim" id="contato">
+  <div class="torn torn-navy" aria-hidden="true"></div>
+  <img src="assets/mascot.png" alt="" class="fim-mascot" data-float="0.07">
+  <h2 class="giga center">
+    <span class="ln"><i>Vem brincar</i></span>
+    <span class="ln ln-mustard"><i>em inglês.</i></span>
+  </h2>
+  <p class="fim-p" data-rev>Escolha por onde começar — a gente responde no WhatsApp, geralmente no mesmo dia.</p>
+  <div class="fim-btns" data-rev>
+    <a class="btn btn-mustard" href="https://wa.me/5554981503248?text=Quero%20agendar%20uma%20aula%20experimental" target="_blank" rel="noopener" data-magnet><span>Quero a aula experimental</span></a>
+    <a class="btn btn-ghost" href="https://wa.me/5554981503248?text=Quero%20assinar%20a%20Bunny%20Box" target="_blank" rel="noopener" data-magnet><span>Quero a Bunny Box</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════ RODAPÉ ══════════════ -->
+<footer class="foot">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="assets/mascot.png" alt="" class="foot-mascot">
+      <img src="assets/wordmark.png" alt="Bunny Bear Language Immersion" class="foot-word">
+    </div>
+    <p class="hand foot-hand">a second language, the first way.</p>
+  </div>
+  <div class="foot-cols">
+    <div>
+      <h4>Falar com a gente</h4>
+      <a href="https://wa.me/5554981503248" target="_blank" rel="noopener">+55 54 98150-3248</a>
+      <a href="https://wa.me/5554981465253" target="_blank" rel="noopener">+55 54 98146-5253</a>
+    </div>
+    <div>
+      <h4>A escola</h4>
+      <p>Gramado — Rio Grande do Sul<br>turmas presenciais o ano todo</p>
+    </div>
+    <div>
+      <h4>A Bunny Box</h4>
+      <p>envio para todo o Brasil<br>assinatura anual ou semestral</p>
+    </div>
+    <div>
+      <h4>Acompanhar</h4>
+      <a href="https://instagram.com/bunnybearimmersion" target="_blank" rel="noopener">@bunnybearimmersion</a>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© <span id="yr">2026</span> Bunny Bear Language Immersion</span>
+    <span>Fotografias de referência: Unsplash</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

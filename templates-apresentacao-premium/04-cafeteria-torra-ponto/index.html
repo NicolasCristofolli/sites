@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ponto de Torra — Torrefação & Café</title>
+  <meta name="description" content="Torrefação de café de origem única. Torramos no dia, servimos na hora." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#topo" class="nav__logo">Ponto<i>◉</i>de<i>◉</i>Torra</a>
+    <nav class="nav__menu">
+      <a href="#curva">A Curva</a>
+      <a href="#origens">Origens</a>
+      <a href="#metodos">Métodos</a>
+      <a href="#balcao">O Balcão</a>
+    </nav>
+    <span class="nav__lote">LOTE #147 · TORRADO HOJE</span>
+  </header>
+
+  <main id="topo">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="hero__eyebrow">Torrefação de origem única — Perdizes, São Paulo</p>
+      <h1 class="hero__title">
+        <span class="linha-mask"><span>O café que você</span></span>
+        <span class="linha-mask"><span>bebe às <em>8h</em> foi</span></span>
+        <span class="linha-mask"><span>torrado às <em>5h.</em></span></span>
+      </h1>
+      <div class="hero__grao" aria-hidden="true">
+        <div class="grao"></div>
+        <div class="grao grao--2"></div>
+        <div class="grao grao--3"></div>
+      </div>
+      <p class="hero__sub">
+        Não estocamos café torrado. O torrador de 5kg acende de madrugada,
+        e o que sai dele é servido no mesmo dia — ou vira adubo.
+      </p>
+    </section>
+
+    <!-- CURVA DE TORRA -->
+    <section class="curva" id="curva">
+      <div class="curva__head">
+        <span class="kicker">01 / A Curva</span>
+        <h2>Doze minutos entre<br /><em>o verde e o perfeito.</em></h2>
+        <p>Acompanhe a curva de torra do nosso perfil clássico. Role a página: cada grau importa.</p>
+      </div>
+
+      <div class="curva__painel">
+        <div class="curva__leituras">
+          <div class="leitura">
+            <span class="leitura__label">TEMPERATURA</span>
+            <span class="leitura__valor"><b id="temp-out">20</b>°C</span>
+          </div>
+          <div class="leitura">
+            <span class="leitura__label">TEMPO</span>
+            <span class="leitura__valor"><b id="tempo-out">00:00</b></span>
+          </div>
+          <div class="leitura">
+            <span class="leitura__label">FASE</span>
+            <span class="leitura__valor leitura__valor--fase" id="fase-out">carga</span>
+          </div>
+        </div>
+
+        <svg class="curva__svg" viewBox="0 0 800 340" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <g class="curva__grid">
+            <line x1="40" y1="60" x2="780" y2="60" />
+            <line x1="40" y1="130" x2="780" y2="130" />
+            <line x1="40" y1="200" x2="780" y2="200" />
+            <line x1="40" y1="270" x2="780" y2="270" />
+          </g>
+          <text x="10" y="64" class="curva__eixo">220°</text>
+          <text x="10" y="134" class="curva__eixo">160°</text>
+          <text x="10" y="204" class="curva__eixo">100°</text>
+          <text x="10" y="274" class="curva__eixo">40°</text>
+          <path id="curva-path" class="curva__linha"
+            d="M 40 300 C 140 300, 160 240, 240 200 C 320 160, 380 150, 470 120 C 560 92, 640 80, 720 62"
+            fill="none" />
+          <circle id="curva-dot" class="curva__ponto" r="7" cx="40" cy="300" />
+        </svg>
+
+        <div class="curva__marcos">
+          <span>CARGA · 20°C</span>
+          <span>SECAGEM · 160°C</span>
+          <span>1º CRACK · 196°C</span>
+          <span>DESCARGA · 218°C</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGENS (horizontal pinada) -->
+    <section class="origens" id="origens">
+      <div class="origens__pin">
+        <div class="origens__head">
+          <span class="kicker">02 / Origens</span>
+          <h2>Três fazendas. <em>Nome e sobrenome.</em></h2>
+        </div>
+        <div class="origens__trilho" id="origens-trilho">
+          <article class="origem">
+            <span class="origem__alt">1.180 m</span>
+            <h3>Sítio Baixadão</h3>
+            <p class="origem__regiao">Caparaó — Espírito Santo</p>
+            <p>Catuaí amarelo em terreiro suspenso. A família Furtado colhe só quando o grão cede ao toque — e a gente paga 40% acima da cotação por isso.</p>
+            <ul class="origem__notas">
+              <li>rapadura</li><li>laranja</li><li>florais</li>
+            </ul>
+          </article>
+          <article class="origem">
+            <span class="origem__alt">1.350 m</span>
+            <h3>Fazenda Recreio</h3>
+            <p class="origem__regiao">Mantiqueira de Minas</p>
+            <p>Bourbon amarelo fermentado 72h em tanque anaeróbico. Um lote experimental que virou residente fixo do nosso balcão.</p>
+            <ul class="origem__notas">
+              <li>frutas vermelhas</li><li>cacau</li><li>vinho</li>
+            </ul>
+          </article>
+          <article class="origem">
+            <span class="origem__alt">1.420 m</span>
+            <h3>Chácara Dona Nilza</h3>
+            <p class="origem__regiao">Chapada Diamantina — Bahia</p>
+            <p>Microlote de 12 sacas por ano. Catucaí sombreado por jaqueiras, secado devagar em camada fina. Quando acaba, acabou.</p>
+            <ul class="origem__notas">
+              <li>mel</li><li>jasmim</li><li>caqui</li>
+            </ul>
+          </article>
+          <article class="origem origem--final">
+            <p class="origem__frase"><em>Sem blend misterioso.</em><br />Você sabe de qual pé veio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTODOS -->
+    <section class="metodos" id="metodos">
+      <span class="kicker">03 / Métodos</span>
+      <h2 class="metodos__title">No balcão, <em>quatro caminhos.</em></h2>
+      <div class="metodos__grid">
+        <div class="metodo">
+          <span class="metodo__simbolo">◉</span>
+          <h3>Espresso</h3>
+          <p>Extraído a 9 bar na alavanca. 18g de pó, 36g na xícara, 28 segundos. Ajustado a cada troca de lote.</p>
+          <span class="metodo__dado">18g → 36g · 28s</span>
+        </div>
+        <div class="metodo">
+          <span class="metodo__simbolo">◍</span>
+          <h3>V60</h3>
+          <p>Despejo em espiral com água a 93°C, filtrado em papel. O método que mais respeita as notas florais.</p>
+          <span class="metodo__dado">15g · 250ml · 2:45</span>
+        </div>
+        <div class="metodo">
+          <span class="metodo__simbolo">◎</span>
+          <h3>Prensa francesa</h3>
+          <p>Imersão total por quatro minutos. Corpo cheio, textura de veludo. O favorito de quem tem tempo.</p>
+          <span class="metodo__dado">30g · 500ml · 4:00</span>
+        </div>
+        <div class="metodo">
+          <span class="metodo__simbolo">◈</span>
+          <h3>Coado na hora</h3>
+          <p>O coador de pano da casa, como na fazenda. Servido na caneca de ágata, sem cerimônia e sem pressa.</p>
+          <span class="metodo__dado">60g/L · caneca cheia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- O BALCÃO -->
+    <section class="balcao" id="balcao">
+      <span class="kicker">04 / O Balcão</span>
+      <h2>Rua Cardoso de Almeida, 88</h2>
+      <div class="balcao__info">
+        <div><h4>Horário</h4><p>Todos os dias<br />7h às 18h</p></div>
+        <div><h4>Torra aberta</h4><p>Sábados às 9h<br />venha assistir</p></div>
+        <div><h4>Contato</h4><p>oi@pontodetorra.com.br<br />(11) 3000-8888</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__vapor" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="footer__giant">PONTO DE TORRA</p>
+    <div class="footer__row">
+      <span>© 2026 Ponto de Torra</span>
+      <span><em>Torrado hoje. Servido hoje.</em></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
