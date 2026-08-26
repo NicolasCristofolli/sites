@@ -124,29 +124,6 @@ h1,h2,h3,p,figure,ul,li{ margin:0; padding:0; list-style:none }
 .bloco h3{ margin-top:2px }
 @media (max-width:820px){ .bloco{ grid-template-columns:1fr; gap:22px } .bloco:nth-of-type(even) .bloco__foto{ order:0 } }
 
-/* ---- ASSINATURA: monte a sua travessa ---- */
-.travessa{ background:var(--verde); color:var(--branco) }
-.travessa .olho{ color:var(--sage) }
-.travessa .lede{ color:color-mix(in srgb,var(--branco) 78%, transparent) }
-.travessa__int{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.08fr); gap:clamp(26px,4vw,66px); align-items:center }
-.prato{ position:relative; border-radius:26px; overflow:hidden; background:var(--verde-fundo) }
-.prato > img{ width:100%; aspect-ratio:4/3; object-fit:cover }
-.prato svg{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none }
-.tp{ opacity:0; transform:translateY(-26px) scale(.72); transform-box:fill-box; transform-origin:center;
-  transition:opacity .3s var(--ease), transform .6s var(--pulo) }
-.tp.on{ opacity:1; transform:none }
-.chips{ display:flex; flex-wrap:wrap; gap:11px; margin-top:22px }
-.chip{ display:inline-flex; align-items:center; gap:9px; padding:12px 22px; border-radius:99px;
-  border:2px solid color-mix(in srgb,var(--branco) 42%, transparent); color:var(--branco);
-  font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
-  transition:background .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease), transform .35s var(--pulo) }
-.chip s{ display:block; width:13px; height:13px; border-radius:50%; background:currentColor; opacity:.5; transition:opacity .3s }
-.chip[aria-pressed="true"]{ background:var(--branco); border-color:var(--branco); color:var(--verde) }
-.chip[aria-pressed="true"] s{ opacity:1 }
-.chip:hover{ transform:translateY(-2px) }
-.chip--morango[aria-pressed="true"]{ background:var(--framboesa); border-color:var(--framboesa); color:var(--branco) }
-@media (max-width:880px){ .travessa__int{ grid-template-columns:1fr; gap:26px } }
-
 /* ---- cardápio ---- */
 .cardapio{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:clamp(10px,1.2vw,16px) }
 .cardapio li a{ display:flex; align-items:baseline; gap:11px; height:100%; padding:16px 20px; border-radius:18px;
@@ -175,7 +152,8 @@ h1,h2,h3,p,figure,ul,li{ margin:0; padding:0; list-style:none }
 @media (max-width:820px){ .levar__int{ grid-template-columns:1fr; gap:24px } }
 
 /* ---- onde ---- */
-.onde{ display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:clamp(24px,4vw,58px); align-items:start }
+.onde { 
+  display: grid;  grid-template-columns: 320px 1fr; gap: clamp(24px, 3vw, 48px); align-items: start;max-width: 1150px;margin-inline: auto;}
 .dados{ display:grid; gap:22px }
 .dados h3{ font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--verde); font-weight:700; margin-bottom:5px }
 .dados p, .dados a{ font-size:clamp(15px,1.05vw,16.5px); line-height:1.62; font-style:normal }
@@ -212,18 +190,21 @@ h1,h2,h3,p,figure,ul,li{ margin:0; padding:0; list-style:none }
 /* o papel de parede é a foto do papel da loja, costurada em ladrilho.
    multiply: o branco do papel some e só os traços escurecem o creme do site. */
 .toile{ position:relative; isolation:isolate }
-.toile::before{
-  content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
-  background:url('img/fundo-tile.webp') repeat; background-size:clamp(340px,38vw,560px) auto;
-  mix-blend-mode:multiply; opacity:.4;
-  -webkit-mask-image:radial-gradient(122% 80% at 50% 42%, #000 46%, transparent 100%);
-          mask-image:radial-gradient(122% 80% at 50% 42%, #000 46%, transparent 100%);
+.toile::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url('img/fundo-tile.webp') repeat;
+  background-attachment: fixed; /* <-- ADICIONE ESTA LINHA */
+  background-size: clamp(340px,38vw,560px) auto;
+  mix-blend-mode: multiply; opacity: .4;
+  -webkit-mask-image: radial-gradient(122% 80% at 50% 42%, #000 46%, transparent 100%);
+          mask-image: radial-gradient(122% 80% at 50% 42%, #000 46%, transparent 100%);
 }
-.toile > *{ position:relative; z-index:1 }
-.toile--forte::before{
-  opacity:.62; background-size:clamp(330px,34vw,520px) auto;
-  -webkit-mask-image:radial-gradient(96% 62% at 50% 52%, transparent 0 18%, #000 62%);
-          mask-image:radial-gradient(96% 62% at 50% 52%, transparent 0 18%, #000 62%);
+
+/* 2. Na classe modificadora .toile--forte, remova a declaração de background-size */
+.toile--forte::before {
+  opacity: .62;
+  -webkit-mask-image: radial-gradient(96% 62% at 50% 52%, transparent 0 18%, #000 50%, transparent 100%);
+          mask-image: radial-gradient(96% 62% at 50% 52%, transparent 0 18%, #000 50%, transparent 100%);
 }
 
 /* ---- apresentação de seção ---- */

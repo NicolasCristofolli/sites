@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VELHA LAJE — Adega e Importadora · Canela, Serra Gaúcha</title>
+<meta name="description" content="Uma adega de vinhos em Canela, Serra Gaúcha. Cave subterrânea, acervo selecionado e curadoria pessoal. Toda recomendação começa por uma conversa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..500&family=Montserrat:ital,wght@0,200..600;1,200..400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- véu de entrada: levanta sozinho, sem portão nem clique -->
+<div class="veil" id="veil" aria-hidden="true"><span class="veil__mark">VELHA LAJE</span></div>
+
+<!-- ═══════════════ CABEÇALHO ═══════════════ -->
+<header class="head" id="head">
+  <a class="head__mark" href="#topo">VELHA&nbsp;LAJE</a>
+  <nav class="head__nav" aria-label="Seções">
+    <a href="#casa">A Adega</a>
+    <a href="#curador">O Curador</a>
+    <a href="#adega">Encontre a Adega</a>
+  </nav>
+  <button class="head__btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <a href="#casa"><i>i</i>A Adega</a>
+  <a href="#curador"><i>iii</i>O Curador</a>
+  <a href="#adega"><i>vi</i>Encontre a Adega</a>
+</nav>
+
+<main>
+
+<!-- ═══════════════ 01 · ABERTURA ═══════════════ -->
+<section class="hero" id="topo">
+  <figure class="hero__plate plate">
+    <img src="img/entrada.jpeg" alt="A entrada da Velha Laje, sob o bordo vermelho">
+  </figure>
+  <div class="hero__type">
+    <h1 class="hero__title" data-open><b>VELHA&nbsp;LAJE</b></h1>
+    <p class="hero__tag" data-open><b>Adega e Importadora.</b></p>
+  </div>
+  <a class="hero__cue" href="#casa" aria-label="Descer"><span></span>Canela · Serra Gaúcha</a>
+</section>
+
+<!-- ═══════════════ 02 · A CASA ═══════════════ -->
+<section class="place" id="casa">
+  <div class="place__stage">
+    <!-- a escada abre e dá lugar à cave: descer é a própria interação -->
+    <figure class="place__door plate">
+      <img src="img/escada.jpg" alt="A escada que desce para a cave">
+      <img class="place__deeper" src="img/adega.jpg" alt="A cave subterrânea, garrafas do chão ao teto">
+    </figure>
+
+    <div class="place__before">
+      <p class="mark">ii — A Adega</p>
+      <h2 class="place__lead">Há lugares que<br>não se encontram por acaso.</h2>
+      <p class="place__cue">continue descendo</p>
+    </div>
+
+    <div class="place__inside">
+      <p class="place__body">
+        A temperatura cai alguns graus antes de qualquer palavra. A pedra da serra guarda o frio
+        do ano inteiro; a madeira guarda o resto. Lá dentro não há vitrine, não há corredor,
+        não há preço em cartaz — há garrafas deitadas na penumbra e alguém que sabe por que
+        cada uma está ali.
+      </p>
+      <p class="place__body place__body--dim">
+        Uma adega não se visita. Entra-se nela.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 03 · A GALERIA ═══════════════ -->
+<section class="gallery" id="galeria">
+  </header>
+
+  <div class="gal">
+    <figure class="gal__i gal__i--a" data-rise>
+      <div class="plate"><img src="img/conversa.jpg" alt="Três homens conversando na sala de pedra da adega"></div>
+      <figcaption><b>Uma Conversa</b><i>Onde o vinho vira língua comum.</i></figcaption>
+    </figure>
+
+    <figure class="gal__i gal__i--b" data-rise>
+      <div class="plate"><img src="img/taca-fogo.jpg" alt="Taça de champanhe contra o fogo"></div>
+    </figure>
+
+    <figure class="gal__i gal__i--c" data-rise>
+      <div class="plate"><img src="img/rocca-rotulo.jpg" alt="Contrarrótulo do Tenuta Rocca com dedicatória a Jadir Engers"></div>
+      <figcaption><b>A Dedicatória</b><i>“Al mio caro Amico Jadir Engers.”</i></figcaption>
+    </figure>
+
+    <figure class="gal__i gal__i--d" data-rise>
+      <div class="plate"><img src="img/rubrica-trio.jpg" alt="Três garrafas Rubrica sobre fundo escuro"></div>
+    </figure>
+
+    <figure class="gal__i gal__i--e" data-rise>
+      <div class="plate"><img src="img/barolo.jpg" alt="Garrafa de Barolo Tenuta Rocca deitada sobre pedra"></div>
+      <figcaption><b>Barolo</b><i>Serralunga d’Alba. Nebbiolo e paciência.</i></figcaption>
+    </figure>
+
+    <figure class="gal__i gal__i--f" data-rise>
+      <div class="plate"><img src="img/malleolus.jpg" alt="Garrafas Malleolus, Emilio Moro"></div>
+    </figure>
+
+    <figure class="gal__i gal__i--g" data-rise>
+      <div class="plate"><img src="img/muga-duo.jpg" alt="Duas garrafas Muga Selección Especial sobre pedra"></div>
+      <figcaption><b>Rioja</b><i>Pedra, madeira e tempo.</i></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══════════════ 04 · O CURADOR ═══════════════ -->
+<section class="curator" id="curador">
+  <div class="curator__grid">
+    <figure class="curator__portrait" data-rise>
+      <div class="plate"><img src="img/jadir-retrato.jpg" alt="Jadir Engers com o brevete dos Hospitaliers de Pomerol, entre as vinhas"></div>
+    </figure>
+
+    <div class="curator__text">
+      <p class="mark">iv — O Curador</p>
+      <h2 class="sec-title">Jadir Engers</h2>
+
+      <p class="body">
+        Há quem venda vinho. Há quem o compreenda. Jadir Engers construiu a Velha Laje sobre
+        a segunda hipótese: décadas de garrafas abertas, produtores visitados, safras
+        acompanhadas de perto e uma memória de taça que não se aprende em catálogo.
+      </p>
+      <p class="body">
+        A relação com quem produz veio antes da relação com quem compra — e é dela que nasce o
+        acervo. Em Monforte d’Alba, a Tenuta Rocca imprimiu no contrarrótulo do seu Barolo de
+        Serralunga uma dedicatória ao seu nome: <em>“Al mio caro Amico Jadir Engers, questa
+        speciale riserva per il nostro progetto in Brasile.”</em> É o tipo de crédito que não
+        se solicita.
+      </p>
+
+      <!-- Lidos dos próprios documentos nas fotos (brevete de Pomerol e décret do Bontemps).
+           Confirmar grafia exata e datas antes de publicar. Os dois últimos campos seguem vazios. -->
+      <h2 class="titulo">TÍTULOS E HONRARIAS</h2>
+      <ul class="creds">
+        <li><span>Commandeur d'Honneur</span><b>Commanderie du Bontemps de Médoc, Graves, Sauternes et Barsac — Bordeaux</b></li>
+        <li><span>Hospitalier d'Honneur</span><b>Confrérie des Hospitaliers de Pomerol — Pomerol</b></li>
+        <li><span>Cavaleiro</span><b>Confraria do Vinho do Porto — Porto — Confraria do Alentejo</b></li>
+        <li><span>Maître</span><b>Commanderie de Bordeaux de Porto Alegre, nomeado pelo Grand Conseil du Vin de Bordeaux </b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="curator__gallery">
+    
+    <div class="curator__strip" id="curatorStrip" data-strip tabindex="0" role="group" aria-label="Galeria do curador">
+      <figure data-rise>
+        <div class="plate"><img src="img/jadir-pomerol.jpg" alt="Capítulo da confraria, em Pomerol"></div>
+        <figcaption>O capítulo, em Pomerol.</figcaption>
+      </figure>
+      <figure data-rise>
+        <div class="plate"><img src="img/jadir-bontemps.jpg" alt="Entrega do décret do Ordre du Bontemps"></div>
+        <figcaption>O décret, entregue em mãos.</figcaption>
+      </figure>
+      <figure data-rise>
+        <div class="plate"><img src="img/jadir-malleolus.jpg" alt="Na bodega, entre uma prova e outra"></div>
+        <figcaption>Entre uma prova e outra.</figcaption>
+      </figure>
+      <figure data-rise>
+        <div class="plate"><img src="img/jadir-vinha.jpg" alt="Na vinha, garrafa na mão"></div>
+        <figcaption>Na vinha, com quem a faz.</figcaption>
+      </figure>
+      <figure data-rise>
+        <div class="plate"><img src="img/Jadir-Pessoas2.jpg" alt="Na vinha, garrafa na mão"></div>
+        <figcaption>Entre uma prova e outra.</figcaption>
+      </figure>
+    </div>
+    <div class="strip__head">
+      <p class="strip__label"></p>
+      <div class="strip__nav">
+        <button class="strip__arrow" type="button" data-strip-prev aria-label="Fotos anteriores" aria-controls="curatorStrip">
+          <svg viewBox="0 0 40 12" aria-hidden="true"><path d="M39 6H1M7 1 1 6l6 5"/></svg>
+        </button>
+        <button class="strip__arrow" type="button" data-strip-next aria-label="Próximas fotos" aria-controls="curatorStrip">
+          <svg viewBox="0 0 40 12" aria-hidden="true"><path d="M1 6h38M33 1l6 5-6 5"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- ═══════════════ 08 · ENCONTRE A ADEGA ═══════════════ -->
+<section class="find" id="adega">
+  <div class="find__info">
+    <p class="mark">vi — Encontre a Adega</p>
+    <h2 class="sec-title">No caminho da<br><em>Laje de Pedra.</em></h2>
+
+    <address class="find__address">
+      Av. José Luiz Corrêa Pinto, 251<br>
+      Caminho Laje de Pedra · Canela, RS
+    </address>
+
+    <dl class="find__dl">
+
+      <dt>Instagram</dt>
+      <dd><a href="https://www.instagram.com/velhalaje/" target="_blank" >Clique aqui para ir ao instagram</a></dd>
+      
+      <dt>WhatsApp</dt>
+      <dd><a href="https://wa.me/555432824215" target="_blank" rel="noopener">Nos chame pelo WhatsApp</a></dd>
+
+      <dt>E-mail</dt>
+      <dd><a href="mailto:velhalaje@gmail.com">velhalaje@gmail.com</a></dd>
+
+      <dt>Telefone</dt>
+      <dd><a href="tel:+555432824215">54 3282.4215</a></dd>
+
+
+      <dt>Horários</dt>
+      <dd class="ph">[ horários — a preencher ]</dd>
+
+    </dl>
+
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+Jos%C3%A9+Luiz+Corr%C3%AAa+Pinto,+251+-+Canela,+RS" target="_blank" rel="noopener">Traçar rota no mapa →</a>
+  </div>
+
+  <figure class="find__map" aria-label="Mapa ilustrado do caminho entre o centro de Canela e a Velha Laje">
+    <svg viewBox="0 0 640 460" role="img" aria-hidden="true">
+      <!-- moldura ex-líbris -->
+      <rect x="10" y="10" width="620" height="440" fill="none" stroke="var(--brass)" stroke-opacity="0.55" stroke-width="1.5"/>
+      <rect x="18" y="18" width="604" height="424" fill="none" stroke="var(--brass)" stroke-opacity="0.25" stroke-width="0.75"/>
+
+      <!-- ruas de fundo -->
+      <g stroke="var(--ivory)" stroke-opacity="0.13" fill="none" stroke-width="1">
+        <path d="M 40 300 C 160 290, 300 330, 620 260"/>
+        <path d="M 60 440 C 120 340, 150 300, 210 200 S 300 80, 330 20"/>
+        <path d="M 240 440 C 280 360, 330 320, 430 290 S 590 250, 622 240"/>
+        <path d="M 18 200 C 120 220, 220 240, 320 210 S 500 130, 560 18"/>
+        <path d="M 400 442 C 420 380, 450 330, 520 300"/>
+      </g>
+
+      <!-- a rota -->
+      <path id="mapRoute" d="M 96 372 C 190 350, 245 335, 305 285 S 440 185, 505 122"
+            fill="none" stroke="var(--brass)" stroke-width="2" stroke-dasharray="7 7" stroke-linecap="round"/>
+      <text class="map-road" dy="-8"><textPath href="#mapRoute" startOffset="16%">Av. José Luiz Corrêa Pinto</textPath></text>
+
+      <!-- centro / catedral -->
+      <g class="map-mark">
+        <path d="M 96 372 l -7 14 h 14 z M 96 362 v 10" stroke="var(--ivory)" stroke-width="1.4" fill="none"/>
+        <text class="map-label" x="96" y="406" text-anchor="middle">Catedral de Pedra</text>
+        <text class="map-sublabel" x="96" y="421" text-anchor="middle">centro de Canela</text>
+      </g>
+
+      <!-- a adega -->
+      <g class="map-mark">
+        <circle class="map-pulse" cx="505" cy="122" r="16" fill="none" stroke="var(--brass)" stroke-width="1"/>
+        <path d="M 505 114 l 8 8 -8 8 -8 -8 z" fill="var(--brass)"/>
+        <text class="map-brand" x="505" y="88" text-anchor="middle">VELHA LAJE</text>
+        <text class="map-sublabel" x="505" y="152" text-anchor="middle">nº 251 · térreo do chalé</text>
+      </g>
+
+      <!-- referência adiante -->
+      <g class="map-mark">
+        <rect x="586" y="52" width="9" height="9" fill="none" stroke="var(--ivory)" stroke-opacity="0.5" stroke-width="1"/>
+        <text class="map-sublabel" x="590" y="42" text-anchor="middle">Laje de Pedra</text>
+      </g>
+
+      <!-- rosa dos ventos -->
+      <g class="map-mark" transform="translate(576 396)">
+        <circle r="17" fill="none" stroke="var(--ivory)" stroke-opacity="0.35" stroke-width="0.8"/>
+        <path d="M 0 -13 l 3.5 9 h -7 z" fill="var(--brass)"/>
+        <path d="M 0 13 l 3.5 -9 h -7 z M -13 0 l 9 3.5 v -7 z M 13 0 l -9 3.5 v -7 z" fill="var(--ivory)" fill-opacity="0.4"/>
+        <text class="map-sublabel" y="-24" text-anchor="middle">N</text>
+      </g>
+
+      <!-- coordenadas -->
+      <text class="map-coords" x="40" y="52">29°21′ S · 50°48′ W — Serra Gaúcha, 830 m</text>
+    </svg>
+    <figcaption class="find__legend">Mapa afetivo, sem escala — como todo bom caminho até o vinho.</figcaption>
+  </figure>
+</section>
+
+</main>
+
+<!-- ═══════════════ 09 · RODAPÉ ═══════════════ -->
+<footer class="foot">
+  <div class="foot__mark">
+    <p>VELHA&nbsp;LAJE</p>
+    <p><em>A arte de descobrir o vinho.</em></p>
+  </div>
+  <nav class="foot__links" aria-label="Rodapé">
+    <a href="https://wa.me/555432824215" target="_blank" rel="noopener">Contato</a>
+    <a href="https://instagram.com/velhalaje" target="_blank" rel="noopener">Instagram</a>
+    <a href="#adega">Localização</a>
+  </nav>
+  <p class="foot__legal">
+    © <span id="ano">2026</span> Velha Laje · Canela, RS · CNPJ [ a preencher ] — Beba com moderação.
+    Venda proibida para menores de 18 anos.
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
